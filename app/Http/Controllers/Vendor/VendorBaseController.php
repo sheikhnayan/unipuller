@@ -1,0 +1,76 @@
+<?php
+
+namespace App\Http\Controllers\Vendor;
+
+use App\Http\Controllers\Controller;
+use DB;
+use App;
+use App\Models\Category;
+use Auth;
+use Session;
+
+
+class VendorBaseController extends Controller
+{
+    protected $gs;
+    protected $curr;
+    protected $language_id;
+    protected $user;
+    protected $vendor_category;
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+
+        // Set Global GeneralSettings
+
+        $this->gs = DB::table('generalsettings')->find(1);
+
+        $this->middleware(function ($request, $next) {
+
+        // Set Global Users
+
+        $this->user = Auth::user();
+
+            // Set Global Language
+
+            // Set Global Language
+
+            if (Session::has('language')) 
+            {
+                $this->language = DB::table('languages')->find(Session::get('language'));
+            }
+            else
+            {
+                $this->language = DB::table('languages')->where('is_default','=',1)->first();
+            }  
+            view()->share('langg', $this->language);
+            App::setlocale($this->language->name);
+    
+            // Set Global Currency
+
+            $this->curr = DB::table('currencies')->where('is_default','=',1)->first();
+
+            
+    
+            return $next($request);
+        });
+
+    }
+    public function userCategories(){
+        
+        $vendor_categories = Category::where(function($query){
+            $user_categories = json_decode($this->user->service_category_id);
+            if($user_categories && is_array($user_categories)){
+                foreach($user_categories as $key=> $us_category){
+                    if($key == 0){
+                        $query->where('id',$us_category);
+                    } else {
+                        $query->orwhere('id',$us_category);
+                    }
+                }
+            }
+        })->get();
+        return $vendor_categories;
+    }
+}
