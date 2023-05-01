@@ -7,7 +7,8 @@
 
 {{-- @include('partials.global.subscription-popup') --}}
 
-<header class="ecommerce-header nav-on-banner">
+{{-- <header class="ecommerce-header nav-on-banner">  code updated bvy huma  --}}
+    <header class="ecommerce-header">
     {{-- Top header currency and Language --}}
     @include('partials.global.top-header')
     {{-- Top header currency and Language  end--}}
@@ -15,12 +16,12 @@
 </header>
 
 @if($ps->slider == 1)
-    <div class="position-relative">
+    <div class="position-relative" >
         <span class="nextBtn"></span>
         <span class="prevBtn"></span>
         <section class="home-slider owl-theme owl-carousel">
             @foreach($sliders as $data)
-            <div class="banner-slide-item" style="background: url('{{asset('assets/images/sliders/'.$data->photo)}}') no-repeat center center / cover ;">
+            <div class="banner-slide-item" style="background: url('{{asset('assets/images/sliders/'.$data->photo)}}') no-repeat center  ;height:350px !important">
                 <div class="container">
                     <div class="banner-wrapper-item text-{{ $data->position }}">
                         <div class="banner-content text-dark ">

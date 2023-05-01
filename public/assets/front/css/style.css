@@ -1327,7 +1327,7 @@ h6,
 	border: none;
 }
 img.nav-logo {
-	min-width: 124px;
+	min-width: 210px;
 }
 .sign-in {
 	font-size: 13px;
@@ -1636,7 +1636,7 @@ img.nav-logo {
 	background-color: rgb(223, 245, 250);
 	padding: 50px 0px;
 }
-/* 
+/*
 .time-count.time-box li {
 	border: 2px solid var(--theme-secondary-color);
 	width: 80px;
@@ -1764,7 +1764,7 @@ input.text-dark::placeholder {
 .form-inline input.search-field {
 	padding: 0 20px;
 	line-height: 50px !important;
-	height: 50px;
+	height: 40px;
 }
 .product-search-two .form-inline input.search-field {
 	order: 2 !important;
@@ -2318,7 +2318,7 @@ header.fixed-top {
 .dropdown-item:focus
 {
 	color: var(--theme-secondary-color) !important;
-	
+
 }
 .dropdown-item:hover {
 	color: var(--theme-secondary-color) !important;
@@ -2352,8 +2352,8 @@ header.fixed-top {
 .top-header .wishlist-view > a,
 .top-header .refresh-view > a,
 .top-header .sign-in > a {
-	width: 30px;
-	height: 30px;
+	width: 50px;
+	height: 50px;
 }
 [class*="header-cart-"] .cart-icon [class*="flaticon-"]:before,
 .search-view > a [class*="flaticon-"]:before,
@@ -2373,8 +2373,8 @@ header.fixed-top {
 	margin-bottom: -4px;
 }
 .top-header [class*="header-cart-"] .cart-icon {
-	width: 30px;
-	height: 30px;
+	width: 50px;
+	height: 50px;
 }
 .header-cart-6 .header-cart-item-text {
 	margin-bottom: -5px;
@@ -6674,7 +6674,7 @@ table.cart {
 		padding: 0 10px;
 	}
 	.ecommerce-header .navbar-expand-lg .navbar-nav > li.nav-item {
-		line-height: 50px;
+		line-height: 28px;
 	}
 	.nav-line-active .navbar-nav .active > .nav-link:before {
 		bottom: 10px;
@@ -9018,7 +9018,7 @@ button.btn.btn-secondary.rounded-right-pill.text-white:hover {
 }
 .nav-line-active .navbar-nav .active > .nav-link::before {
 	width: 100%;
-	bottom: 10px;
+	bottom: 2px;
 	left: 0;
 }
 
@@ -9435,7 +9435,7 @@ li.addtocart a:hover {
 .banner-wrapper-item {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	position: relative;
 	z-index: 3;
 	min-height: 540px;
@@ -9480,13 +9480,13 @@ li.addtocart a:hover {
 @media (min-width: 768px) {
 	.banner-wrapper-item {
 		min-height: 620px;
-		padding: 100px 0;
+		padding: 50px 0;
 	}
 }
 @media (min-width: 992px) {
 	.banner-wrapper-item {
 		min-height: 780px;
-		padding: 100px 0;
+		padding: 50px 0;
 	}
 }
 @media (min-width: 1200px) {
@@ -9890,4 +9890,18 @@ select.form-control {
 
 .products-header .btn{
 	line-height: 35px;
+}
+
+.main-features-section .card-text{
+    font-size: 12px;
+    line-height: 18px;
+}
+.main-features-section .buy-sell p.card-text {
+    min-height: 45px;
+    max-height: 45px;
+}
+
+
+.main-features-section  a.card-link {
+    font-size: 13px;
 }
