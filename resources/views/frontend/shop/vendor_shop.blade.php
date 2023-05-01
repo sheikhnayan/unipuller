@@ -164,21 +164,22 @@
                 <div class="row">
                     @if($shops->count() > 0)
                     @foreach($shops as $shop)
-                    <div class="col-md-5 shadow rounded p-3 m-3">
+                    <div class="col-md-5 brands_shadow rounded p-3 m-3">
                             <div class="row">
                                 <div class="col-md-3">
                                     <a href="{{ route('vendor.shop.service',$shop->id) }}">
-                                        <img class="lazy" data-src="{{ $shop->shop_image ? asset('assets/images/categories/' . $shop->shop_image) : asset('assets/common_img/shop2.jpg') }}" alt="">
+                                        <img class="lazy" data-src="{{ $shop->shop_image ? asset('assets/images/categories/' . $shop->shop_image) : asset('assets/common_img/vendor_profile.jpeg') }}" alt="">
                                     </a>
                                 </div>
                                 <div class="col-md-9">
                                     <a href="{{ route('vendor.shop.service',$shop->id) }}">
                                         <h6>{{$shop->shop_name}}</h6>
                                     </a>
+                                    <p>Category</p>
                                     <p class="store_line_height">
-                                        {{$shop->shop_number}}, {{$shop->shop_address}}
+                                        {{$shop->shop_number}} {{$shop->shop_address}}
                                         <br>
-                                        Total {{$shop->services->count()}} Services
+                                        Total {{$shop->services->count()}} Services & 2 Products
                                     </p>
                                 </div>
                             </div>
@@ -188,6 +189,12 @@
                     @endif
                 </div>
             </div>
+
+            <style>
+                .brands_shadow {
+                    box-shadow: 0px 0px 5px 0px #ccc;
+                }
+            </style>
 
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...
                 Coming soon
