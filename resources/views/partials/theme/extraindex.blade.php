@@ -16,7 +16,12 @@
     }
 </style>
 
-@include('frontend.features.feature')
+@include('frontend.homePage.feature')
+{{-- @include('frontend.homePage.trendingCategories') --}}
+@include('frontend.homePage.popularCategories')
+@include('frontend.homePage.meetups')
+{{-- @include('frontend.homePage.partner') --}}
+
 
 <!--==================== Service Section Start ====================-->
 @if ($service_categories->count() > 1)
