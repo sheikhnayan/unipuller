@@ -1,4 +1,4 @@
-<div class="main-nav d-lg-block d-none py-3 shadow mb-5">
+<div class="main-nav d-lg-block d-none py-3">
     <div class="container-fluid px-lg-5">
         <div class="row">
             <div class="col-xl-7 col-md-9">

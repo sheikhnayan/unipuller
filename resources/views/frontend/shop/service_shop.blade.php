@@ -2,6 +2,304 @@
 @section('content')
 @includeIf('partials.global.common-header')
 
+<style>
+    /* Banner Style Start  */
+    .custom-left-img {
+        padding: 10px 0px 10px 10px !important;
+        border-radius: 20px !important;
+        height: 160px!important;
+        width: 160px!important;
+        margin-top: 20px;
+        margin-left: 33px;
+    }
+    .sub_company_details{
+        margin-top: 40px;
+    }
+    .product-service-tab {
+        max-width: 200px;
+        margin-right: 15px;
+        margin-left: auto;
+    }
+    .banner-img{
+        height:100%;
+        width: fit-content;
+    }
+    #v-pills-tabContent .fade:not(.show){
+        display: none;
+    }
+
+    .parter_company_details {
+        margin-top: 20px;
+    }
+    .call_btn_size span{
+        display: block;
+        line-height: 20px;
+
+    }
+    .website_btn{
+        background-color: #fff;
+        color: #000;
+    }
+    .website_btn:hover{
+        background-color: #db1f5a;
+        color: #fff;
+    }
+    .website_btn {
+        height: 30px !important;
+        padding: 0 10px;
+        font-size: 12px;
+        line-height: 30px !important;
+    }
+    .call_btn_size {
+        font-size: 14px;
+    }
+    .custom{
+        background: #f9f6f6;
+    }
+
+    .mr-2 {
+        margin-right: 5px;
+    }
+
+    .custom-padding{
+        line-height: 37px!important;
+        padding: 0 12px!important;
+    }
+
+    .call_btn_size a {
+        font-size: 14px;
+        width: 100%;
+        background-color: #ddd;
+        padding: 2px 20px;
+    }
+
+    .contact-btn {
+        display: flex;
+        gap: 20px;
+    }
+
+    .vendor_sidebar {
+        width: 100%;
+        text-align: left;
+        margin-top: 4px !important;
+        padding: 15px 35px;
+        background-color: #ddd;
+        margin-bottom: 5px;
+    }
+
+    .vendor_sidebar.active {
+        background-color: #424a4d !important;
+    }
+
+    .store_line_height {
+        line-height: 20px;
+    }
+
+    .custom-img {
+            padding: 10px 0px 10px 10px !important;
+            border-radius: 20px !important;
+            height: 208px!important;
+            width: 180px!important;
+    }
+
+    .user-custom, .user-custom1 {
+        gap: 15px;
+    }
+    .banner{
+        padding: 10px;
+        background-color: #424a4d !important;
+    }
+    .product-wrapper .product-info .product-title, .product-wrapper .product-info .product-title a {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .social-links li a {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        border-radius: 50%;
+        background: #a439ee;
+        display: block;
+        color: #fff;
+    }
+    .nav-link-style{
+        color:black;
+    }
+    .product_service_tabs .active{
+        background-color: #424a4d !important;
+        color: #fff !important;
+    }
+    .product_service_tabs {
+        background-color: #ddd;
+    }
+    .nav-tabs {
+        border-bottom: none;
+    }
+    .nav-pills button {
+        font-size: 18px;
+    }
+    /* Banner Style End  */
+
+    /* Marketing Section Style Start */
+    .btn-group {
+        display: flex;
+        justify-content: flex-end;
+        width: 300px;
+        margin-top: 10px;
+    }
+    .btn-group .card_view_btn {
+        background: #424a4d !important;
+        color: #fff;
+        width: 50px;
+    }
+    .btn-group .list_view_btn {
+        background: #ddd !important;
+        color: #000;
+        width: 50px;
+    }
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .pagination-link {
+        color: #424a4d !important;
+        border: none;
+        background-color: #fff !important;
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        margin: 0 5px;
+        text-decoration: none;
+        border: 1px solid #ccc;
+    }
+
+    .pagination-link:hover {
+        background-color: #424a4d !important;
+        color: #fff !important;
+    }
+
+    .pagination-link.active {
+        background-color: #424a4d !important;
+        color: #fff !important;
+        font-weight: bold;
+    }
+
+    .marketing-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .marketing-card-image {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .marketing-card-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .marketing-card:hover .marketing-card-image img {
+        transform: scale(1.1);
+    }
+
+    .marketing-card-body {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .marketing-card:hover .marketing-card-body {
+        transform: translateY(0);
+    }
+
+    .marketing-card-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .marketing-card-text {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .marketing-card-learn-more {
+        font-size: 14px;
+        padding: 8px 12px;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #000;
+        border: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        display: inline-block;
+        margin-top: 20px;
+        text-decoration: none;
+    }
+
+    .marketing-card-learn-more:hover {
+        background-color: #db1f5a;
+        color: #fff !important;
+    }
+    /* Marketing Section Style End */
+
+    /* News Section Style Start */
+    .news_section_container {
+        margin-top: 20px;
+    }
+    .news-card {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .news-card img {
+        height: 275px;
+    }
+
+    .news-card-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .news-card-text {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .news-card-btn {
+        font-size: 14px;
+        padding: 0px 16px;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .news-card-btn:hover {
+        background-color: #0056b3;
+        color: #fff;
+    }
+    /* News Section Style End */
+</style>
+
 <div class="container mb-4 bg-white rounded">
     <div class="row shadow m-0 p-0 custom">
         <div class="col-lg-4 d-flex pl-0 user-custom1">
@@ -36,32 +334,6 @@
                 @endif -->
             </div>
         </div>
-        <style>
-            .custom-left-img {
-                padding: 10px 0px 10px 10px !important;
-                border-radius: 20px !important;
-                height: 160px!important;
-                width: 160px!important;
-                margin-top: 20px;
-                margin-left: 33px;
-            }
-            .sub_company_details{
-                margin-top: 40px;
-            }
-            .product-service-tab {
-                max-width: 200px;
-                margin-right: 15px;
-                margin-left: auto;
-            }
-            .banner-img{
-                height:100%;
-                /* object-fit: cover; */
-                width: fit-content;
-            }
-            #v-pills-tabContent .fade:not(.show){
-                display: none;
-            }
-        </style>
         <div class="col-lg-5 d-flex user-custom">
             <img class="lazy custom-img w-100 img-fluid rounded" data-src="{{ $shop->shop_image ? asset('assets/images/categories/' . $shop->shop_image) : asset('assets/common_img/vendor_profile.jpeg') }}" alt="">
             <div class="parter_company_details">
@@ -97,129 +369,6 @@
             <img class="lazy banner-img w-100 img-fluid rounded" data-src="{{ $shop->shop_banner ? asset('assets/images/categories/' . $shop->shop_banner) : asset('assets/common_img/shop_banner.jpeg') }}" alt="">
         </div>
     </div>
-    <style>
-        .parter_company_details {
-            margin-top: 20px;
-        }
-        .call_btn_size span{
-            display: block;
-            line-height: 20px;
-
-        }
-        .website_btn{
-            background-color: #fff;
-            color: #000;
-        }
-        .website_btn:hover{
-            background-color: #db1f5a;
-            color: #fff;
-        }
-        .website_btn {
-            height: 30px !important;
-            padding: 0 10px;
-            font-size: 12px;
-            line-height: 30px !important;
-        }
-        .call_btn_size {
-            font-size: 14px;
-            /* line-height: 20px; */
-        }
-        .custom{
-            background: #f9f6f6;
-        }
-
-        .mr-2 {
-            margin-right: 5px;
-        }
-
-        .custom-padding{
-            line-height: 37px!important;
-            padding: 0 12px!important;
-        }
-
-        .call_btn_size a {
-            font-size: 14px;
-            width: 100%;
-            background-color: #ddd;
-            padding: 2px 20px;
-        }
-
-        /* .width-20 {
-                width: 20%;
-            } */
-
-        .contact-btn {
-            display: flex;
-            gap: 20px;
-        }
-
-        .vendor_sidebar {
-            width: 100%;
-            text-align: left;
-            margin-top: 4px !important;
-            padding: 15px 35px;
-            background-color: #ddd;
-            margin-bottom: 5px;
-        }
-
-        .vendor_sidebar.active {
-            background-color: #424a4d !important;
-        }
-
-        .store_line_height {
-            line-height: 20px;
-        }
-
-        /* .custom-img {
-            max-width: 140px;
-        } */
-
-        .custom-img {
-                padding: 10px 0px 10px 10px !important;
-                border-radius: 20px !important;
-                height: 208px!important;
-                width: 180px!important;
-        }
-
-        .user-custom, .user-custom1 {
-            gap: 15px;
-        }
-        .banner{
-            padding: 10px;
-            background-color: #424a4d !important;
-        }
-        .product-wrapper .product-info .product-title, .product-wrapper .product-info .product-title a {
-            font-weight: 500;
-            font-size: 18px;
-        }
-        .social-links li a {
-            width: 36px;
-            height: 36px;
-            line-height: 36px;
-            text-align: center;
-            border-radius: 50%;
-            background: #a439ee;
-            display: block;
-            color: #fff;
-        }
-        .nav-link-style{
-            color:black;
-        }
-        .product_service_tabs .active{
-            background-color: #424a4d !important;
-            color: #fff !important;
-        }
-        .product_service_tabs {
-            background-color: #ddd;
-        }
-        .nav-tabs {
-            border-bottom: none;
-        }
-        .nav-pills button {
-            font-size: 18px;
-        }
-    </style>
-</div>
 </div>
 
 <div class="container mb-5">
@@ -263,6 +412,7 @@
             </ul>
         </div>
         <div class="tab-content w-100" id="v-pills-tabContent">
+        <!-- Marketing Section Start -->    
             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                 <ul role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4" class="nav nav-tabs mt-3 mb-2 product-service-tab" id="nav-tab-with-nested-tabs">
                     <li class="nav-item product_service_tabs" role="presentation">
@@ -437,10 +587,10 @@
                 </div>
             </div>
 
-            <!-- Marketing Section Start -->
+            
             <div class="tab-pane fade marketing-section" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
 
-            <div class="container">
+                <div class="container">
                     <!-- Buttons for switching between card and list view -->
                     <div class="btn-group mb-3 ml-auto" role="group" aria-label="View Switcher">
                         <button type="button" class="btn card_view_btn" data-view="card">Card View</button>
@@ -450,59 +600,113 @@
                     <!-- Card view for marketing section -->
                     <div class="row marketing-card-view">
                         <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <img src="https://picsum.photos/id/1018/400/250" class="card-img-top" alt="...">
+                            <div class="marketing-card">
+                                <div class="marketing-card-image">
+                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
+                                </div>
+                                <div class="marketing-card-body">
+                                    <h5 class="marketing-card-title">Product Name 2</h5>
+                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <img src="https://picsum.photos/id/1018/400/250" class="card-img-top" alt="...">
+                            <div class="marketing-card">
+                                <div class="marketing-card-image">
+                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
+                                </div>
+                                <div class="marketing-card-body">
+                                    <h5 class="marketing-card-title">Product Name 2</h5>
+                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <img src="https://picsum.photos/id/1018/400/250" class="card-img-top" alt="...">
+                            <div class="marketing-card">
+                                <div class="marketing-card-image">
+                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
+                                </div>
+                                <div class="marketing-card-body">
+                                    <h5 class="marketing-card-title">Product Name 2</h5>
+                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <img src="https://picsum.photos/id/1018/400/250" class="card-img-top" alt="...">
+                            <div class="marketing-card">
+                                <div class="marketing-card-image">
+                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
+                                </div>
+                                <div class="marketing-card-body">
+                                    <h5 class="marketing-card-title">Product Name 2</h5>
+                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <img src="https://picsum.photos/id/1018/400/250" class="card-img-top" alt="...">
+                            <div class="marketing-card">
+                                <div class="marketing-card-image">
+                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
+                                </div>
+                                <div class="marketing-card-body">
+                                    <h5 class="marketing-card-title">Product Name 2</h5>
+                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <img src="https://picsum.photos/id/1018/400/250" class="card-img-top" alt="...">
+                            <div class="marketing-card">
+                                <div class="marketing-card-image">
+                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
+                                </div>
+                                <div class="marketing-card-body">
+                                    <h5 class="marketing-card-title">Product Name 2</h5>
+                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <img src="https://picsum.photos/id/1018/400/250" class="card-img-top" alt="...">
+                            <div class="marketing-card">
+                                <div class="marketing-card-image">
+                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
+                                </div>
+                                <div class="marketing-card-body">
+                                    <h5 class="marketing-card-title">Product Name 2</h5>
+                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <img src="https://picsum.photos/id/1018/400/250" class="card-img-top" alt="...">
+                            <div class="marketing-card">
+                                <div class="marketing-card-image">
+                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
+                                </div>
+                                <div class="marketing-card-body">
+                                    <h5 class="marketing-card-title">Product Name 2</h5>
+                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
+                                </div>
                             </div>
                         </div>
-                        
                     </div>
 
                     <!-- Pagination for marketing section -->
                     <div class="pagination justify-content-center">
-  <a href="#" class="pagination-link">&laquo;</a>
-  <a href="#" class="pagination-link active">1</a>
-  <a href="#" class="pagination-link">2</a>
-  <a href="#" class="pagination-link">3</a>
-  <a href="#" class="pagination-link">4</a>
-  <a href="#" class="pagination-link">5</a>
-  <a href="#" class="pagination-link">&raquo;</a>
-</div>
-
+                        <a href="#" class="pagination-link">&laquo;</a>
+                        <a href="#" class="pagination-link active">1</a>
+                        <a href="#" class="pagination-link">2</a>
+                        <a href="#" class="pagination-link">3</a>
+                        <a href="#" class="pagination-link">4</a>
+                        <a href="#" class="pagination-link">5</a>
+                        <a href="#" class="pagination-link">&raquo;</a>
+                    </div>
 
                     <!-- List view for marketing section -->
                     <div class="marketing-list-view" style="display:none;">
@@ -527,119 +731,106 @@
                     </div>
                 </div>
             </div>
-
-            <style>
- .btn-group {
-  display: flex;
-  justify-content: flex-end;
-  width: 300px; /* adjust the width as needed */
-  margin-top: 10px;
-}
-.btn-group .card_view_btn {
-    background: #424a4d !important;
-    color: #fff;
-    width: 50px;
-}
-.btn-group .list_view_btn {
-    background: #ddd !important;
-    color: #000;
-    width: 50px;
-}
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.pagination-link {
-  color: #424a4d !important;
-  border: none;
-  background-color: #fff !important;
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  margin: 0 5px;
-  text-decoration: none;
-  border: 1px solid #ccc;
-}
-
-.pagination-link:hover {
-  background-color: #424a4d !important;
-  color: #fff !important;
-}
-
-.pagination-link.active {
-  background-color: #424a4d !important;
-  color: #fff !important;
-  font-weight: bold;
-}
-
-
-            </style>
             <!-- Marketing Section End -->
 
             <!-- News Section Start -->
             <div class="tab-pane fade news-section" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                <div class="container">
+                <div class="container news_section_container">
                     <div class="row">
                         <div class="col-md-6 mb-4">
                             <div class="card news-card">
-                                <img class="card-img-top" src="https://picsum.photos/seed/picsum/500/300" alt="Card image cap">
+                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">News Title</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dictum enim, eu aliquet magna commodo sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dictum enim, eu aliquet magna commodo sit amet.</p>
-                                    <a href="#" class="btn btn-primary">View</a>
+                                <h5 class="card-title news-card-title">News Title</h5>
+                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="card news-card">
-                                <img class="card-img-top" src="https://picsum.photos/seed/picsum/500/300" alt="Card image cap">
+                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">News Title</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dictum enim, eu aliquet magna commodo sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dictum enim, eu aliquet magna commodo sit amet.</p>
-                                    <a href="#" class="btn btn-primary">View</a>
+                                <h5 class="card-title news-card-title">News Title</h5>
+                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="card news-card">
-                                <img class="card-img-top" src="https://picsum.photos/seed/picsum/500/300" alt="Card image cap">
+                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">News Title</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dictum enim, eu aliquet magna commodo sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dictum enim, eu aliquet magna commodo sit amet.</p>
-                                    <a href="#" class="btn btn-primary">View</a>
+                                <h5 class="card-title news-card-title">News Title</h5>
+                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="card news-card">
-                                <img class="card-img-top" src="https://picsum.photos/seed/picsum/500/300" alt="Card image cap">
+                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">News Title</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dictum enim, eu aliquet magna commodo sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dictum enim, eu aliquet magna commodo sit amet.</p>
-                                    <a href="#" class="btn btn-primary">View</a>
+                                <h5 class="card-title news-card-title">News Title</h5>
+                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- Repeat the above code for more news items -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card">
+                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title news-card-title">News Title</h5>
+                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card">
+                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title news-card-title">News Title</h5>
+                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card">
+                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title news-card-title">News Title</h5>
+                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card">
+                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title news-card-title">News Title</h5>
+                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination for news section -->
+                    <div class="pagination justify-content-center">
+                        <a href="#" class="pagination-link">&laquo;</a>
+                        <a href="#" class="pagination-link active">1</a>
+                        <a href="#" class="pagination-link">2</a>
+                        <a href="#" class="pagination-link">3</a>
+                        <a href="#" class="pagination-link">4</a>
+                        <a href="#" class="pagination-link">5</a>
+                        <a href="#" class="pagination-link">&raquo;</a>
                     </div>
                 </div>
             </div>
-            <style>
-                .news-card img {
-                height: 250px; /* adjust the height as per your requirement */
-                object-fit: cover;
-                }
-                .news-cards {
-                    box-shadow: 0px 0px 5px 0px #40c3e0;
-                    border-radius: 5px;
-                    padding: 10px;
-                    margin-bottom: 10px;
-
-            }
-            </style>
             <!-- News Section End -->
             <div class="tab-pane fade" id="v-pills-company" role="tabpanel" aria-labelledby="v-pills-company-tab">
                 <p class="pt-3 text-justify">{{ $shop->shop_about }}</p>
@@ -660,17 +851,17 @@
         }
 
         $(document).ready(function() {
-    $('.view-list').click(function() {
-        console.log('list');
-      $('.view-list-section').show();
-      $('.view-card-section').hide();
-    });
-    
-    $('.view-card').click(function() {
-        console.log('card');
-      $('.view-list-section').hide();
-      $('.view-card-section').show();
-    });
-  });
+            $('.view-list').click(function() {
+                console.log('list');
+            $('.view-list-section').show();
+            $('.view-card-section').hide();
+            });
+            
+            $('.view-card').click(function() {
+                console.log('card');
+            $('.view-list-section').hide();
+            $('.view-card-section').show();
+            });
+        });
     </script>
 @endsection
