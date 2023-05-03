@@ -1,7 +1,7 @@
-<div class="main-nav d-lg-block d-none bg-light">
+<div class="main-nav d-lg-block d-none bg-white">
     <div class="container-fluid px-lg-5 border-bottom">
         <div class="row">
-            <div class="col-xl-12 col-md-12">
+            <div class="col-xl-12 col-md-12 d-flex justify-content-center">
                 <nav class="navbar navbar-expand-lg nav-dark nav-primary-hover nav-line-active">
                     {{-- <a class="navbar-brand" href="{{ route('front.index') }}"><img class="nav-logo lazy"
                             data-src="{{ asset('assets/images/' . $gs->logo) }}" alt="Image not found !"></a> --}}
@@ -74,7 +74,7 @@
                     </div>
                 </nav>
             </div>
-        
+
 
         </div>
 
@@ -82,8 +82,8 @@
 </div>
 <div class="header-sticky bg-light py-10">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xxl-2 col-xl-2 col-lg-3 col-6 order-lg-1">
+        <div class="row align-items-center d-flex justify-content-between">
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-6 order-lg-1">
                 <div class="d-flex align-items-center h-100 md-py-10">
                     <div class="nav-leftpush-overlay">
                         <nav class="navbar navbar-expand-lg nav-general nav-primary-hover">
@@ -240,7 +240,7 @@
                             data-src="{{ asset('assets/images/' . $gs->logo) }}" alt="Image not found !"></a>
                 </div>
             </div>
-            <div class="col-xxl-3 col-xl-4 col-lg-3 col-6 order-lg-3">
+            <div class="col-xxl-3 col-xl-2 col-lg-2 col-6 order-lg-3">
                 <div class="d-flex align-items-center justify-content-end h-100 md-py-10">
                     <div class="sign-in position-relative font-general my-account-dropdown">
                         <a href="my-account.html"

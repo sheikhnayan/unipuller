@@ -12,7 +12,7 @@ Route::prefix('admin')->group(function () {
   Route::get('/logout', 'Auth\Admin\LoginController@logout')->name('admin.logout');
 
   //------------ ADMIN LOGIN SECTION ENDS ------------
-  
+
   //------------ ADMIN FORGOT SECTION ------------
 
   Route::group(['middleware' => 'auth:admin'], function () {
@@ -1427,7 +1427,7 @@ Route::group(['middleware' => 'maintenance'], function () {
   Route::get('/category/shop', 'Front\FrontendController@categoryShop')->name('category.shop');
   Route::get('/shop/details/{id}', 'Front\FrontendController@shopDetails')->name('shop.details');
   Route::get('/service/details/{id}', 'Front\FrontendController@serviceDetails')->name('service.details');
-  
+
   Route::get('/', 'Front\FrontendController@index')->name('front.index');
   Route::get('/shop/list/{category?}/{country?}', 'Front\FrontendController@vendorList')->name('vendor.list');
   Route::get('/vendor/service/{id}', 'Front\FrontendController@vendorService')->name('vendor.service');

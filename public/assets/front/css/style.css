@@ -9898,6 +9898,36 @@ select.form-control {
 }
 
 /* added by huma */
+.top-header .middle-nav-bar .row {
+    background-color: rgba(128, 128, 128, 0.459);
+}
+form#searchForm {
+    border: 1px solid !important;
+}
+nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.main-features-section .card {
+    height: auto; /* Set a fixed height for the card */
+    overflow: hidden; /* Hide any content that overflows the card */
+}
+/* .main-features-section .card .card-img {
+    height: 203px;
+} */
+/* .main-features-section .card-item {
+    height: 111px;
+} */
+/* .main-features-section .card .card-img-sell-product {
+    height: 222px;
+} */
+.card img {
+    width: 100%; /* Make the image width fill the card */
+    height: auto; /* Let the image height scale proportionally */
+    object-fit: cover; /* Crop the image to fill the card without distorting it */
+}
+
 .main-features-section .card-text {
     font-size: 12px;
     line-height: 18px;
@@ -9974,10 +10004,107 @@ select.form-control {
     color: white;
     transform: rotateY(180deg);
 }
-.meetup-section  .list-group {
+.meetup-section .list-group {
     width: inherit;
 }
-.meetup-section  li.list-group-item {
+.meetup-section li.list-group-item {
     background-color: #ffffff73;
     border: 0px;
+}
+.footer-section p,
+.footer-section a,
+.footer-section span {
+    color: #808080e8;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer-section .copy-rights span {
+    font-size: 10px;
+}
+
+/* responsiveness  by huma*/
+@media (max-width: 2560px) {
+
+    .card-img-sell-product {
+        height: 320px;
+    }
+}
+@media (max-width: 1440px) {
+    .main-features-section .card-item {
+        height: 140px;
+    }
+    .main-features-section .card .card-img-sell-product {
+        height: 280px;
+    }
+}
+@media (max-width: 1024px) {
+    .footer-section img {
+        width: 60px;
+    }
+    .footer-section .advertise-number {
+        display: block;
+        text-align: center;
+    }
+    .main-features-section .card-item {
+        height: 110px;
+    }
+    .main-features-section .card .card-img-sell-product {
+        height: 220px;
+    }
+}
+@media (max-width: 768px) {
+    .footer-section img {
+        width: 60px;
+    }
+    .footer-section .advertise-number {
+        display: block;
+        text-align: center;
+    }
+    .main-features-section .card-item {
+        height: 161px;
+    }
+    .main-features-section .card .card-img-sell-product {
+        height: 322px;
+    }
+}
+@media (max-width: 425px) {
+    .footer-section .d-flex.justify-content-sm-center {
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .footer-section p.mb-0,
+    .footer-section h6 {
+        text-align: center;
+    }
+    .footer-section .social-icons {
+        justify-content: center !important;
+    }
+    .footer-section .copy-rights {
+        text-align: center;
+    }
+
+    .main-features-section .card-item {
+        height: 162px;
+    }
+    .popular-categories-section li.list-group-item {
+        border: 0px;
+        text-align: center;
+    }
+    .main-features-section .card .card-img-sell-product {
+        height: 311px;
+    }
+}
+@media (max-width: 375px) {
+    .main-features-section .card .card-img-sell-product {
+        height: 270px;
+    }
+    .main-features-section .card-item {
+        height: 140px;
+    }
+}
+@media (max-width: 320px) {
+    .main-features-section .card .card-img-sell-product {
+        height: 235px;
+    }
 }
