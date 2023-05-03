@@ -413,8 +413,18 @@ class ProductController extends VendorBaseController
                     return response()->json(array('errors' => ['Image format not supported']));
                 }
                 $name = \PriceHelper::ImageCreateName($file);
-                $file->move('assets/files',$name);
+                // move file to public/assets/files folder
+                $file->move(base_path('public/assets/files'), $name);
+
+
+
+                // $file->move('assets/files',$name);
+
+
+
                 $input['file'] = $name;
+
+
             }
 
             $image = $request->photo;
@@ -422,7 +432,14 @@ class ProductController extends VendorBaseController
             list(, $image)      = explode(',', $image);
             $image = base64_decode($image);
             $image_name = time().Str::random(8).'.png';
-            $path = 'assets/images/products/'.$image_name;
+            $path = base_path('public/assets/images/products/'.$image_name);
+
+
+            
+            // $path = 'assets/images/products/'.$image_name;
+            
+            
+            
             file_put_contents($path, $image);
             $input['photo'] = $image_name;
 
@@ -733,7 +750,6 @@ class ProductController extends VendorBaseController
         $data = Product::findOrFail($id);
         $sign = $this->curr;
 
-
         if($data->type == 'Digital')
             return view('vendor.product.edit.digital',compact('cats','data','sign'));
         elseif($data->type == 'License')
@@ -762,7 +778,6 @@ class ProductController extends VendorBaseController
     //*** POST Request
     public function update(Request $request, $id)
     {
-
         //--- Validation Section
         $rules = [
                'file'       => 'mimes:zip'

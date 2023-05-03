@@ -205,7 +205,7 @@
     .marketing-card-image img {
         display: block;
         width: 100%;
-        height: auto;
+        height: 333px;
         transition: transform 0.3s ease;
     }
 
@@ -412,7 +412,6 @@
             </ul>
         </div>
         <div class="tab-content w-100" id="v-pills-tabContent">
-        <!-- Marketing Section Start -->    
             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                 <ul role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4" class="nav nav-tabs mt-3 mb-2 product-service-tab" id="nav-tab-with-nested-tabs">
                     <li class="nav-item product_service_tabs" role="presentation">
@@ -589,7 +588,7 @@
 
             
             <div class="tab-pane fade marketing-section" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-
+            <!-- Marketing Section Start -->    
                 <div class="container">
                     <!-- Buttons for switching between card and list view -->
                     <div class="btn-group mb-3 ml-auto" role="group" aria-label="View Switcher">
@@ -599,102 +598,32 @@
 
                     <!-- Card view for marketing section -->
                     <div class="row marketing-card-view">
+                        @if($shop->products && $shop->products->count() > 0)
+                        @foreach($shop->products as $product)
                         <div class="col-md-6 mb-4">
                             <div class="marketing-card">
                                 <div class="marketing-card-image">
-                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
+                                    <img src="{{ asset('assets/images/products/'.$product->photo) }}" alt="...">
+                                    <!-- <img src="https://picsum.photos/id/1015/400/250" alt="..."> -->
                                 </div>
                                 <div class="marketing-card-body">
-                                    <h5 class="marketing-card-title">Product Name 2</h5>
-                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
+                                    <h5 class="marketing-card-title">{{ $product->showName() }}</h5>
+                                    <p class="marketing-card-text">{{ $product->details }}</p>
                                     <a href="#" class="marketing-card-learn-more">Learn More</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="marketing-card">
-                                <div class="marketing-card-image">
-                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
-                                </div>
-                                <div class="marketing-card-body">
-                                    <h5 class="marketing-card-title">Product Name 2</h5>
-                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
+                        @endforeach
+                        @else
+                        <div class="col-lg-9 mb-4">
+                            <div class="card">
+                            <div class="card-body">
+                                <div class="page-center">
+                                    <h4 class="text-center">{{ __('No Product Found.') }}</h4>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="marketing-card">
-                                <div class="marketing-card-image">
-                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
-                                </div>
-                                <div class="marketing-card-body">
-                                    <h5 class="marketing-card-title">Product Name 2</h5>
-                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="marketing-card">
-                                <div class="marketing-card-image">
-                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
-                                </div>
-                                <div class="marketing-card-body">
-                                    <h5 class="marketing-card-title">Product Name 2</h5>
-                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="marketing-card">
-                                <div class="marketing-card-image">
-                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
-                                </div>
-                                <div class="marketing-card-body">
-                                    <h5 class="marketing-card-title">Product Name 2</h5>
-                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="marketing-card">
-                                <div class="marketing-card-image">
-                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
-                                </div>
-                                <div class="marketing-card-body">
-                                    <h5 class="marketing-card-title">Product Name 2</h5>
-                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="marketing-card">
-                                <div class="marketing-card-image">
-                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
-                                </div>
-                                <div class="marketing-card-body">
-                                    <h5 class="marketing-card-title">Product Name 2</h5>
-                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="marketing-card">
-                                <div class="marketing-card-image">
-                                    <img src="https://picsum.photos/id/1015/400/250" alt="...">
-                                </div>
-                                <div class="marketing-card-body">
-                                    <h5 class="marketing-card-title">Product Name 2</h5>
-                                    <p class="marketing-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
+                        @endif
                     </div>
 
                     <!-- Pagination for marketing section -->
