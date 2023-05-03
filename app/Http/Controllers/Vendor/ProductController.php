@@ -699,9 +699,10 @@ class ProductController extends VendorBaseController
                     $prod->slug = Str::slug($data->name,'-').'-'.strtolower($data->sku);
                 }
             // Set Thumbnail
-                $img = Image::make(public_path().'/assets/images/products/'.$prod->photo)->resize(285, 285);
+            // dd(public_path().'/public/assets/images/products/'.$prod->photo);
+                $img = Image::make(asset('/assets/images/products/'.$prod->photo))->resize(285, 285);
                 $thumbnail = time().Str::random(8).'.jpg';
-                $img->save(public_path().'/assets/images/thumbnails/'.$thumbnail);
+                $img->save( base_path('public/assets/images/thumbnails/'.$thumbnail));
                 $prod->thumbnail  = $thumbnail;
                 $prod->update();
 
