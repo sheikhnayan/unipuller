@@ -16,10 +16,14 @@
     }
 </style>
 
-@include('frontend.homePage.feature')
+
 {{-- @include('frontend.homePage.trendingCategories') --}}
+
+@include('frontend.homePage.feature')
 @include('frontend.homePage.popularCategories')
 @include('frontend.homePage.meetups')
+@include('frontend.homePage.recuitments')
+@include('frontend.homePage.realEstate')
 {{-- @include('frontend.homePage.partner') --}}
 
 

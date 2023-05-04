@@ -1,6 +1,7 @@
 @extends('layouts.front')
 @section('css')
     <link rel="stylesheet" href="{{ asset('assets/front/css/category/classic.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/front/css/main.css') }}">
 @endsection
 @section('content')
 

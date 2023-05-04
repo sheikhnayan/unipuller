@@ -1,0 +1,337 @@
+/* added by huma */
+.top-header .middle-nav-bar .row {
+    background-color: rgba(128, 128, 128, 0.459);
+}
+form#searchForm {
+    border: 1px solid !important;
+}
+nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.main-features-section .card {
+    transition: box-shadow 0.3s;
+
+    height: auto; /* Set a fixed height for the card */
+    overflow: hidden; /* Hide any content that overflows the card */
+    /* transition: box-shadow .3s; */
+}
+.main-features-section .card:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+/* .main-features-section .card .card-img {
+    height: 203px;
+} */
+/* .main-features-section .card-item {
+    height: 111px;
+} */
+.main-features-section .card .card-img-sell-product {
+    text-align: center;
+}
+.card img {
+    width: fit-content !important;
+    height: inherit;
+    text-align: center;
+}
+
+.main-features-section .card-text {
+    font-size: 12px;
+    line-height: 18px;
+}
+.main-features-section .buy-sell p.card-text {
+    min-height: 45px;
+    max-height: 45px;
+}
+
+.main-features-section a.card-link {
+    font-size: 13px;
+}
+
+.trending-categories-section {
+    background-color: #fae95138;
+}
+.trending-categories-section p {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.trending-categories-section svg.bi {
+    width: 100px;
+    height: 100px;
+}
+
+.popular-categories-section li.list-group-item {
+    border: 0px;
+    text-align: left;
+    padding: 3px;
+    font-size: 13px;
+}
+.popular-categories-section li.list-group-item:hover {
+    text-decoration: underline;
+}
+
+.meetup-section .flip-card {
+    background-color: transparent;
+    /* width: 300px; */
+    height: 300px;
+    perspective: 1000px;
+}
+
+.meetup-section .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.meetup-section .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.meetup-section .flip-card-front,
+.meetup-section .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.meetup-section .flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.meetup-section .flip-card-back {
+    background-color: #222a34;
+    color: white;
+    transform: rotateY(180deg);
+}
+.meetup-section .list-group {
+    width: inherit;
+}
+.meetup-section li.list-group-item {
+    background-color: #ffffff73;
+    border: 0px;
+}
+.meetup-section .list-group-item span {
+    vertical-align: middle;
+}
+.footer-section p,
+.footer-section a,
+.footer-section span {
+    color: #808080e8;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer-section .copy-rights span {
+    font-size: 10px;
+}
+
+.container-wrapper-content {
+    background-color: #232323;
+}
+.bg-circle-2 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    background-color: #e7e7e7;
+    border-radius: 50%;
+    opacity: 0.05;
+    left: -90px;
+    top: -145px;
+    z-index: 0;
+}
+.bg-circle-1 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    background-color: #e7e7e7;
+    border-radius: 50%;
+    opacity: 0.05;
+    left: -140px;
+    top: -200px;
+    z-index: 0;
+}
+.bg-line-1 {
+    width: 475px;
+    height: 475px;
+    position: absolute;
+    border: 1px solid #e7e7e7;
+    border-radius: 50%;
+    opacity: 0.1;
+    right: -290px;
+    bottom: -237px;
+    z-index: 0;
+}
+.bg-line-2 {
+    width: 475px;
+    height: 475px;
+    position: absolute;
+    border: 1px solid #e7e7e7;
+    border-radius: 50%;
+    opacity: 0.1;
+    right: -230px;
+    bottom: -185px;
+    z-index: 0;
+}
+
+.recruitment-section .featured-jobs .bg-circle-2 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    background-color: #e7e7e7;
+    border-radius: 50%;
+    opacity: 0.5;
+    left: -90px;
+    top: -145px;
+    z-index: 0;
+}
+.recruitment-section .featured-jobs .bg-circle-1 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    background-color: #b3b3b3;
+
+    border-radius: 50%;
+    opacity: 0.5;
+    left: -140px;
+    top: -200px;
+    z-index: 0;
+}
+.recruitment-section .content-recuitment,
+.recruitment-section .featured-jobs {
+    overflow: hidden;
+    /* margin-top: 70px; */
+}
+
+.recruitment-section
+    .container-fluid.position-relative.content-recuitment
+    .container,
+.recruitment-section .featured-jobs {
+    z-index: 1;
+}
+
+.recruitment-section .featured-jobs .col-lg-3.col-md-3.col-sm-6 {
+    z-index: 1;
+}
+.recruitment-section .featured-jobs .card {
+    transition: all 0.3s ease;
+}
+.recruitment-section .card:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+.estate-section .step {
+    width: 65px;
+    padding: 20px;
+    border-radius: 55px;
+}
+
+.estate-section .contact-action-area {
+    padding: 70px 100px !important;
+    margin: 35px 0px 0px 0px !important;
+}
+/* responsiveness  by huma*/
+@media (max-width: 2560px) {
+    .card-img-sell-product {
+        height: 320px;
+    }
+    .main-features-section .card-img {
+        height: 240px;
+    }
+    .main-features-section .card-item {
+        height: 106px;
+    }
+}
+@media (max-width: 1440px) {
+    .main-features-section .card-item {
+        height: 87px;
+    }
+    .main-features-section .card .card-img-sell-product {
+        height: 280px;
+    }
+    .main-features-section .card-img {
+        height: 202px;
+    }
+}
+@media (max-width: 1024px) {
+    .footer-section img {
+        width: 60px;
+    }
+    .footer-section .advertise-number {
+        display: block;
+        text-align: center;
+    }
+    .main-features-section .card-item {
+        height: 57px;
+    }
+    .main-features-section .card .card-img-sell-product {
+        height: 220px;
+    }
+    .main-features-section .card-img {
+        height: 142px;
+    }
+}
+@media (max-width: 768px) {
+    .footer-section img {
+        width: 60px;
+    }
+    .footer-section .advertise-number {
+        display: block;
+        text-align: center;
+    }
+    .main-features-section .card-item {
+        height: 108px;
+    }
+    .main-features-section .card .card-img-sell-product {
+        height: 322px;
+    }
+    .main-features-section .card-img {
+        height: 245px;
+    }
+}
+@media (max-width: 425px) {
+    .footer-section .d-flex.justify-content-sm-center {
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .footer-section p.mb-0,
+    .footer-section h6 {
+        text-align: center;
+    }
+    .footer-section .social-icons {
+        justify-content: center !important;
+    }
+    .footer-section .copy-rights {
+        text-align: center;
+    }
+
+    .main-features-section .card-item {
+        height: 175px;
+    }
+    .popular-categories-section li.list-group-item {
+        border: 0px;
+        text-align: center;
+    }
+    .main-features-section .card .card-img-sell-product {
+        height: 311px;
+    }
+}
+@media (max-width: 375px) {
+    .main-features-section .card .card-img-sell-product {
+        height: 270px;
+    }
+    .main-features-section .card-item {
+        height: 140px;
+    }
+}
+@media (max-width: 320px) {
+    .main-features-section .card .card-img-sell-product {
+        height: 235px;
+    }
+}

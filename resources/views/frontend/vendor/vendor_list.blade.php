@@ -58,7 +58,7 @@
         </div>
       </div>
 
-      
+
       <div class="col-xl-9">
         <div class="product-search-one">
           <form id="searchForm" class="search-form form-inline search-pill-shape" action="{{ route('vendor.list') }}" method="GET">
@@ -104,7 +104,8 @@
               <div class="product type-product">
                 <div class="product-wrapper">
                   <div class="product-image mt-3">
-                    <a href="{{ route('vendor.shop.service', $vendor->id) }}" class="woocommerce-LoopProduct-link"><img class="lazy img-fluid rounded" data-src="{{ $vendor->shop_image ? asset('assets/images/categories/'.$vendor->shop_image):asset('assets/common_img/vendor_profile.jpeg') }}" alt="Product Image"></a>
+                    <a href="{{ route('vendor.shop.service', $vendor->id) }}" class="woocommerce-LoopProduct-link">
+                        <img class="lazy img-fluid rounded" data-src="{{ $vendor->shop_image ? asset('assets/images/categories/'.$vendor->shop_image):asset('assets/common_img/vendor_profile.jpeg') }}" alt="Product Image"></a>
 
                     <div class="hover-area">
 
@@ -113,14 +114,14 @@
                   <div class="product-info">
                     <div @if(strlen($vendor->shop_name) > 18) class="title_height" @else class="title_height2" @endif>
                       <h3 class="product-title large_screen"><a href="{{ route('vendor.shop.service', $vendor->id) }}">
-                        @if (strlen($vendor->shop_name) > 40)  
+                        @if (strlen($vendor->shop_name) > 40)
                           {{ substr($vendor->shop_name, 0, 40) . '...' }}
                         @else
                           {{ $vendor->shop_name }}
                         @endif
                       </a></h3>
                       <h3 class="product-title small_screen" style="display: none"><a href="{{ route('vendor.shop.service', $vendor->id) }}">
-                        @if (strlen($vendor->shop_name) > 30)  
+                        @if (strlen($vendor->shop_name) > 30)
                           {{ substr($vendor->shop_name, 0, 30) . '...' }}
                         @else
                           {{ $vendor->shop_name }}
@@ -128,7 +129,7 @@
                       </a></h3>
                     </div>
                     <p class="category_text">{{ $vendor->subcategory->name ?? "" }}</p>
-                    
+
                     <p class="store_line_height mb-0">
                         Total {{$vendor->services->count()}} Services & {{$vendor->products->count()}} Products
                     </p>
@@ -141,8 +142,8 @@
                     </div>
                     <p class="about_line mt-4">{!! substr($vendor->shop_about, 0, 127) !!}</p>
                   </div>
-                  
-                  
+
+
                 </div>
               </div>
             </div>
@@ -200,7 +201,7 @@
         </div>
 
       </div>
-     
+
     </div>
   </div>
 </div>
