@@ -589,7 +589,7 @@
             
             <div class="tab-pane fade marketing-section" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
             <!-- Marketing Section Start -->    
-                <div class="container">
+                <div class="container" id="marketing-container">
                     <!-- Buttons for switching between card and list view -->
                     <div class="btn-group mb-3 ml-auto" role="group" aria-label="View Switcher">
                         <button type="button" class="btn card_view_btn" data-view="card">Card View</button>
@@ -597,37 +597,51 @@
                     </div>
 
                     <!-- Card view for marketing section -->
-                    <div class="row marketing-card-view">
-                        @if($shop->products && $shop->products->count() > 0)
-                        @foreach($shop->products as $product)
-                        <div class="col-md-6 mb-4">
-                            <div class="marketing-card">
-                                <div class="marketing-card-image">
-                                    <img src="{{ asset('assets/images/products/'.$product->photo) }}" alt="...">
-                                    <!-- <img src="https://picsum.photos/id/1015/400/250" alt="..."> -->
-                                </div>
-                                <div class="marketing-card-body">
-                                    <h5 class="marketing-card-title">{{ $product->showName() }}</h5>
-                                    <p class="marketing-card-text">{{ $product->details }}</p>
-                                    <a href="#" class="marketing-card-learn-more">Learn More</a>
+                    <div class="row marketing-card-view" id="marketing-card-view">
+                        @if($shop->marketingProducts && $shop->marketingProducts->count() > 0)
+                            @foreach($shop->marketingProducts as $product)
+                            <div class="col-md-6 mb-4">
+                                <div class="marketing-card">
+                                    <div class="marketing-card-image">
+                                        <img src="{{ asset('assets/images/products/'.$product->photo) }}" alt="...">
+                                    </div>
+                                    <div class="marketing-card-body">
+                                        <h5 class="marketing-card-title">{{ $product->showName() }}</h5>
+                                        <p class="marketing-card-text">
+                                            @if(strlen($product->details) > 200)
+                                            {!! substr($product->details, 0, 200) !!}...
+                                            @else
+                                            {!! $product->details !!}
+                                            @endif
+                                        </p>
+                                        <a href="{{ route('front.product', $product->slug) }}" class="marketing-card-learn-more">Learn More</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        @endforeach
+                            @endforeach
                         @else
                         <div class="col-lg-9 mb-4">
                             <div class="card">
-                            <div class="card-body">
-                                <div class="page-center">
-                                    <h4 class="text-center">{{ __('No Product Found.') }}</h4>
+                                <div class="card-body">
+                                    <div class="page-center">
+                                        <h4 class="text-center">{{ __('No Product Found.') }}</h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         @endif
                     </div>
 
-                    <!-- Pagination for marketing section -->
                     <div class="pagination justify-content-center">
+                        @if($shop->products->count() > 8)
+                            @for($i = 1; $i <= ceil($shop->products->count() / 8); $i++)
+                                <a class="pagination-link marketing-pagination-link @if($i == 1) active @endif" id="marketing-pagination-link-{{ $i }}" onclick="loadMarketingProducts({{ $i }})" href="javascript:void(0)">{{ $i }}</a>
+                            @endfor
+                        @endif
+                    </div>
+
+                    <!-- Pagination for marketing section -->
+                    <!-- <div class="pagination justify-content-center">
                         <a href="#" class="pagination-link">&laquo;</a>
                         <a href="#" class="pagination-link active">1</a>
                         <a href="#" class="pagination-link">2</a>
@@ -635,7 +649,7 @@
                         <a href="#" class="pagination-link">4</a>
                         <a href="#" class="pagination-link">5</a>
                         <a href="#" class="pagination-link">&raquo;</a>
-                    </div>
+                    </div> -->
 
                     <!-- List view for marketing section -->
                     <div class="marketing-list-view" style="display:none;">
@@ -665,98 +679,46 @@
             <!-- News Section Start -->
             <div class="tab-pane fade news-section" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                 <div class="container news_section_container">
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="card news-card">
-                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title news-card-title">News Title</h5>
-                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
+                    <div class="row news-card-view" id="news-card-view">
+                        @if($shop->marketingProducts && $shop->marketingProducts->count() > 0)
+                            @foreach($shop->marketingProducts as $product)
+                            <div class="col-md-6 mb-4">
+                                <div class="card news-card">
+                                    <img src="{{ asset('assets/images/products/'.$product->photo) }}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title news-card-title">{{ $product->showName() }}</h5>
+                                    <p class="card-text news-card-text">
+                                        @if(strlen($product->details) > 200)
+                                        {!! substr($product->details, 0, 200) !!}...
+                                        @else
+                                        {!! $product->details !!}
+                                        @endif
+                                    </p>
+                                    <a href="{{ route('front.product', $product->slug) }}" class="btn btn-primary news-card-btn">Learn More</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card news-card">
-                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title news-card-title">News Title</h5>
-                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
+                            @endforeach
+                        @else
+                            <div class="col-lg-9 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="page-center">
+                                            <h4 class="text-center">{{ __('No News Found.') }}</h4>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card news-card">
-                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title news-card-title">News Title</h5>
-                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card news-card">
-                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title news-card-title">News Title</h5>
-                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card news-card">
-                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title news-card-title">News Title</h5>
-                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card news-card">
-                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title news-card-title">News Title</h5>
-                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card news-card">
-                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title news-card-title">News Title</h5>
-                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card news-card">
-                                <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title news-card-title">News Title</h5>
-                                <p class="card-text news-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada molestie commodo. In hac habitasse platea dictumst.</p>
-                                <a href="#" class="btn btn-primary news-card-btn">Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                        @endif
                     </div>
 
                     <!-- Pagination for news section -->
                     <div class="pagination justify-content-center">
-                        <a href="#" class="pagination-link">&laquo;</a>
-                        <a href="#" class="pagination-link active">1</a>
-                        <a href="#" class="pagination-link">2</a>
-                        <a href="#" class="pagination-link">3</a>
-                        <a href="#" class="pagination-link">4</a>
-                        <a href="#" class="pagination-link">5</a>
-                        <a href="#" class="pagination-link">&raquo;</a>
+                        @if($shop->products->count() > 8)
+                            @for($i = 1; $i <= ceil($shop->products->count() / 8); $i++)
+                                <a class="pagination-link news-pagination-link @if($i == 1) active @endif" id="news-pagination-link-{{ $i }}" onclick="loadNewsProducts({{ $i }})" href="javascript:void(0)">{{ $i }}</a>
+                            @endfor
+                        @endif
                     </div>
                 </div>
             </div>
@@ -777,6 +739,47 @@
         }
         function seeShopContact(){
             $(".shop_contact").css("display", "block");
+        }
+        function loadMarketingProducts(page){
+            const links = document.querySelectorAll('.marketing-pagination-link');
+            [].forEach.call(links, function(link) {
+                link.classList.remove('active');
+            });
+            const currentPageLink = document.querySelector('#marketing-pagination-link-' + page);
+            currentPageLink.classList.add('active');
+
+            $.ajax({
+                url: "{{ route('front.loadmarketing.products') }}",
+                type: "GET",
+                data: {
+                    page: page,
+                    shop_id: "{{ $shop->id }}"
+                },
+                success: function(response){
+                    $("#marketing-card-view").html(response);
+                }
+            });
+        }
+
+        function loadNewsProducts(page){
+            const links = document.querySelectorAll('.news-pagination-link');
+            [].forEach.call(links, function(link) {
+                link.classList.remove('active');
+            });
+            const currentPageLink = document.querySelector('#news-pagination-link-' + page);
+            currentPageLink.classList.add('active');
+
+            $.ajax({
+                url: "{{ route('front.loadnews.products') }}",
+                type: "GET",
+                data: {
+                    page: page,
+                    shop_id: "{{ $shop->id }}"
+                },
+                success: function(response){
+                    $("#news-card-view").html(response);
+                }
+            });
         }
 
         $(document).ready(function() {
