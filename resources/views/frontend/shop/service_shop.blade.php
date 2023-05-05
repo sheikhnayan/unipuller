@@ -113,13 +113,16 @@
         font-weight: 500;
         font-size: 18px;
     }
+    .social-links {
+        margin-top: 10px;
+    }
     .social-links li a {
         width: 36px;
         height: 36px;
         line-height: 36px;
         text-align: center;
         border-radius: 50%;
-        background: #a439ee;
+        background: #343B45;
         display: block;
         color: #fff;
     }
