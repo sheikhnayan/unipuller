@@ -300,6 +300,21 @@
         background-color: #0056b3;
         color: #fff;
     }
+
+    @media only screen and (max-width: 990px) {
+        .custom-class{
+            background-color: #5a6164;
+            background-image: linear-gradient(to bottom right, #424a4d 50%, transparent 50%);
+            color: #fff;
+        }
+        .custom-left-img{
+            margin-left:10px !important;
+            border-radius: 20px !important;
+            height: 208px!important;
+            width: 180px!important;
+        }
+
+    }
     /* News Section Style End */
 </style>
 
@@ -337,7 +352,7 @@
                 @endif -->
             </div>
         </div>
-        <div class="col-lg-5 d-flex user-custom">
+        <div class="col-lg-5 d-flex user-custom custom-class">
             <img class="lazy custom-img w-100 img-fluid rounded" data-src="{{ $shop->shop_image ? asset('assets/images/categories/' . $shop->shop_image) : asset('assets/common_img/vendor_profile.jpeg') }}" alt="">
             <div class="parter_company_details">
                 <h5 class="mb-2">{{ $shop->shop_name }}</h5>
