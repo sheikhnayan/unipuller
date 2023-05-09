@@ -53,6 +53,14 @@
                 <p class="mb-0 p-3 bg-warning rounded-2">Advertise here: <span class="advertise-number"> 0000-000-000</span></p>
             </div>
         </div>
+        <div class="row  py-2">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12 justify-content-md-start justify-content-sm-center">
+                <h6 class="mb-0">Latest Posts</h6>
+                <p class="mb-0 ">
+                </p>
+            </div>
+            
+        </div>
 
         <div class="row  py-2 d-flex justify-content-between">
             <div class="col-md-7 col-sm-12 copy-rights">

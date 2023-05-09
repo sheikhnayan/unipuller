@@ -1,4 +1,30 @@
 /* added by huma */
+
+p {
+    font-size: 15px;
+    line-height: 25px;
+}
+button.btn.btn-dark {
+    border: 1px px solid #424a4d !important;
+}
+.accordion-button {
+    border-bottom: 2px solid rgb(172, 172, 172) !important;
+    border: 0px;
+    padding: 15px;
+}
+.accordion-collapse {
+    border: 0px;
+    border-width: 0 1px;
+    background-color: white;
+}
+.accordion-button:not(.collapsed) {
+    color: #444444;
+    background-color: rgb(194, 194, 194) !important;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+
 .top-header .middle-nav-bar .row {
     background-color: rgba(128, 128, 128, 0.459);
 }
@@ -11,15 +37,61 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
 }
 
 .main-features-section .card {
-    transition: box-shadow 0.3s;
-
     height: auto; /* Set a fixed height for the card */
     overflow: hidden; /* Hide any content that overflows the card */
     /* transition: box-shadow .3s; */
-}
-.main-features-section .card:hover {
     box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
+
+/* cards */
+
+.main-features-section .card,
+.ubs-section .card,
+.recruitment-section .card {
+    border-radius: 10px;
+    filter: drop-shadow(0 5px 10px 0 #ffffff);
+    background-color: #ffffff;
+    padding: 20px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in;
+}
+
+.main-features-section .card::before,
+.ubs-section .card::before,
+.recruitment-section .card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -15px;
+    right: -15px;
+    background: #f3f3f3;
+    height: 220px;
+    width: 25px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+}
+
+.main-features-section .card:hover::before,
+.ubs-section .card:hover::before,
+.recruitment-section .card:hover::before {
+    transition-delay: 0.2s;
+
+    transform: scale(40);
+}
+
+/* .card:hover{
+      color: #ffffff !important
+      ;
+
+  } */
+
+/* .main-features-section .card:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+} */
 /* .main-features-section .card .card-img {
     height: 203px;
 } */
@@ -136,33 +208,12 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
 .container-wrapper-content {
     background-color: #232323;
 }
-.bg-circle-2 {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    background-color: #e7e7e7;
-    border-radius: 50%;
-    opacity: 0.05;
-    left: -90px;
-    top: -145px;
-    z-index: 0;
-}
-.bg-circle-1 {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    background-color: #e7e7e7;
-    border-radius: 50%;
-    opacity: 0.05;
-    left: -140px;
-    top: -200px;
-    z-index: 0;
-}
+
 .bg-line-1 {
     width: 475px;
     height: 475px;
     position: absolute;
-    border: 1px solid #e7e7e7;
+    border: 1px solid #878585;
     border-radius: 50%;
     opacity: 0.1;
     right: -290px;
@@ -173,7 +224,7 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
     width: 475px;
     height: 475px;
     position: absolute;
-    border: 1px solid #e7e7e7;
+    border: 1px solid #878585;
     border-radius: 50%;
     opacity: 0.1;
     right: -230px;
@@ -181,7 +232,8 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
     z-index: 0;
 }
 
-.recruitment-section .featured-jobs .bg-circle-2 {
+.recruitment-section .featured-jobs .bg-circle-2,
+.recruitment-section .content-recuitment .bg-circle-2 {
     width: 500px;
     height: 500px;
     position: absolute;
@@ -192,7 +244,8 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
     top: -145px;
     z-index: 0;
 }
-.recruitment-section .featured-jobs .bg-circle-1 {
+.recruitment-section .featured-jobs .bg-circle-1,
+.recruitment-section .content-recuitment .bg-circle-1 {
     width: 500px;
     height: 500px;
     position: absolute;
@@ -204,29 +257,41 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
     top: -200px;
     z-index: 0;
 }
+
 .recruitment-section .content-recuitment,
 .recruitment-section .featured-jobs {
     overflow: hidden;
     /* margin-top: 70px; */
 }
-
+.recruitment-section h2.py-4.text-center.text-secondary,
+.recruitment-section h4.py-4.text-center.text-secondary,
 .recruitment-section
     .container-fluid.position-relative.content-recuitment
     .container,
-.recruitment-section .featured-jobs {
+.recruitment-section .featured-jobs,
+.content-recuitment .col-lg-6.col-md-8.col-sm-12,
+.recruitment-section h4.py-4.text-secondary {
     z-index: 1;
 }
 
-.recruitment-section .featured-jobs .col-lg-3.col-md-3.col-sm-6 {
+.recruitment-section .featured-jobs .col-lg-3.col-md-3.col-sm-6,
+.content-recuitment .col-lg-6.col-md-8.col-sm-12 {
     z-index: 1;
 }
 .recruitment-section .featured-jobs .card {
     transition: all 0.3s ease;
 }
+.recruitment-section p.card-text {
+    height: 175px;
+}
+.recruitment-section h6.card-subtitle.mb-2.text-muted {
+    height: 40px;
+}
 .recruitment-section .card:hover {
     box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
-.estate-section .step {
+.estate-section .step,
+.ubs-section .step {
     width: 65px;
     padding: 20px;
     border-radius: 55px;
@@ -234,8 +299,136 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
 
 .estate-section .contact-action-area {
     padding: 70px 100px !important;
-    margin: 35px 0px 0px 0px !important;
+    /* margin: 35px 0px 0px 0px !important; */
+    background-color: #d7d7d7;
 }
+.estate-section #accordianImg,
+.ubs-section #accordianUbsImg,
+.digital-section #ms,
+.digital-section #dc,
+.digital-section #wd,
+.digital-section #smm,
+.digital-section #oa,
+.digital-section #seo,
+.digital-section #cm
+ {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+/* card */
+.estate-section .card,
+.digital-section .card {
+    position: relative;
+    height: 330px;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    float: left;
+    margin: 15px;
+}
+.estate-section .card__content,
+.digital-section .card__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: #000; */
+    background-color: #ffffffba;
+    top: calc(100% - 80px);
+    left: 0;
+    opacity: 1;
+    transition: all 0.75s ease-in-out;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+.estate-section .card__content-inner,
+.digital-section .card__content-inner {
+    position: relative;
+    display: block;
+    height: 80px;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    justify-content: center;
+    transition: all 0.75s ease-in-out;
+}
+.estate-section .card__content:after,
+.digital-section .card__content:after {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border-color: #878787;
+    border-style: solid;
+    border-width: 2px 0 0 2px;
+    content: "";
+}
+.estate-section .card__title,
+.digital-section .card__title {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #3e3e3e;
+    letter-spacing: 1px;
+}
+.estate-section .card__description,
+.digital-section .card__description {
+    color: #3e3e3e;
+}
+.estate-section .card:after,
+.digital-section .card:after {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-color: #3e3e3e;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    content: "";
+}
+.estate-section .card:hover,
+.digital-section .card:hover {
+    cursor: pointer;
+}
+.estate-section .card:hover .card__content,
+.digital-section .card:hover .card__content {
+    top: 0;
+    /* background: #000; */
+    transition: all 1s ease-in-out;
+    background-color: #ffffffba;
+}
+.estate-section .card:hover .card__content-inner,
+.digital-section .card:hover .card__content-inner {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease-in-out;
+}
+.estate-section .card.a50 .card__content,
+.digital-section .card.a50 .card__content {
+    top: 50%;
+}
+.estate-section .card.a50 .card__content-inner,
+.digital-section .card.a50 .card__content-inner {
+    height: 50%;
+}
+.estate-section .card.a50:hover .card__content,
+.digital-section .card.a50:hover .card__content {
+    top: 0;
+}
+.estate-section .card.a50:hover .card__content-inner,
+.digital-section .card.a50:hover .card__content-inner {
+    height: 100%;
+}
+
+.ubs-section .our-service h6.text-secondary {
+    min-height: 45px;
+}
+
 /* responsiveness  by huma*/
 @media (max-width: 2560px) {
     .card-img-sell-product {
@@ -320,6 +513,16 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
     }
     .main-features-section .card .card-img-sell-product {
         height: 311px;
+    }
+
+    .estate-section .contact-action-area {
+        padding: 35px 30px !important;
+        /* margin: 35px 0px 0px 0px !important; */
+        background-color: #d7d7d7;
+    }
+    .estate-section .contact-action-area .d-flex.justify-content-between {
+        display: block !important;
+        text-align: center;
     }
 }
 @media (max-width: 375px) {

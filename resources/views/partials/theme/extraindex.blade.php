@@ -20,72 +20,8 @@
 {{-- @include('frontend.homePage.trendingCategories') --}}
 
 @include('frontend.homePage.feature')
-@include('frontend.homePage.popularCategories')
-@include('frontend.homePage.meetups')
-@include('frontend.homePage.recuitments')
-@include('frontend.homePage.realEstate')
-{{-- @include('frontend.homePage.partner') --}}
 
-
-<!--==================== Service Section Start ====================-->
-@if ($service_categories->count() > 1)
-    <div class="full-row bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-5">
-                    <span
-                        class="text-secondary pb-2 d-table tagline mx-auto text-uppercase text-center">{{ __('Services') }}</span>
-                    <h2 class="main-title mb-4 text-center text-secondary">{{ __('We Providing Helpful Services') }}
-                    </h2>
-                </div>
-            </div>
-            <div class="row g-3 justify-content-center">
-                @foreach ($service_categories as $data)
-                    <div class="col-6 col-sm-4 col-lg-2 col-xl-2 custom-service text-center">
-                        <a href="{{ route('front.service_category', $data->slug) }}">
-                            <div class="simple-service">
-                                <img class="lazy" data-src="{{ asset('assets/images/categories/' . $data->photo) }}"
-                                    alt="">
-                            </div>
-                            <p class="text-center text-dark custom-service-title">{{ $data->name }}</p>
-                        </a>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-
-@endif
-
-<!--==================== Service Section End ====================-->
-
-@if ($ps->category == 1)
-    <div class="full-row">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-5">
-                    <span
-                        class="text-secondary pb-2 d-table tagline mx-auto text-uppercase text-center">{{ __('Featured Products') }}</span>
-                    <h2 class="main-title mb-4 text-center text-secondary">{{ __('Our Featured Products') }}</h2>
-                </div>
-            </div>
-            <div class="products product-style-1">
-                <div
-                    class="row g-4 row-cols-xl-4 row-cols-md-3 row-cols-sm-2 row-cols-1 e-title-general e-title-hover-primary e-image-bg-light e-hover-image-zoom e-info-center">
-
-                    @foreach ($popular_products as $prod)
-                        <div class="col">
-                            @include('partials.product.home-product')
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--==================== Top Products Section End ====================-->
-@endif
-
-@if ($ps->deal_of_the_day == 1)
+{{-- @if ($ps->deal_of_the_day == 1)
     <!--==================== Deal of the day Section Start ====================-->
     <div class="full-row bg-light">
         <div class="container">
@@ -124,11 +60,80 @@
         </div>
     </div>
     <!--==================== Deal of the day Section End ====================-->
+@endif --}}
+
+@include('frontend.homePage.popularCategories')
+@include('frontend.homePage.meetups')
+@include('frontend.homePage.recuitments')
+@include('frontend.homePage.realEstate')
+@include('frontend.homePage.ubsSystem')
+@include('frontend.homePage.digitalSolutions')
+{{-- @include('frontend.homePage.partner') --}}
+
+
+<!--==================== Service Section Start ====================-->
+{{-- @if ($service_categories->count() > 1)
+    <div class="full-row bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <span
+                        class="text-secondary pb-2 d-table tagline mx-auto text-uppercase text-center">{{ __('Services') }}</span>
+                    <h2 class="main-title mb-4 text-center text-secondary">{{ __('We Providing Helpful Services') }}
+                    </h2>
+                </div>
+            </div>
+            <div class="row g-3 justify-content-center">
+                @foreach ($service_categories as $data)
+                    <div class="col-6 col-sm-4 col-lg-2 col-xl-2 custom-service text-center">
+                        <a href="{{ route('front.service_category', $data->slug) }}">
+                            <div class="simple-service">
+                                <img class="lazy" data-src="{{ asset('assets/images/categories/' . $data->photo) }}"
+                                    alt="">
+                            </div>
+                            <p class="text-center text-dark custom-service-title">{{ $data->name }}</p>
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+@endif --}}
+
+<!--==================== Service Section End ====================-->
+
+@if ($ps->category == 1)
+    <div class="full-row">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <span
+                        class="text-secondary pb-2 d-table tagline mx-auto text-uppercase text-center">{{ __('Featured Products') }}</span>
+                    <h2 class="main-title mb-4 text-center text-secondary">{{ __('Our Featured Products') }}</h2>
+                </div>
+            </div>
+            <div class="products product-style-1">
+                <div
+                    class="row g-4 row-cols-xl-4 row-cols-md-3 row-cols-sm-2 row-cols-1 e-title-general e-title-hover-primary e-image-bg-light e-hover-image-zoom e-info-center">
+
+                    @foreach ($popular_products as $prod)
+                        <div class="col">
+                            @include('partials.product.home-product')
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================== Top Products Section End ====================-->
 @endif
+
+
 <!--==================== Deal of the day Section End ====================-->
 
 
-@if ($ps->top_big_trending == 1)
+{{-- @if ($ps->top_big_trending == 1)
     <!--==================== Top Collection Section Start ====================-->
     <div class="full-row bg-white">
         <div class="container">
@@ -237,7 +242,7 @@
         </div>
     </div>
     <!--==================== Top Collection Section End ====================-->
-@endif
+@endif --}}
 
 
 <!--==================== Top Products Section Start ====================-->
@@ -301,7 +306,7 @@
 @endif
 
 <!--==================== Our Blog Section Start ====================-->
-@if ($ps->blog == 1)
+{{-- @if ($ps->blog == 1)
     <div class="full-row pt-0">
         <div class="container">
             <div class="row justify-content-center">
@@ -342,8 +347,8 @@
         </div>
     </div>
     <!--==================== Our Blog Section End ====================-->
-@endif
-@if ($ps->third_left_banner == 1)
+@endif --}}
+{{-- @if ($ps->third_left_banner == 1)
     <!--==================== Newsleter Section Start ====================-->
     <div class="full-row bg-dark py-30">
         <div class="container">
@@ -368,7 +373,7 @@
         </div>
     </div>
     <!--==================== Newsleter Section End ====================-->
-@endif
+@endif --}}
 
 
 

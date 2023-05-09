@@ -288,72 +288,7 @@
             </a>
         </div>
         <div class="col-12 col-sm-6 col-lg-3 col-xl-3 buy-sell py-2">
-            <a href="#">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">UBS services</h5>
-                        <div class="row">
-                            <div class="col-6 ">
-                                <a href="{{ route('front.categories') }}" class="text-decoration-none">
-                                    <div class="card-item">
-                                        <img class="lazy"
-                                            data-src="{{ asset('assets/front/images/services/business-management.png') }}"
-                                            alt="">
-                                    </div>
-                                    <p class="text-secondary card-text mb-2 text-center">
-                                        Business Management
-                                    </p>
-                                </a>
-
-                            </div>
-                            <div class="col-6 ">
-                                <a href="{{ route('front.categories') }}" class="text-decoration-none">
-                                    <div class="card-item">
-                                        <img class="lazy"
-                                            data-src="{{ asset('assets/front/images/services/lead-management.png') }}"
-                                            alt="">
-                                    </div>
-                                    <p class="text-secondary card-text mb-2 text-center">
-                                        Lead Management
-                                    </p>
-                                </a>
-
-                            </div>
-                            <div class="col-6">
-                                <a href="{{ route('front.categories') }}" class="text-decoration-none">
-                                    <div class="card-item">
-                                        <img class="lazy"
-                                            data-src="{{ asset('assets/front/images/services/marketing-solution.png') }}"
-                                            alt="">
-                                    </div>
-                                    <p class="text-secondary card-text mb-2 text-center">
-                                        Marketing Solutions
-                                    </p>
-                                </a>
-
-                            </div>
-                            <div class="col-6">
-                                <a href="{{ route('front.categories') }}" class="text-decoration-none">
-                                    <div class="card-item">
-                                        <img class="lazy"
-                                            data-src="{{ asset('assets/front/images/services/sell-automation.png') }}"
-                                            alt="">
-                                    </div>
-                                    <p class="text-secondary card-text mb-2 text-center">
-                                        Sell Automation
-                                    </p>
-                                </a>
-
-                            </div>
-                        </div>
-                        <a href="#" class="card-link text-dark text-deconration-none mt-2">Show more details</a>
-                    </div>
-                </div>
-
-            </a>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 buy-sell py-2">
-            <a href="">
+            <a href="{{route('front.contact')}}">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Domain Hosting</h5>
