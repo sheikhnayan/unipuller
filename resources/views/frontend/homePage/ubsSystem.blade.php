@@ -9,7 +9,7 @@
                                 <div class="row">
                                     <div
                                         class="col-lg-5 col-md-4 col-sm-12 justify-content-center d-flex align-items-center">
-                                        <img src="{{ asset('assets/front/images/ubs/ubs.png') }}"
+                                        <img src="{{ asset('assets/front/images/ubs.png') }}"
                                             class="img-fluid" alt="" srcset="">
                                     </div>
                                     <div class="col-lg-7 col-md-8 col-sm-12 p-3">
