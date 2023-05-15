@@ -2,9 +2,11 @@
 :root {
     --green: #38b2ac;
     --hover-green: #2f9590;
-    --light-green:#e2f7f6;
-  }
-
+    --light-green: #e2f7f6;
+}
+.bg-sea-green {
+    background-color: var(--light-green);
+}
 p {
     font-size: 15px;
     line-height: 25px;
@@ -58,7 +60,7 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
 
 /* cards */
 
-.main-features-section .card{
+.main-features-section .card {
     border-radius: 10px;
     filter: drop-shadow(0 5px 10px 0 #ffffff);
     background-color: #ffffff;
@@ -84,7 +86,7 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
     transition: transform 0.25s ease-out;
 }
 
-.main-features-section .card:hover::before{
+.main-features-section .card:hover::before {
     transition-delay: 0.2s;
 
     transform: scale(40);
@@ -216,22 +218,17 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
     background-color: #232323;
 }
 
-
-
 .recruitment-section .list-group-item,
 .estate-section .list-group-item,
 .ubs-section .list-group-item,
-.digital-section  .list-group-item
-{
-    border:0px;
-    padding:5px;
+.digital-section .list-group-item {
+    border: 0px;
+    padding: 5px;
 }
 .recruitment-section i.bi.bi-building-check,
 .estate-section i.bi.bi-house-check,
 .ubs-section i.bi.bi-kanban-fill,
-.digital-section i.bi.bi-globe-central-south-asia
-
- {
+.digital-section i.bi.bi-globe-central-south-asia {
     font-size: 25px;
     background-color: var(--light-green);
     padding: 10px 10px;
@@ -241,269 +238,162 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
 .recruitment-section i,
 .estate-section i,
 .ubs-section i,
-.digital-section i
-{
+.digital-section i {
     color: var(--green);
 }
-.recruitment-section .content-circle .bg-circle-2 {
+.bg-circle-2 {
     width: 500px;
     height: 500px;
     position: absolute;
     background-color: #38b2acb2;
     border-radius: 50%;
     opacity: 0.5;
+    z-index: 0;
+}
+.bg-circle-1 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    background-color: #2f9590;
+    z-index: 0;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+.bg-line-1,
+.bg-line-2,
+.bg-line-3,
+.bg-line-4 {
+    width: 475px;
+    height: 475px;
+    position: absolute;
+    border: 1px solid #2f9590;
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.recruitment-section .content-circle .bg-circle-2 {
     left: -90px;
     bottom: -145px;
-    z-index: 0;
 }
 .recruitment-section .content-circle .bg-circle-1 {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    background-color: #2f9590;
-
-    border-radius: 50%;
-    opacity: 0.5;
     left: -140px;
     bottom: -200px;
-    z-index: 0;
 }
 .recruitment-section .bg-line-1 {
-    width: 475px;
-    height: 475px;
-    position: absolute;
-    border: 1px solid #2f9590;
-    border-radius: 50%;
-    opacity: 0.1;
     right: -290px;
     bottom: -237px;
-    z-index: 0;
 }
 .recruitment-section .bg-line-2 {
-    width: 475px;
-    height: 475px;
-    position: absolute;
-    border: 1px solid #2f9590;
-    border-radius: 50%;
-    opacity: 0.1;
     right: -230px;
     bottom: -185px;
-    z-index: 0;
 }
 .estate-section .content-circle .bg-circle-2 {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    background-color: #38b2acb2;
-    border-radius: 50%;
-    opacity: 0.5;
     left: -90px;
     top: -355px;
-    z-index: 0;
 }
 .estate-section .content-circle .bg-circle-1 {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    background-color: #2f9590;
-
-    border-radius: 50%;
-    opacity: 0.5;
     left: -140px;
     top: -297px;
-    z-index: 0;
 }
 .estate-section .bg-line-1 {
-    width: 475px;
-    height: 475px;
-    position: absolute;
-    border: 1px solid #2f9590;
-    border-radius: 50%;
-    opacity: 0.1;
     right: -290px;
     top: -233px;
-    z-index: 0;
 }
 .estate-section .bg-line-2 {
-    width: 475px;
-    height: 475px;
-    position: absolute;
-    border: 1px solid #2f9590;
-    border-radius: 50%;
-    opacity: 0.1;
     right: -230px;
     top: -293px;
-    z-index: 0;
 }
 .estate-section .bg-line-3 {
-    width: 475px;
-    height: 475px;
-    position: absolute;
-    border: 1px solid #2f9590;
-    border-radius: 50%;
-    opacity: 0.1;
     left: -290px;
     bottom: -233px;
-    z-index: 0;
 }
 .estate-section .bg-line-4 {
-    width: 475px;
-    height: 475px;
-    position: absolute;
-    border: 1px solid #2f9590;
-    border-radius: 50%;
-    opacity: 0.1;
     left: -230px;
     bottom: -182px;
-    z-index: 0;
 }
 
 .ubs-section .content-circle .bg-circle-2 {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    background-color: #38b2acb2;
-    border-radius: 50%;
-    opacity: 0.5;
     right: -90px;
     bottom: -355px;
-    z-index: 0;
 }
 .ubs-section .content-circle .bg-circle-1 {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    background-color: #2f9590;
-
-    border-radius: 50%;
-    opacity: 0.5;
     right: -140px;
     bottom: -297px;
-    z-index: 0;
 }
 .ubs-section .bg-line-1 {
-    width: 475px;
-    height: 475px;
-    position: absolute;
-    border: 1px solid #2f9590;
-    border-radius: 50%;
-    opacity: 0.1;
     left: -290px;
     top: -233px;
-    z-index: 0;
 }
 .ubs-section .bg-line-2 {
-    width: 475px;
-    height: 475px;
-    position: absolute;
-    border: 1px solid #2f9590;
-    border-radius: 50%;
-    opacity: 0.1;
     left: -230px;
     top: -293px;
-    z-index: 0;
 }
-
 
 .digital-section .content-circle .bg-circle-2 {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    background-color: #38b2acb2;
-    border-radius: 50%;
-    opacity: 0.5;
     right: -90px;
     top: -145px;
-    z-index: 0;
 }
 .digital-section .content-circle .bg-circle-1 {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    background-color: #2f9590;
-
-    border-radius: 50%;
-    opacity: 0.5;
     right: -140px;
     top: -200px;
-    z-index: 0;
 }
 .digital-section .bg-line-1 {
-    width: 475px;
-    height: 475px;
-    position: absolute;
-    border: 1px solid #2f9590;
-    border-radius: 50%;
-    opacity: 0.1;
     left: -290px;
     top: -237px;
-    z-index: 0;
 }
 .digital-section .bg-line-2 {
-    width: 475px;
-    height: 475px;
-    position: absolute;
-    border: 1px solid #2f9590;
-    border-radius: 50%;
-    opacity: 0.1;
     left: -230px;
     top: -185px;
-    z-index: 0;
 }
 
 .contact-page .content-circle .bg-circle-2 {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    background-color: #38b2acb2;
-    border-radius: 50%;
-    opacity: 0.5;
     right: -90px;
     bottom: -145px;
-    z-index: 0;
 }
 .contact-page .content-circle .bg-circle-1 {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    background-color: #2f9590;
-
-    border-radius: 50%;
-    opacity: 0.5;
     right: -140px;
     bottom: -200px;
-    z-index: 0;
 }
 .contact-page .bg-line-1 {
-    width: 475px;
-    height: 475px;
-    position: absolute;
-    border: 1px solid #2f9590;
-    border-radius: 50%;
-    opacity: 0.1;
     left: -290px;
     top: -237px;
-    z-index: 0;
 }
 .contact-page .bg-line-2 {
-    width: 475px;
-    height: 475px;
-    position: absolute;
-    border: 1px solid #2f9590;
-    border-radius: 50%;
-    opacity: 0.1;
     left: -230px;
     top: -185px;
-    z-index: 0;
 }
 
+.shop-list-page .bg-circle-1 {
+    right: -110px;
+    top: 70px;
+}
+.shop-list-page .bg-circle-2 {
+    right: -200px;
+    top: 0px;
+}
 
+.shop-list-page .bg-line-1,
+.shop-list-page .bg-line-2 {
+    width: 200px;
+    height: 200px;
+}
+.shop-list-page .bg-line-1 {
+    top: 122px;
+    left: -82px;
+}
+
+.shop-list-page .bg-line-2 {
+    top: 90px;
+    left: -70px;
+}
 .recruitment-section .content-circle,
 .estate-section .content-circle,
 .ubs-section .content-circle,
 .digital-section .content-circle,
-.contact-page .content-circle
-{
+.contact-page .content-circle,
+.shop-list-page .content-circle,
+.shop-list-page .product.type-product.rounded {
     overflow: hidden;
     /* margin-top: 70px; */
 }
@@ -511,27 +401,33 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
 .estate-section .container,
 .ubs-section .container,
 .digital-section .container,
-.contact-page .full-row .container
-{
+.contact-page .full-row .container,
+.shop-list-page .content-circle .container,
+.shop-list-page .product.type-product.rounded {
     z-index: 1;
 }
-
 
 .fade-out {
     opacity: 0;
 }
 /* card */
 
-
 /* .page-section .sidebar-category{
 background-color: var(--light-green) !important;
 } */
-.contact-page .col-lg-7.col-md-7{
+.contact-page .col-lg-7.col-md-7 {
     background-color: var(--light-green);
     padding: 30px;
     border-radius: 10px;
 }
+.advertise-banner {
+    background-color: var(--light-green);
+}
 
+.shop-list-page  a.page-link {
+    color: var(--green);
+    border: 1px solid var(--green);
+}
 /* responsiveness  by huma*/
 @media (max-width: 2560px) {
     .card-img-sell-product {
@@ -590,6 +486,13 @@ background-color: var(--light-green) !important;
     .main-features-section .card-img {
         height: 245px;
     }
+    .shop-list-page .img-small-screen{
+        display:none;
+    }
+    .shop-list-page .img-large-screen{
+        display:block;
+    }
+
 }
 @media (max-width: 425px) {
     .footer-section .d-flex.justify-content-sm-center {
@@ -617,7 +520,17 @@ background-color: var(--light-green) !important;
     .main-features-section .card .card-img-sell-product {
         height: 311px;
     }
+    .shop-list-page .img-small-screen{
+        display:block;
+    }
+    .shop-list-page .img-large-screen{
+        display:none;
+    }
+    .shop-list-page .bg-line-1,
+    .shop-list-page .bg-line-2 {
+        display:none;
 
+    }
     /* .estate-section .contact-action-area {
         padding: 35px 30px !important;
         background-color: #d7d7d7;

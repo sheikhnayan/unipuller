@@ -1812,11 +1812,11 @@ select.category_select {
     width: 1px;
     height: 60%;
     content: "";
-    background-color: #dcd9d9;
+    /* background-color: #dcd9d9; */
 }
-.product-search-one .select-appearance-none::before {
+/* .product-search-one .select-appearance-none::before {
     left: 0;
-}
+} */
 .product-search-two .select-appearance-none::before {
     right: 0;
 }
