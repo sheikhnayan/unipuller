@@ -306,7 +306,7 @@
 @endif
 
 <!--==================== Our Blog Section Start ====================-->
-{{-- @if ($ps->blog == 1)
+@if ($ps->blog == 1)
     <div class="full-row pt-0">
         <div class="container">
             <div class="row justify-content-center">
@@ -347,7 +347,7 @@
         </div>
     </div>
     <!--==================== Our Blog Section End ====================-->
-@endif --}}
+@endif
 {{-- @if ($ps->third_left_banner == 1)
     <!--==================== Newsleter Section Start ====================-->
     <div class="full-row bg-dark py-30">

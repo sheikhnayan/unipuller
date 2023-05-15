@@ -3,6 +3,7 @@
     <div class="row">
         <div class="col-12">
             <h3 class="text-dark text-center">Popular Categories</h3>
+            <hr class="mx-auto">
         </div>
         <?php
         $categories = App\Models\Category::where('language_id', $langg->id)

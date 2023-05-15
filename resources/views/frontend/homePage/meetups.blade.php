@@ -3,6 +3,7 @@
     <div class="row">
         <div class="col-12">
             <h3 class="text-dark text-center">Meet with Stars</h3>
+            <hr class="mx-auto">
         </div>
     </div>
     <div class="row justify-content-center">

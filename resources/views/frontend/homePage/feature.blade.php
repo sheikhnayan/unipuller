@@ -10,6 +10,10 @@
 @endphp
 <div class="container container-sm py-4 main-features-section">
     <div class="row justify-content-center">
+        <div class="col-12">
+            <h2 class="text-dark text-center">Main Features</h2>
+            <hr class="mx-auto">
+        </div>
         <div class="col-12 col-sm-6 col-lg-3 col-xl-3 buy-sell py-2">
             <a href="#">
                 <div class="card">
@@ -288,7 +292,7 @@
             </a>
         </div>
         <div class="col-12 col-sm-6 col-lg-3 col-xl-3 buy-sell py-2">
-            <a href="{{route('front.contact')}}">
+            <a href="https://slippa.unipuller.uk">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Domain Hosting</h5>

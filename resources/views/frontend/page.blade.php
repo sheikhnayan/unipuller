@@ -1,49 +1,186 @@
 @extends('layouts.front')
 
 @section('content')
-@include('partials.global.common-header')
+    @include('partials.global.common-header')
 
 
 
-<!-- breadcrumb -->
-<div class="full-row bg-light overlay-dark py-5" style="background-image: url({{ $gs->breadcrumb_banner ? asset('assets/images/'.$gs->breadcrumb_banner):asset('assets/images/noimage.png') }}); background-position: center center; background-size: cover;">
-    <div class="container">
-        <div class="row text-center text-white">
-            <div class="col-12">
-                <h3 class="mb-2 text-white">{{ $page->title }}</h3>
-            </div>
-            <div class="col-12">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb mb-0 d-inline-flex bg-transparent p-0">
-                        <li class="breadcrumb-item"><a href="{{ route('front.index') }}">{{ __('Home') }}</a></li>
-
-                        <li class="breadcrumb-item active" aria-current="page">{{ $page->title }}</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- breadcrumb -->
-
-  <!--==================== About Owner Section Start ====================-->
-  <div class="full-row">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7 col-md-12">
-                {!! clean($page->details , array('Attr.EnableID' => true)) !!}
-            </div>
-            <div class="col-lg-5 col-md-12 sm-mx-none mt-5">
-                <img class="sm-mb-30" src="{{ $page->photo ? asset('assets/images/pages/'.$page->photo) : 'Image not found!'}}" alt="Image not found!">
+    <div class="page-section">
+        <!-- breadcrumb -->
+        <div class="full-row bg-light overlay-dark py-5"
+            style="background-image: url({{ $gs->breadcrumb_banner ? asset('assets/images/' . $gs->breadcrumb_banner) : asset('assets/images/noimage.png') }}); background-position: center center; background-size: cover;">
+            <div class="container">
+                <div class="row text-center text-white">
+                    <div class="col-12">
+                        <h3 class="mb-2 text-white">{{ $page->title }}</h3>
+                    </div>
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0 d-inline-flex bg-transparent p-0">
+                                <li class="breadcrumb-item"><a href="{{ route('front.index') }}">{{ __('Home') }}</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ $page->title }}</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- breadcrumb -->
+        <!--==================== About Owner Section Start ====================-->
+        <div class="full-row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 md-mb-50">
+                        <div id="sidebar" class="sidebar-category bg-light  p-30">
+                            <div class="widget border-0 py-0 search-widget">
+                                <form class="contactform" action="#" id="categoryForm" method="GET">
+                                    <input type="text" class="form-control " id="category-search" name="search"
+                                        placeholder="{{ __('Search Here') }}"
+                                        value="{{ isset($_GET['search']) ? $_GET['search'] : '' }}" required>
+                                    <div class="text-danger" id="message"></div>
+                                    <button type="submit" name="submit"><i
+                                            class="flaticon-search flat-mini text-red"></i></button>
+                                </form>
+                            </div>
+                            <div class="widget border-0 py-0 widget_categories">
+                                <h4 class="widget-title down-line">{{ __('Categories') }}</h4>
+                                <ul id="category-list">
+                                    @php
+                                    @endphp
+                                    {{-- @foreach ($categories as $category)
+                                        <li><a class=""
+                                                href="{{ route('front.service_category', $category->slug) }}{{ !empty(request()->input('search')) ? '?search=' . request()->input('search') : '' }}">
+                                                {{ $category->name }} </a></li>
+                                    @endforeach --}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-7 col-md-12">
+                                {!! clean($page->details, ['Attr.EnableID' => true]) !!}
+                            </div>
+                            <div class="col-lg-5 col-md-12 sm-mx-none mt-5">
+                                <img class="sm-mb-30"
+                                    src="{{ $page->photo ? asset('assets/images/pages/' . $page->photo) : 'Image not found!' }}"
+                                    alt="Image not found!">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--==================== About Owner Section End ====================-->
+
     </div>
-</div>
-<!--==================== About Owner Section End ====================-->
+
+    <script>
+        // // const categoryForm = document.getElementById('categoryForm');
+        // const categorySearch = document.getElementById('categorySearch');
+
+        // const categoriesList = document.querySelector('#categories');
+        // const message = document.getElementById('message');
+        // const categories = @json($categories); // Laravel collection
+
+        // categorySearch.addEventListener('keyup', (event) => {
+        //     if (event.target.value.length < 3 && event.target.value.length!=0) {
+        //         console.log(' less than 3');
+
+        //         message.innerHTML = 'Please type at least 3 letters';
+        //     } else if (event.target.value.length > 3) {
+        //         message.innerHTML = '';
+        //         // if (event.key === 'Enter') {
+        //         //     // categoryForm.submit();
+        //         // }
+        //         // Filter categories based on search query
+        //         const searchQuery = event.target.value;
+        //         const filteredCategories = categories.filter(category => {
+        //             const regex = new RegExp(searchQuery, 'i');
+        //             return regex.test(category.name);
+        //         });
+
+        //         // Create new ul element and add filtered categories as li elements
+        //         const filteredList = document.createElement('ul');
+        //         filteredCategories.forEach(category => {
+        //             const listItem = document.createElement('li');
+        //             listItem.textContent = category.name;
+        //             filteredList.appendChild(listItem);
+        //         });
+
+        //         // Replace existing ul element with new filtered ul element
+        //         categoriesList.replaceWith(filteredList);
+        //     } else if(event.target.value.length==0) {
+        //         console.log(' inside 0');
+        //         message.innerHTML = '';
+
+        //         categoriesList.replaceWith(categories);
+
+        //     }
+
+        // });
 
 
 
 
-@includeIf('partials.global.common-footer')
+        // const categoryForm = document.getElementById('categoryForm');
+        const categories = @json($categories); // Fetch the categories from Laravel
 
+        // Generate the category list
+        const categoryList = document.getElementById('category-list');
+        categories.forEach(category => {
+            console.log('category.slug', category.slug);
+            const li = document.createElement('li');
+            const link = document.createElement('a');
+            link.textContent = category.name;
+            var routeUrl = "{{ route('front.service_category', ':slug') }}";
+            var generatedUrl = routeUrl.replace(':slug',  category.slug);
+            link.href =generatedUrl;
+            li.appendChild(link);
+            categoryList.appendChild(li);
+        });
+
+        // Add event listener to the search box
+        const searchBox = document.getElementById('category-search');
+
+        searchBox.addEventListener('keyup', (e) => {
+            console.log(' i m here', searchBox);
+            const searchValue = e.target.value.trim().toLowerCase();
+
+            if (searchValue.length >= 3) {
+                // Filter the categories based on the search value
+                const filteredCategories = categories.filter(category =>
+                    category.name.toLowerCase().includes(searchValue)
+                );
+                message.innerHTML = 'Please type at least 3 letters';
+
+                // Generate the filtered category list
+                categoryList.innerHTML = '';
+                filteredCategories.forEach(category => {
+                    const li = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.textContent = category.name;
+                    link.href = "{{ route('front.service_category', '+category.slug+') }}";
+                    li.appendChild(link);
+                    categoryList.appendChild(li);
+                });
+            } else {
+                message.innerHTML = '';
+
+                // If the search value is less than 3 characters, display the whole category list
+                categoryList.innerHTML = '';
+                categories.forEach(category => {
+                    const li = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.textContent = category.name;
+                    link.href = "{{ route('front.service_category', '+category.slug+') }}";
+                    li.appendChild(link);
+                    categoryList.appendChild(li);
+                });
+            }
+        });
+    </script>
+
+    @includeIf('partials.global.common-footer')
 @endsection

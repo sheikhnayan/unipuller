@@ -9,6 +9,7 @@
                             {{ config('app.name') }}.com</a></span>
                    <span class="px-2">|</span> <span class=""><a class="" href="#">Help & Support</a></span>
                    <span class="px-2">|</span> <span class=""><a class="" href="#">Careers</a></span>
+                   <span class="px-2">|</span> <span class=""><a class="" href="{{route('front.contact')}}">Contact Us</a></span>
                 </p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-12 d-flex justify-content-md-end justify-content-sm-center align-items-center">
@@ -59,7 +60,7 @@
                 <p class="mb-0 ">
                 </p>
             </div>
-            
+
         </div>
 
         <div class="row  py-2 d-flex justify-content-between">

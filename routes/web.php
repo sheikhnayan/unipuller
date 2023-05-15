@@ -1446,6 +1446,7 @@ Route::group(['middleware' => 'maintenance'], function () {
   Route::get('/blog/archive/{slug}', 'Front\FrontendController@blogarchive')->name('front.blogarchive');
   // BLOG SECTION ENDS
 
+
   // FAQ SECTION
   Route::get('/faq', 'Front\FrontendController@faq')->name('front.faq');
   // FAQ SECTION ENDS
@@ -1646,6 +1647,8 @@ Route::group(['middleware' => 'maintenance'], function () {
   // VENDOR AND PAGE SECTION
   Route::get('/country/tax/check', 'Front\CartController@country_tax');
   Route::get('/{slug}', 'Front\VendorController@index')->name('front.vendor');
+ //category search
+//  Route::get('/category-search', 'Front\FrontendController@categorySearch')->name('front.categorySearch');
 
   // VENDOR AND PAGE SECTION ENDS
 
