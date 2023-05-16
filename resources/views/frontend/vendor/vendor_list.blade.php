@@ -34,7 +34,7 @@
         </style>
 
         {{-- There are two product page. you have to give condition here --}}
-        <div class="full-row content-circle">
+        <div class="mt-2 content-circle">
             <div class="container">
                 <div class="row mobile-reverse">
                     <div class="col-xl-3">
@@ -69,7 +69,7 @@
                                 alt="">
                             <p> we take pride in providing exceptional services to assist you in fin
                                 ding your dream property. Whether you're looking for a cozy apartmen
-                                t, a spacious family home, or a commercial space for your business, 
+                                t, a spacious family home, or a commercial space for your business,
                                 we have a wide range of options to suit your needs.</p>
                             {{-- <button class="btn btn-primary">Claim Your Business</button> --}}
                             <button href="#" class="btn  btn-dark">Get Job</button>
@@ -78,8 +78,8 @@
                         <div class="advertise-box">
                             <h6 class="text-center">Our UBS System</h6>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, asperiores
-                               enim voluptatibus ut atque molestiae natus facilis, accusamus dolorum, repelle
-                               ndus voluptas sequi ad. Molestias.</p>
+                                enim voluptatibus ut atque molestiae natus facilis, accusamus dolorum, repelle
+                                ndus voluptas sequi ad. Molestias.</p>
                             {{-- <button class="btn btn-primary">Claim Your Business</button> --}}
                             <button href="#" class="btn  btn-dark">Get System Services</button>
                         </div>
@@ -107,7 +107,9 @@
                             <h6 class="text-center">Domain Hosting</h6>
                             <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/social.png') }}"
                                 alt="">
-                            <p>we are dedicated to providing reliable and secure hosting solutions for your online presence. We understand the importance of having a robust and accessible website, and we strive to ensure that your domain and hosting needs.</p>
+                            <p>we are dedicated to providing reliable and secure hosting solutions for your online presence.
+                                We understand the importance of having a robust and accessible website, and we strive to
+                                ensure that your domain and hosting needs.</p>
                             {{-- <button class="btn btn-primary">Claim Your Business</button> --}}
                             <button href="#" class="btn  btn-dark">Get System Services</button>
                         </div>
@@ -174,9 +176,10 @@
                                             @php
                                                 $key += 1;
                                             @endphp
-                                            <div class="product type-product rounded @if ($key % 2 == 0) bg-sea-green @else bg-dark @endif">
+                                            <div class="product type-product rounded ">
                                                 <div class=" row m-0">
-                                                    <div class="  col-lg-4 col-md-4 col-sm-12 d-flex align-items-center p-0 img-small-screen">
+                                                    <div
+                                                        class="  col-lg-4 col-md-4 col-sm-12 d-flex align-items-center card-image">
                                                         <a href="{{ route('vendor.shop.service', $vendor->id) }}"
                                                             class="woocommerce-LoopProduct-link">
                                                             <img class="lazy img-fluid rounded"
@@ -188,73 +191,62 @@
 
                                                         </div>
                                                     </div>
-                                                    <div class=" col-lg-8 col-md-8 col-sm-12 p-4">
-                                                        <h5 class="product-title large_screen  mb-0 ">
-                                                            <a class="@if ($key % 2 == 1) text-white @endif"
-                                                                href="{{ route('vendor.shop.service', $vendor->id) }}">
-                                                                @if (strlen($vendor->shop_name) > 40)
-                                                                    {{ substr($vendor->shop_name, 0, 40) . '...' }}
+                                                    <div class=" col-lg-8 col-md-8 col-sm-12 p-0">
+                                                        <div class="p-4">
+                                                            <h5 class="product-title large_screen  mb-0 ">
+                                                                <a class="text-dark"
+                                                                    href="{{ route('vendor.shop.service', $vendor->id) }}">
+                                                                    @if (strlen($vendor->shop_name) > 40)
+                                                                        {{ substr($vendor->shop_name, 0, 40) . '...' }}
+                                                                    @else
+                                                                        {{ $vendor->shop_name }}
+                                                                    @endif
+                                                                </a>
+                                                            </h5>
+                                                            <h5 class="product-title small_screen  mb-0"
+                                                                style="display: none">
+                                                                <a class="text-dark"
+                                                                    href="{{ route('vendor.shop.service', $vendor->id) }}">
+                                                                    @if (strlen($vendor->shop_name) > 30)
+                                                                        {{ substr($vendor->shop_name, 0, 30) . '...' }}
+                                                                    @else
+                                                                        {{ $vendor->shop_name }}
+                                                                    @endif
+                                                                </a>
+                                                            </h5>
+                                                            <hr class="mt-0">
+                                                            <p class="category_text text-dark">
+                                                                {{ $vendor->subcategory->name ?? '' }}</p>
+
+
+                                                            <p class="about_line  text-dark">
+                                                                @if (strlen($vendor->shop_about) > 80)
+                                                                    {!! substr($vendor->shop_about, 0, 77) !!}...
                                                                 @else
-                                                                    {{ $vendor->shop_name }}
+                                                                    {!! substr($vendor->shop_about, 0, 80) !!}
                                                                 @endif
-                                                            </a>
-                                                        </h5>
-                                                        <h5 class="product-title small_screen  mb-0" style="display: none">
-                                                            <a class="@if ($key % 2 == 1) text-white @endif"
-                                                                href="{{ route('vendor.shop.service', $vendor->id) }}">
-                                                                @if (strlen($vendor->shop_name) > 30)
-                                                                    {{ substr($vendor->shop_name, 0, 30) . '...' }}
-                                                                @else
-                                                                    {{ $vendor->shop_name }}
-                                                                @endif
-                                                            </a>
-                                                        </h5>
-                                                        <p
-                                                            class="category_text @if ($key % 2 == 1) text-white @endif">
-                                                            {{ $vendor->subcategory->name ?? '' }}</p>
-                                                        <p
-                                                            class="store_line_height mb-0 @if ($key % 2 == 1) text-white @endif">
-                                                            Total {{ $vendor->services->count() }} Services &
-                                                            {{ $vendor->products->count() }} Products
-                                                        </p>
-                                                        <div @if (strlen($vendor->shop_name) > 22) class="shipping-feed-back mt-0 @if ($key % 2 == 1) text-white @endif"
-                                                        @else
-                                                            class="shipping-feed-back2 mt-0 @if ($key % 2 == 1) text-white @endif"
-                                                            @endif>
-                                                            <div class="star-rating">
-                                                                <div class="rating-wrap">
-                                                                    <p class="mb-0"><i class="fas fa-star"></i><span>
-                                                                            {{ App\Models\Rating::ratings($vendor->id) }}
-                                                                            ({{ App\Models\Rating::ratingCount($vendor->id) }})
-                                                                        </span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
+                                                            </p>
                                                         </div>
-                                                        <p
-                                                            class="about_line  @if ($key % 2 == 1) text-white @endif">
-                                                            @if (strlen($vendor->shop_about) > 80)
-                                                                {!! substr($vendor->shop_about, 0, 77) !!}...
-                                                            @else
-                                                                {!! substr($vendor->shop_about, 0, 80) !!}
-                                                            @endif
-                                                        </p>
-                                                    </div>
-                                                    <div class="  col-lg-4 col-md-4 col-sm-12 d-flex align-items-center p-0 img-large-screen">
-                                                        <a href="{{ route('vendor.shop.service', $vendor->id) }}"
-                                                            class="woocommerce-LoopProduct-link">
-                                                            <img class="lazy img-fluid rounded-end"
-                                                                data-src="{{ $vendor->shop_image ? asset('assets/images/categories/' . $vendor->shop_image) : asset('assets/common_img/vendor_profile.jpeg') }}"
-                                                                alt="Product Image">
-                                                        </a>
 
-                                                        <div class="hover-area">
-
+                                                        <div class="d-flex text-center" style="background-color: whitesmoke;
+                                                        border-top: 3px solid var(--green);">
+                                                            <span class=" flex-fill mb-0 text-white p-2">
+                                                                <p class="lower-section-text mb-0  text-muted">Total</p>
+                                                                <p class="mb-0 text-muted">{{ $vendor->services->count() }}</p>
+                                                            </span>
+                                                            <span class=" flex-fill mb-0 text-white p-2">
+                                                                <p  class="lower-section-text mb-0  text-muted">Services & Products</p>
+                                                                <p class="mb-0  text-muted">{{ $vendor->products->count() }}</p>
+                                                            </span>
+                                                            <span class=" flex-fill mb-0 text-white p-2">
+                                                                <p  class="lower-section-text mb-0  text-muted">Rating</p>
+                                                                <p class="mb-0  text-muted"><i class="fas fa-star"></i>
+                                                                    {{ App\Models\Rating::ratings($vendor->id) }}
+                                                                    ({{ App\Models\Rating::ratingCount($vendor->id) }})
+                                                                </p>
+                                                            </span>
                                                         </div>
                                                     </div>
-
-
-
                                                 </div>
                                                 <div class="bg-line-1"></div>
                                                 <div class="bg-line-2"></div>
@@ -295,12 +287,12 @@
                                         }
 
                                         /* .shipping-feed-back {
-                                                                margin-bottom: -25px;
-                                                            } */
+                                                                        margin-bottom: -25px;
+                                                                    } */
 
                                         /* .shipping-feed-back2 {
-                                                                margin-bottom: -15px;
-                                                            } */
+                                                                        margin-bottom: -15px;
+                                                                    } */
 
                                         .product-info .product-title a {
                                             font-size: 18px !important;

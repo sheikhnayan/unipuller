@@ -379,13 +379,13 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
     height: 200px;
 }
 .shop-list-page .bg-line-1 {
-    top: 122px;
-    left: -82px;
+    top: -100px;
+    right: -82px;
 }
 
 .shop-list-page .bg-line-2 {
-    top: 75px;
-    left: -110px;
+    top: -23px;
+    right: -100px;
 }
 .recruitment-section .content-circle,
 .estate-section .content-circle,
@@ -437,6 +437,18 @@ background-color: var(--light-green) !important;
 /* .sidebar-category.bg-light.p-30 {
     display: block;
 } */
+
+.shop-list-page .product.type-product{
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+
+}
+.shop-list-page .lower-section-text{
+    font-size:11px;
+}
+.shop-list-page  .card-image{
+    background-color: var(--light-green);
+    border-radius: 0px 95px 0px 95px;
+}
 /* responsiveness  by huma*/
 @media (max-width: 2560px) {
     .card-img-sell-product {
@@ -487,12 +499,7 @@ background-color: var(--light-green) !important;
 }
 
 @media (min-width: 768px) {
-    .shop-list-page .img-small-screen {
-        display: none !important;
-    }
-    .shop-list-page .img-large-screen {
-        display: block !important;
-    }
+  
 }
 @media (max-width: 768px) {
     .footer-section img {
@@ -541,12 +548,6 @@ background-color: var(--light-green) !important;
     }
     .main-features-section .card .card-img-sell-product {
         height: 311px;
-    }
-    .shop-list-page .img-small-screen {
-        display: block !important;
-    }
-    .shop-list-page .img-large-screen {
-        display: none !important;
     }
     .shop-list-page .bg-line-1,
     .shop-list-page .bg-line-2 {
