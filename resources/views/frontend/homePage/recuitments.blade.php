@@ -30,8 +30,8 @@
                                             <li class="list-group-item"><i class="bi bi-check-circle-fill"></i> Achieve
                                                 your dream goals</li>
                                         </ul>
-                                        <button href="https://candidate-finder.unipuller.uk"
-                                            class="btn  btn-dark mt-3">Get Job</button>
+                                        <a href="https://candidate-finder.unipuller.uk"
+                                            class="btn  btn-dark mt-3">Get Job</a>
                                     </div>
                                 </div>
                             </div>
@@ -49,8 +49,8 @@
                                 and
                                 we are committed to creating a supportive and inclusive workplace environment.
                             </p>
-                            <button href="{{ route('front.contact') }}" class="btn  btn-dark">Get your dream
-                                job</button>
+                            <a href="{{ route('front.contact') }}" class="btn  btn-dark">Get your dream
+                                job</a>
 
 
                         </div>

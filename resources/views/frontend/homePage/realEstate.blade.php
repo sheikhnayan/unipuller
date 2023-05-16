@@ -27,7 +27,7 @@
                                             <li class="list-group-item"><i class="bi bi-check-circle-fill"></i> Real estate investment advice</li>
                                             <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>  Real estate consulting</li>
                                           </ul>
-                                    <button href="#" class="btn  btn-dark mt-3">Get Job</button>
+                                    <a href="{{route('front.contact')}}" class="btn  btn-dark mt-3">Get Job</a>
                                 </div>
                                </div>
                             </div>
@@ -118,10 +118,10 @@
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item" onclick="changeImage(1)">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                <a class="accordion-a" type="a" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     Find Places Anywhere in the World
-                                </button>
+                                </a>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
@@ -137,10 +137,10 @@
                         </div>
                         <div class="accordion-item" onclick="changeImage(2)">
                             <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                <a class="accordion-a collapsed" type="a" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     We have agents
-                                </button>
+                                </a>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample">
@@ -156,10 +156,10 @@
                         </div>
                         <div class="accordion-item" onclick="changeImage(3)">
                             <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                <a class="accordion-a collapsed" type="a" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     Buy & Rent Modern Properties
-                                </button>
+                                </a>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#accordionExample">
@@ -175,10 +175,10 @@
                         </div>
                         <div class="accordion-item" onclick="changeImage(4)">
                             <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                <a class="accordion-a collapsed" type="a" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                     Real estate investment advice
-                                </button>
+                                </a>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                 data-bs-parent="#accordionExample">
@@ -194,11 +194,11 @@
                         </div>
                         <div class="accordion-item" onclick="changeImage(5)">
                             <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                <a class="accordion-a collapsed" type="a" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFive" aria-expanded="false"
                                     aria-controls="collapseFive">
                                     Real estate consulting
-                                </button>
+                                </a>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                 data-bs-parent="#accordionExample">
@@ -280,7 +280,7 @@
                 <div class="col-12 ">
                     <div class="d-flex justify-content-between">
                         <h2 class="text-dark">Add your property for sale</h2>
-                        <button type="button" class="btn btn-dark">Contact Us</button>
+                        <a type="a" class="btn btn-dark">Contact Us</a>
                     </div>
                 </div>
             </div>

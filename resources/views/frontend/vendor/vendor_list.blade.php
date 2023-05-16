@@ -44,24 +44,24 @@
                                 alt="">
 
                             <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p>
-                            <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p>
-                            <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p>
-                            <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p>
+                            {{-- <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p> --}}
+                            {{-- <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p> --}}
+                            {{-- <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p> --}}
                             <div class="d-flex mt-3 justify-content-between">
-                                <a href="{{ route('vendor.register') }}" target="_blank"><button
-                                        class="btn btn-primary mr-2">Get Started</button></a>
-                                <button class="btn btn-primary">Suggest edit</button>
+                                <a href="{{ route('vendor.register') }}" target="_blank"><a
+                                        class="btn btn-primary mr-2">Get Started</a></a>
+                                <a href="{{ route('front.contact') }}" class="btn btn-primary">Suggest edit</a>
                             </div>
                         </div>
                         <div class="advertise-box">
                             <h6 class="text-center">See Anything wrong with this listing</h6>
                             <p>Help us improve by letting us know</p>
-                            <button class="btn btn-primary">Suggest edit</button>
+                            <a href="{{ route('front.contact') }}" class="btn btn-primary">Suggest edit</a>
                         </div>
                         <div class="advertise-box">
                             <h6 class="text-center">Is this your business</h6>
                             <p>By claiming this business you can update and control company information</p>
-                            <button class="btn btn-primary">Claim Your Business</button>
+                            <a href="{{ route('front.contact') }}" class="btn btn-primary">Claim Your Business</a>
                         </div>
                         <div class="advertise-box bg-sea-green">
                             <h6 class="text-center">Real-Estate</h6>
@@ -71,8 +71,8 @@
                                 ding your dream property. Whether you're looking for a cozy apartmen
                                 t, a spacious family home, or a commercial space for your business,
                                 we have a wide range of options to suit your needs.</p>
-                            {{-- <button class="btn btn-primary">Claim Your Business</button> --}}
-                            <button href="#" class="btn  btn-dark">Get Job</button>
+                            {{-- <a class="btn btn-primary">Claim Your Business</a> --}}
+                            <a href="{{ route('front.contact') }}" class="btn  btn-dark">Get Job</a>
 
                         </div>
                         <div class="advertise-box">
@@ -80,8 +80,8 @@
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, asperiores
                                 enim voluptatibus ut atque molestiae natus facilis, accusamus dolorum, repelle
                                 ndus voluptas sequi ad. Molestias.</p>
-                            {{-- <button class="btn btn-primary">Claim Your Business</button> --}}
-                            <button href="#" class="btn  btn-dark">Get System Services</button>
+                            {{-- <a class="btn btn-primary">Claim Your Business</a> --}}
+                            <a href="{{ route('front.contact') }}" class="btn  btn-dark">Get System Services</a>
                         </div>
                         <div class="advertise-box bg-sea-green">
                             <h6 class="text-center">Technology Services</h6>
@@ -100,8 +100,9 @@
                             <p class="">
                                 <i class="bi bi-check-circle-fill"></i> Cyber Security Service
                             </p>
-                            {{-- <button class="btn btn-primary">Claim Your Business</button> --}}
-                            <button href="#" class="btn  btn-dark">Get Technolgy services</button>
+                            {{-- <a class="btn btn-primary">Claim Your Business</a> --}}
+                            <a href="{{ route('front.contact') }}" class="btn  btn-dark">Get Technolgy
+                                services</a>
                         </div>
                         <div class="advertise-box">
                             <h6 class="text-center">Domain Hosting</h6>
@@ -110,15 +111,15 @@
                             <p>we are dedicated to providing reliable and secure hosting solutions for your online presence.
                                 We understand the importance of having a robust and accessible website, and we strive to
                                 ensure that your domain and hosting needs.</p>
-                            {{-- <button class="btn btn-primary">Claim Your Business</button> --}}
-                            <button href="#" class="btn  btn-dark">Get System Services</button>
+                            {{-- <a class="btn btn-primary">Claim Your Business</a> --}}
+                            <a href="https://slippa.unipuller.uk/" class="btn  btn-dark">Get Domain</a>
                         </div>
                         {{-- <div class="advertise-box">
                             <h6 class="text-center">Buy and Sell Products</h6>
                             <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/sell-product.png') }}"
                                 alt="">
                             <p>we strive to connect buyers and sellers in a seamless and efficient manner. We understand the importance of finding the right products or selling your items to interested buyers, and we are here to facilitate that process.</p>
-                            <button href="#" class="btn  btn-dark">Buy & Sell Products</button>
+                            <a href="#" class="btn  btn-dark">Buy & Sell Products</a>
                         </div> --}}
                     </div>
 
@@ -151,17 +152,17 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <button type="submit" name="submit" class="search-submit"><i
-                                        class="flaticon-search flat-mini text-white"></i></button>
+                                <a type="submit" name="submit" class="search-submit"><i
+                                        class="flaticon-search flat-mini text-white"></i></a>
                             </form>
                         </div>
                         <div class="shopautocomplete2 position-relative">
                             <div id="shopmyInputautocomplete-list2" class="autocomplete-items"></div>
                         </div>
                         <div class="mb-4 d-xl-none">
-                            <button class="dashboard-sidebar-btn btn bg-primary rounded">
+                            <a class="dashboard-sidebar-btn btn bg-primary rounded">
                                 <i class="fas fa-bars"></i>
-                            </button>
+                            </a>
                         </div>
 
                         <div class="showing-products pt-30 pb-50 border-2 border-bottom border-light" id="ajaxContent">
@@ -228,18 +229,22 @@
                                                             </p>
                                                         </div>
 
-                                                        <div class="d-flex text-center" style="background-color: whitesmoke;
+                                                        <div class="d-flex text-center"
+                                                            style="background-color: whitesmoke;
                                                         border-top: 3px solid var(--green);">
                                                             <span class=" flex-fill mb-0 text-white p-2">
                                                                 <p class="lower-section-text mb-0  text-muted">Total</p>
-                                                                <p class="mb-0 text-muted">{{ $vendor->services->count() }}</p>
+                                                                <p class="mb-0 text-muted">
+                                                                    {{ $vendor->services->count() }}</p>
                                                             </span>
                                                             <span class=" flex-fill mb-0 text-white p-2">
-                                                                <p  class="lower-section-text mb-0  text-muted">Services & Products</p>
-                                                                <p class="mb-0  text-muted">{{ $vendor->products->count() }}</p>
+                                                                <p class="lower-section-text mb-0  text-muted">Services &
+                                                                    Products</p>
+                                                                <p class="mb-0  text-muted">
+                                                                    {{ $vendor->products->count() }}</p>
                                                             </span>
                                                             <span class=" flex-fill mb-0 text-white p-2">
-                                                                <p  class="lower-section-text mb-0  text-muted">Rating</p>
+                                                                <p class="lower-section-text mb-0  text-muted">Rating</p>
                                                                 <p class="mb-0  text-muted"><i class="fas fa-star"></i>
                                                                     {{ App\Models\Rating::ratings($vendor->id) }}
                                                                     ({{ App\Models\Rating::ratingCount($vendor->id) }})
@@ -287,12 +292,12 @@
                                         }
 
                                         /* .shipping-feed-back {
-                                                                        margin-bottom: -25px;
-                                                                    } */
+                                                                            margin-bottom: -25px;
+                                                                        } */
 
                                         /* .shipping-feed-back2 {
-                                                                        margin-bottom: -15px;
-                                                                    } */
+                                                                            margin-bottom: -15px;
+                                                                        } */
 
                                         .product-info .product-title a {
                                             font-size: 18px !important;

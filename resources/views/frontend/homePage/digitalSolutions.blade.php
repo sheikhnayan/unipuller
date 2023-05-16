@@ -29,8 +29,8 @@
                                             <li class="list-group-item"><i class="bi bi-check-circle-fill"></i> Content marketing</li>
                                             <li class="list-group-item"><i class="bi bi-check-circle-fill"></i> Digital content</li>
                                         </ul>
-                                        <button href="https://candidate-finder.unipuller.uk"
-                                            class="btn  btn-dark mt-3">Get Digital Solution</button>
+                                        <a href="https://candidate-finder.unipuller.uk"
+                                            class="btn  btn-dark mt-3">Get Digital Solution</a>
                                     </div>
                                 </div>
                             </div>
