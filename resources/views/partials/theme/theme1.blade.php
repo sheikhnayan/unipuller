@@ -22,7 +22,7 @@
             <section class="home-slider owl-theme owl-carousel">
                 @foreach ($sliders as $data)
                     <div class="banner-slide-item"
-                        style="background: url('{{ asset('assets/images/sliders/' . $data->photo) }}') no-repeat center  ;height:350px !important">
+                        style="background: url('{{ asset('assets/images/sliders/' . $data->photo) }}') no-repeat center  ;height:400px !important;background-position: center -130px;">
                         <div class="container">
                             <div class="banner-wrapper-item text-{{ $data->position }}">
                                 <div class="banner-content text-dark ">

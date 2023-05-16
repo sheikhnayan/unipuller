@@ -14,7 +14,7 @@
             <h2 class="text-dark text-center">Main Features</h2>
             <hr class="mx-auto">
         </div>
-        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 buy-sell py-2">
+        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 col-md-6 buy-sell py-2">
             <a href="#">
                 <div class="card">
                     <div class="card-body">
@@ -38,7 +38,7 @@
 
             </a>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 buy-sell py-2">
+        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 col-md-6 buy-sell py-2">
             <a href="#">
                 <div class="card">
                     <div class="card-body">
@@ -70,7 +70,7 @@
 
             </a>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 buy-sell py-2">
+        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 col-md-6 buy-sell py-2">
             @php
                 $route = route('vendor.login');
                 if ($gs->reg_vendor == 1) {
@@ -101,7 +101,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 buy-sell py-2">
+        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 col-md-6 buy-sell py-2">
             <a href="#">
                 <div class="card">
                     <div class="card-body">
@@ -161,7 +161,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 buy-sell py-2">
+        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 col-md-6 buy-sell py-2">
             <a href="#">
                 <div class="card">
                     <div class="card-body">
@@ -226,7 +226,7 @@
 
             </a>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 buy-sell py-2">
+        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 col-md-6 buy-sell py-2">
             <a href="#">
                 <div class="card">
                     <div class="card-body">
@@ -291,7 +291,7 @@
 
             </a>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 buy-sell py-2">
+        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 col-md-6 buy-sell py-2">
             <a href="https://slippa.unipuller.uk">
                 <div class="card">
                     <div class="card-body">
@@ -310,11 +310,11 @@
                 </div>
             </a>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 buy-sell py-2">
+        <div class="col-12 col-sm-6 col-lg-3 col-xl-3 col-md-6 buy-sell py-2">
             <a href="#">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Search for local companies</h5>
+                        <h5 class="card-title">Search  local companies</h5>
                         <div class="row">
                             @foreach ($shopUser as $vendor)
                                 <div class="col-6">

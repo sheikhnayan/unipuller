@@ -133,7 +133,7 @@
 
                                                         </div>
                                                     </div>
-                                                    <div class=" col-lg-8 col-md-8 col-sm-12 py-2">
+                                                    <div class=" col-lg-8 col-md-8 col-sm-12 p-4">
                                                         <h5 class="product-title large_screen  mb-0 ">
                                                             <a class="@if ($key % 2 == 1) text-white @endif"
                                                                 href="{{ route('vendor.shop.service', $vendor->id) }}">
@@ -188,7 +188,7 @@
                                                     <div class="  col-lg-4 col-md-4 col-sm-12 d-flex align-items-center p-0 img-large-screen">
                                                         <a href="{{ route('vendor.shop.service', $vendor->id) }}"
                                                             class="woocommerce-LoopProduct-link">
-                                                            <img class="lazy img-fluid rounded"
+                                                            <img class="lazy img-fluid rounded-end"
                                                                 data-src="{{ $vendor->shop_image ? asset('assets/images/categories/' . $vendor->shop_image) : asset('assets/common_img/vendor_profile.jpeg') }}"
                                                                 alt="Product Image">
                                                         </a>

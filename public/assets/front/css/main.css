@@ -384,8 +384,8 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
 }
 
 .shop-list-page .bg-line-2 {
-    top: 90px;
-    left: -70px;
+    top: 75px;
+    left: -110px;
 }
 .recruitment-section .content-circle,
 .estate-section .content-circle,
@@ -424,7 +424,7 @@ background-color: var(--light-green) !important;
     background-color: var(--light-green);
 }
 
-.shop-list-page  a.page-link {
+.shop-list-page a.page-link {
     color: var(--green);
     border: 1px solid var(--green);
 }
@@ -468,14 +468,21 @@ background-color: var(--light-green) !important;
     .main-features-section .card-img {
         height: 142px;
     }
-}
-@media (min-width: 768px) {
 
-    .shop-list-page .img-small-screen{
-        display:none !important;
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+    .main-features-section .col-lg-3 {
+        flex: 0 0 auto;
+        width: 30%;
     }
-    .shop-list-page .img-large-screen{
-        display:block !important;
+}
+
+@media (min-width: 768px) {
+    .shop-list-page .img-small-screen {
+        display: none !important;
+    }
+    .shop-list-page .img-large-screen {
+        display: block !important;
     }
 }
 @media (max-width: 768px) {
@@ -499,7 +506,6 @@ background-color: var(--light-green) !important;
         min-height: 55px;
         max-height: 55px;
     }
-
 }
 @media (max-width: 425px) {
     .footer-section .d-flex.justify-content-sm-center {
@@ -527,20 +533,19 @@ background-color: var(--light-green) !important;
     .main-features-section .card .card-img-sell-product {
         height: 311px;
     }
-    .shop-list-page .img-small-screen{
-        display:block !important;
+    .shop-list-page .img-small-screen {
+        display: block !important;
     }
-    .shop-list-page .img-large-screen{
-        display:none !important;
+    .shop-list-page .img-large-screen {
+        display: none !important;
     }
     .shop-list-page .bg-line-1,
     .shop-list-page .bg-line-2 {
-        display:none;
-
+        display: none;
     }
     .shop-list-page p.about_line {
-        min-height: 40px;
-        max-height: 40px;
+        min-height: 55px;
+        max-height: 55px;
     }
 }
 @media (max-width: 375px) {
