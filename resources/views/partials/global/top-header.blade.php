@@ -53,7 +53,7 @@
 
     </div>
     <div class="container-fluid middle-nav-bar">
-        <div class="row align-items-center justify-content-end">
+        <div class="row align-items-center justify-content-end  py-3">
             <div class="col-lg-3 sm-mx-none">
                 <div class="d-flex align-items-center  text-general">
                     <i class="flaticon-phone-call flat-mini me-2 text-general"></i>

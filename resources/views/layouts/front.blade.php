@@ -203,6 +203,7 @@
     @yield('script')
 
 
+    @include('partials.global.front-footer')
 
 </body>
 

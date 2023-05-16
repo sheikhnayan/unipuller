@@ -31,8 +31,16 @@
         <div class="full-row">
             <div class="container">
                 <div class="row">
+                    <div class="mb-4 d-lg-none">
+                        <button class="dashboard-sidebar-btn btn bg-dark rounded">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
                     <div class="col-lg-4 md-mb-50">
                         <div id="sidebar" class="sidebar-category bg-light  p-30">
+                            <div class="dashbaord-sidebar-close d-lg-none d-flex justify-content-end">
+                                <i class="fas fa-times"></i>
+                            </div>
                             <div class="widget border-0 py-0 search-widget">
                                 <form class="contactform" action="#" id="categoryForm" method="GET">
                                     <input type="text" class="form-control " id="category-search" name="search"
@@ -77,7 +85,6 @@
     </div>
 
     <script>
-
         // const categoryForm = document.getElementById('categoryForm');
         const categories = @json($categories); // Fetch the categories from Laravel
 
@@ -137,5 +144,6 @@
         });
     </script>
 
-    @includeIf('partials.global.common-footer')
+    {{-- {{-- @includeIf('partials.global.common-footer') --}}
+ --}}
 @endsection

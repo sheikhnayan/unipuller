@@ -134,7 +134,7 @@
         @endif
     @endif
 
-    @include('partials.global.front-footer')
+    {{-- @include('partials.global.front-footer') --}}
 
     <!-- Scroll to top -->
     <a href="#" class="scroller text-white" id="scroll"><i class="fa fa-angle-up"></i></a>

@@ -40,7 +40,7 @@
                     <div class="col-xl-3">
                         <div class="advertise-banner">
                             <h5 class="text-center px-4 mt-3">Create Your Free Business Profile</h5>
-                            <img class="text-center mb-2" src="{{ asset('/assets/front/images/social.png') }}"
+                            <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/social.png') }}"
                                 alt="">
 
                             <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p>
@@ -54,15 +54,70 @@
                             </div>
                         </div>
                         <div class="advertise-box">
-                            <h6>See Anything wrong with this listing</h6>
+                            <h6 class="text-center">See Anything wrong with this listing</h6>
                             <p>Help us improve by letting us know</p>
                             <button class="btn btn-primary">Suggest edit</button>
                         </div>
                         <div class="advertise-box">
-                            <h6>Is this your business</h6>
+                            <h6 class="text-center">Is this your business</h6>
                             <p>By claiming this business you can update and control company information</p>
                             <button class="btn btn-primary">Claim Your Business</button>
                         </div>
+                        <div class="advertise-box bg-sea-green">
+                            <h6 class="text-center">Real-Estate</h6>
+                            <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/social.png') }}"
+                                alt="">
+                            <p> we take pride in providing exceptional services to assist you in fin
+                                ding your dream property. Whether you're looking for a cozy apartmen
+                                t, a spacious family home, or a commercial space for your business, 
+                                we have a wide range of options to suit your needs.</p>
+                            {{-- <button class="btn btn-primary">Claim Your Business</button> --}}
+                            <button href="#" class="btn  btn-dark">Get Job</button>
+
+                        </div>
+                        <div class="advertise-box">
+                            <h6 class="text-center">Our UBS System</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, asperiores
+                               enim voluptatibus ut atque molestiae natus facilis, accusamus dolorum, repelle
+                               ndus voluptas sequi ad. Molestias.</p>
+                            {{-- <button class="btn btn-primary">Claim Your Business</button> --}}
+                            <button href="#" class="btn  btn-dark">Get System Services</button>
+                        </div>
+                        <div class="advertise-box bg-sea-green">
+                            <h6 class="text-center">Technology Services</h6>
+                            <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/app-dev.png') }}"
+                                alt="">
+                            <p>We provide the following services:</p>
+                            <p class="mb-0">
+                                <i class="bi bi-check-circle-fill"></i> Applicatoin Development
+                            </p>
+                            <p class="mb-0">
+                                <i class="bi bi-check-circle-fill"></i> Web designing and services
+                            </p>
+                            <p class="mb-0">
+                                <i class="bi bi-check-circle-fill"></i> Web Development
+                            </p>
+                            <p class="">
+                                <i class="bi bi-check-circle-fill"></i> Cyber Security Service
+                            </p>
+                            {{-- <button class="btn btn-primary">Claim Your Business</button> --}}
+                            <button href="#" class="btn  btn-dark">Get Technolgy services</button>
+                        </div>
+                        <div class="advertise-box">
+                            <h6 class="text-center">Domain Hosting</h6>
+                            <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/social.png') }}"
+                                alt="">
+                            <p>we are dedicated to providing reliable and secure hosting solutions for your online presence. We understand the importance of having a robust and accessible website, and we strive to ensure that your domain and hosting needs.</p>
+                            {{-- <button class="btn btn-primary">Claim Your Business</button> --}}
+                            <button href="#" class="btn  btn-dark">Get System Services</button>
+                        </div>
+                        {{-- <div class="advertise-box">
+                            <h6 class="text-center">Buy and Sell Products</h6>
+                            <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/sell-product.png') }}"
+                                alt="">
+                            <p>we strive to connect buyers and sellers in a seamless and efficient manner. We understand the importance of finding the right products or selling your items to interested buyers, and we are here to facilitate that process.</p>
+                            <button href="#" class="btn  btn-dark">Buy & Sell Products</button>
+                        </div> --}}
                     </div>
 
 
@@ -284,11 +339,11 @@
 
                 </div>
             </div>
-            <div class="bg-circle-2"></div>
-            <div class="bg-circle-1"></div>
+            {{-- <div class="bg-circle-2"></div> --}}
+            {{-- <div class="bg-circle-1"></div> --}}
         </div>
     </div>
-    @includeIf('partials.global.common-footer')
+    {{-- {{-- @includeIf('partials.global.common-footer') --}}
 @endsection
 
 @section('script')
