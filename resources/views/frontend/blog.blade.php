@@ -106,5 +106,6 @@
 </div>
 </div>
 <!--==================== Blog Section End ====================-->
-@includeIf('partials.global.common-footer')
+{{-- @includeIf('partials.global.common-footer') --}}
+
 @endsection

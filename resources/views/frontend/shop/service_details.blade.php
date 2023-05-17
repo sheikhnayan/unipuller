@@ -281,7 +281,8 @@
         </div>
     </div>
     <!--==================== Related Products Section End ====================-->
-    @includeIf('partials.global.common-footer')
+    {{-- @includeIf('partials.global.common-footer') --}}
+
 
 
     @if ($gs->is_report)

@@ -45,7 +45,8 @@
 </div>
 
 @endif
-    @includeIf('partials.global.common-footer')
+    {{-- @includeIf('partials.global.common-footer') --}}
+
 @endsection
 @section('script')
     <script>
@@ -61,7 +62,7 @@
             $(".ajax-loader").show();
             filter();
         });
-        
+
         function filter() {
             let filterlink = '';
 

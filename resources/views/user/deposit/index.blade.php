@@ -74,21 +74,21 @@
                                                                 <div>
                                                                     {{$data->method}}
                                                                 </div>
-                                                            </div>        
+                                                            </div>
                                                         </td>
                                                         <td data-label="{{ __('Amount')}}">
                                                             <div>
                                                                 <div>
                                                                     {{ \PriceHelper::showOrderCurrencyPrice(($data->amount * $data->currency_value),$data->currency_code) }}
                                                                 </div>
-                                                            </div>        
+                                                            </div>
                                                         </td>
                                                         <td data-label="{{ __('Status') }}">
                                                             <div>
                                                                 <span class="badge {{$data->status == 1 ? ' bg-success': 'bg-primary'}}">
                                                                     {{ $data->status == 1 ? 'Completed' : 'Pending'}}
                                                                 </span>
-                                                            </div>        
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                 @endforeach
@@ -130,7 +130,8 @@
     </div>
 </div>
 
-@includeIf('partials.global.common-footer')
+{{-- @includeIf('partials.global.common-footer') --}}
+
 
 @endsection
 

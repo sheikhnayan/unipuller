@@ -105,7 +105,8 @@
    </div>
 </div>
 <!--==================== Blog Section End ====================-->
-@includeIf('partials.global.common-footer')
+{{-- @includeIf('partials.global.common-footer') --}}
+
 @endsection
 @section('script')
 <script src = "{{ asset('assets/front/js/dataTables.min.js') }}" defer ></script>

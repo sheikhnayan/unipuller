@@ -224,7 +224,7 @@
 
                                             <select name="method" id="method" class="option form-control border mb-3" required="">
                                                 <option value="" data-form="" data-show="no" data-val="" data-href="">{{ __('Select an option') }}</option>
-                                                
+
                                                 @foreach($gateway as $paydata)
 
                                                     @if($paydata->type == 'manual')
@@ -281,7 +281,8 @@
 
 
 
-@includeIf('partials.global.common-footer')
+{{-- @includeIf('partials.global.common-footer') --}}
+
 
 @endsection
 @section('script')

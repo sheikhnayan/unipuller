@@ -228,7 +228,7 @@
                                                 </td>
                                                 <td data-label="{{ __('Name') }}">
                                                     <div>
-                                                        
+
                                                     <input type="hidden" value="{{ $product['license'] }}">
 
                                                     @if($product['item']['user_id'] != 0)
@@ -276,7 +276,7 @@
                                                 </td>
                                                 <td data-label="{{ __('Details') }}">
                                                     <div>
-                                                            
+
                                                         <b>{{ __('Quantity') }}</b>: {{$product['qty']}} <br>
                                                         @if(!empty($product['size']))
                                                         <b>{{ __('Size') }}</b>: {{ $product['item']['measure'] }}{{str_replace('-',' ',$product['size'])}} <br>
@@ -350,7 +350,8 @@
     </div>
 </div>
 
-@includeIf('partials.global.common-footer')
+{{-- @includeIf('partials.global.common-footer') --}}
+
 
 @endsection
 @section('script')

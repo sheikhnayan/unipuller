@@ -72,7 +72,8 @@
 
 {{-- @includeIf('partials.product.grid') --}}
 
-@includeIf('partials.global.common-footer')
+{{-- @includeIf('partials.global.common-footer') --}}
+
 @endsection
 
 @section('script')
