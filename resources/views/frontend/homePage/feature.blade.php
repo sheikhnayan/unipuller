@@ -28,8 +28,7 @@
                                 </div>
                                 <span class="badge bg-danger text-white">Up to 37% off</span><span class="text-danger">
                                     Deal</span>
-                                <p class="text-secondary card-text mb-2 ">Lorem ipsum dolor Lorem ipsum dolor
-                                    Lorem ipsum dolor Lorem ipsum dolor </p>
+                                <p class="text-secondary card-text mb-2 ">we take pride in providing the best deals to our valued customers </p>
                             </div>
                         </div>
                         <a href="#" class="card-link text-dark text-deconration-none mt-2">Show more details</a>

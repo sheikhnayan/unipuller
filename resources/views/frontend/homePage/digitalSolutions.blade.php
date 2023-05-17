@@ -13,7 +13,7 @@
                                             class="img-fluid" alt="" srcset="">
                                     </div>
                                     <div class="col-lg-7 col-md-8 col-sm-12 p-3">
-                                        <i class="bi bi-globe-central-south-asia p-2"></i>
+                                        <i class="fa fa-globe p-2 main-icon"></i>
                                         <h3 class="mb-0 mt-2 py-1 text-secondary">Digital Solutions</h3>
                                         <hr class="mt-0">
                                         <p class="card-text mb-0">We are committed to creating an actionable strategy, online marketing & technology
@@ -29,7 +29,7 @@
                                             <li class="list-group-item"><i class="bi bi-check-circle-fill"></i> Content marketing</li>
                                             <li class="list-group-item"><i class="bi bi-check-circle-fill"></i> Digital content</li>
                                         </ul>
-                                        <a href="https://candidate-finder.unipuller.uk"
+                                        <a href="https://slippa.unipuller.uk/"
                                             class="btn  btn-dark mt-3">Get Digital Solution</a>
                                     </div>
                                 </div>

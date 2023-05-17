@@ -1,7 +1,7 @@
 
     // Date Counting
     $('[data-countdown]').each(function() {
-
+       
         var $this = $(this),
             finalDate = $(this).data('countdown');
 
@@ -13,9 +13,9 @@
       // Cache jQuery Selector
       var $window = $(window),
       $page_wrapper = $('#page_wrapper'),
-
+    
       $four_carousel = $('.four-carousel')
-
+    
 
        // Four item slide
        if ($four_carousel.length) {

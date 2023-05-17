@@ -37,10 +37,7 @@
                         </div>
                         <div class="flip-card-back p-2">
                             <h5 class="text-white">John Doe</h5>
-                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Libero illo architecto incidunt quibusdam hic magni rec
-                                usandae minus itaque nam officiis quaerat debitis ducim
-                                us laudantium, soluta officia reiciendis animi nulla ab?</p>
+                            <p class="text-white">With a stellar career in the world of cinema, this charismatic individual has captivated audiences worldwide with their exceptional talent and magnetic on-screen presence.</p>
                         </div>
                     </div>
                 </div>
@@ -77,10 +74,7 @@
                         </div>
                         <div class="flip-card-back p-2">
                             <h5 class="text-white">John Doe</h5>
-                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Libero illo architecto incidunt quibusdam hic magni rec
-                                usandae minus itaque nam officiis quaerat debitis ducim
-                                us laudantium, soluta officia reiciendis animi nulla ab?</p>
+                            <p class="text-white">Born with a natural inclination for the performing arts, our film star's journey began with a deep passion for storytelling and a desire to bring characters to life. They embarked on their path to stardom by honing their acting skills through rigorous training</p>
                         </div>
                     </div>
                 </div>
@@ -117,10 +111,7 @@
                         </div>
                         <div class="flip-card-back p-2">
                             <h5 class="text-white">John Doe</h5>
-                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Libero illo architecto incidunt quibusdam hic magni rec
-                                usandae minus itaque nam officiis quaerat debitis ducim
-                                us laudantium, soluta officia reiciendis animi nulla ab?</p>
+                            <p class="text-white">Having established a solid foundation in the industry, our film star made a remarkable transition to the silver screen, gracing audiences with their versatile performances. Their ability to seamlessly embody a wide range of characters, from intense and dramatic roles to lighthearted and comedic ones</p>
                         </div>
                     </div>
                 </div>
@@ -157,10 +148,7 @@
                         </div>
                         <div class="flip-card-back p-2">
                             <h5 class="text-white">John Doe</h5>
-                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Libero illo architecto incidunt quibusdam hic magni rec
-                                usandae minus itaque nam officiis quaerat debitis ducim
-                                us laudantium, soluta officia reiciendis animi nulla ab?</p>
+                            <p class="text-white">Beyond their undeniable talent, our film star's dedication and professionalism have set them apart. They approach each project with unwavering commitment, investing time and effort to understand the nuances of their roles and collaborating closely with directors</p>
                         </div>
                     </div>
                 </div>
@@ -197,10 +185,7 @@
                         </div>
                         <div class="flip-card-back p-2">
                             <h5 class="text-white">John Doe</h5>
-                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Libero illo architecto incidunt quibusdam hic magni rec
-                                usandae minus itaque nam officiis quaerat debitis ducim
-                                us laudantium, soluta officia reiciendis animi nulla ab?</p>
+                            <p class="text-white">Off the screen, our film star is known for their philanthropic endeavors, using their platform to make a positive impact on society. They actively support causes close to their heart and use their influence to raise awareness and promote positive change.</p>
                         </div>
                     </div>
                 </div>
@@ -236,10 +221,9 @@
                         </div>
                         <div class="flip-card-back p-2">
                             <h5 class="text-white">John Doe</h5>
-                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Libero illo architecto incidunt quibusdam hic magni rec
-                                usandae minus itaque nam officiis quaerat debitis ducim
-                                us laudantium, soluta officia reiciendis animi nulla ab?</p>
+                            <p class="text-white"> With a mesmerizing voice and a passion for music, this extraordinary individual has established themselves as a prominent figure in the world of entertainment.
+                                From a young age, our singer displayed a natural talent and a deep love for music. They honed their vocal abilities through years of dedicated practice, vocal training,
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -276,10 +260,7 @@
                         </div>
                         <div class="flip-card-back p-2">
                             <h5 class="text-white">John Doe</h5>
-                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Libero illo architecto incidunt quibusdam hic magni rec
-                                usandae minus itaque nam officiis quaerat debitis ducim
-                                us laudantium, soluta officia reiciendis animi nulla ab?</p>
+                            <p class="text-white">With a diverse repertoire, our singer has the ability to captivate audiences across different genres, be it pop, rock, R&B, jazz, or classical. Their performances are characterized by their soulful delivery, emotive expressions, and an innate ability to connect with listeners on a profound level.</p>
                         </div>
                     </div>
                 </div>
@@ -316,10 +297,7 @@
                         </div>
                         <div class="flip-card-back p-2">
                             <h5 class="text-white">John Doe</h5>
-                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Libero illo architecto incidunt quibusdam hic magni rec
-                                usandae minus itaque nam officiis quaerat debitis ducim
-                                us laudantium, soluta officia reiciendis animi nulla ab?</p>
+                            <p class="text-white">In addition to their vocal prowess, our singer is also a talented songwriter, often penning lyrics that resonate with listeners and reflect their own personal experiences. Their ability to translate raw emotions into beautiful melodies has garnered critical acclaim and earned them a dedicated fan base.</p>
                         </div>
                     </div>
                 </div>

@@ -691,7 +691,7 @@
 		$(document).on("click", "#qaddcrt", function () {
 			var qty = $(".qttotal").val();
 			var pid = $("#product_id").val();
-
+			
 
 			if ($(".product-attr").length > 0) {
 				values = $(".product-attr:checked")
@@ -1056,8 +1056,6 @@
 			$this.find(".gocover").show();
 			$this.find(".input-field").prop("readonly", true);
 			$this.find("button").prop("disabled", true);
-            $this.find("button").text('Sending..');
-
 			$.ajax({
 				method: "POST",
 				url: $(this).prop("action"),
@@ -1070,19 +1068,9 @@
 						for (var error in data.errors) {
 							toastr.error(data.errors[error]);
 						}
-                        $.each(data.errors, function(field, errors) {
-                            // Find the input field and add the error message
-                            $('#' + field).addClass('is-invalid');
-                            $('#' + field).parent().append('<div class="invalid-feedback">' + errors[0] + '</div>');
-                        });
-					$this.find("button").prop("disabled", false);
-                    $this.find("button").text('Send Message');
-
 					} else {
-						toastr.success(data.success);
+						toastr.success(data);
 						$this.find(".input-field").val("");
-						$this.find("button").text('Submited');;
-
 						$(".off-canvas-menu").removeClass("show");
 						$(".off-canvas-menu-overlay").removeClass("show");
 					}
