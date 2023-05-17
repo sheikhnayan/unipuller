@@ -273,6 +273,7 @@
 
     .news-card img {
         height: 275px;
+        width: 100% !important;
     }
 
     .news-card-title {
