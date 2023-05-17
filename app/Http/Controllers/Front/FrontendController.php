@@ -138,14 +138,42 @@ class FrontendController extends FrontBaseController
             ->get();
         return view('frontend.shop.vendor_shop', compact('vendor', 'shops', 'product_shops'));
     }
-    public function vendorShopService($id)
+	public function vendorShopService($id)
+	{
+        $shop = UserShop::where('id',$id)
+        ->with([
+            'services',
+            'products',
+            'marketingProducts' => function($query) {
+                $query->take(8);
+            }
+        ])->first();
+
+        $vendor = User::where('id',$shop->user_id)->first();    
+        return view('frontend.shop.service_shop', compact('shop','vendor'));
+	}
+    public function loadMarketingProducts(Request $request)
     {
-        $shop = UserShop::where('id', $id)
-            ->with('services', 'products')
-            ->first();
-        $vendor = User::where('id', $shop->user_id)->first();
-        return view('frontend.shop.service_shop', compact('shop', 'vendor'));
+        $skip = ($request->page - 1) * 8;
+        $shop = UserShop::where('id', $request->shop_id)->with(['marketingProducts' => function($query) use ($skip) {
+            $query->skip($skip)->take(8);
+        }])->first();
+        
+        $products = $shop->marketingProducts;
+        return view('frontend.shop.marketing_products', compact('products'))->render();
     }
+
+    public function loadNewsProducts(Request $request)
+    {
+        $skip = ($request->page - 1) * 8;
+        $shop = UserShop::where('id', $request->shop_id)->with(['marketingProducts' => function($query) use ($skip) {
+            $query->skip($skip)->take(8);
+        }])->first();
+        
+        $products = $shop->marketingProducts;
+        return view('frontend.shop.news_products', compact('products'))->render();
+    }
+    
     public function categoryShop()
     {
         $shops = UserShop::all();
