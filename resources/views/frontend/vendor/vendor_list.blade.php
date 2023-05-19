@@ -245,13 +245,12 @@
                                                             style="background-color: whitesmoke;
                                                         border-top: 3px solid var(--green);">
                                                             <span class=" flex-fill mb-0 text-white p-2">
-                                                                <p class="lower-section-text mb-0  text-muted">Total</p>
+                                                                <p class="lower-section-text mb-0  text-muted">Services</p>
                                                                 <p class="mb-0 text-muted">
                                                                     {{ $vendor->services->count() }}</p>
                                                             </span>
                                                             <span class=" flex-fill mb-0 text-white p-2">
-                                                                <p class="lower-section-text mb-0  text-muted">Services &
-                                                                    Products</p>
+                                                                <p class="lower-section-text mb-0  text-muted"> Products</p>
                                                                 <p class="mb-0  text-muted">
                                                                     {{ $vendor->products->count() }}</p>
                                                             </span>
