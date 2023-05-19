@@ -1467,7 +1467,7 @@ Route::group(['middleware' => 'maintenance'], function () {
 
   // CATEGORY SECTION
   Route::get('/categories', 'Front\CatalogController@categories')->name('front.categories');
-  Route::get('/category/{category?}/{subcategory?}/{childcategory?}', 'Front\CatalogController@category')->name('front.category');
+  Route::get('/category/{category?}/{subcategory?}/{childcategory?}/{kind?}', 'Front\CatalogController@category')->name('front.category');
   Route::get('/service_category/{category?}/{subcategory?}/{childcategory?}', 'Front\CatalogController@servicecategory')->name('front.service_category');
   // CATEGORY SECTION ENDS
 

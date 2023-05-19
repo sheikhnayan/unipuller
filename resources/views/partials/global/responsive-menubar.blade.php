@@ -53,22 +53,22 @@
                                 </ul> --}}
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">{{ __('IT Solutions') }}</a>
+                                <a class="nav-link" href="https://slippa.unipuller.uk">{{ __('IT Solutions') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">{{ __('Business Solutions') }}</a>
+                                <a class="nav-link" href="https://ubs.unipuller.com/">{{ __('Business Solutions') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">{{ __('Digital Marketing') }}</a>
+                                <a class="nav-link" href="https://slippa.unipuller.uk">{{ __('Digital Marketing') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">{{ __('Domain & Hosting') }}</a>
+                                <a class="nav-link" href="https://slippa.unipuller.uk">{{ __('Domain & Hosting') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">{{ __('Partner Boarding') }}</a>
+                                <a class="nav-link" href="https://slippa.unipuller.uk">{{ __('Partner Boarding') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">{{ __('Sales Lead') }}</a>
+                                <a class="nav-link" href="https://ubs.unipuller.com/">{{ __('Sales Lead') }}</a>
                             </li>
                         </ul>
                     </div>

@@ -128,7 +128,7 @@
                                     <p> <span><i class="fa fa-check"></i></span> Experienced doctors</p>
                                     <p> <span><i class="fa fa-check"></i></span> Professional lawyers</p>
                                     <p> <span><i class="fa fa-check"></i></span> Engineers</p>
-                                    
+
                                     {{-- <a class="btn btn-primary">Claim Your Business</a> --}}
                                     <a href="{{ route('front.contact') }}" class="btn  btn-dark">Get Service</a>
                                 </div>
@@ -266,8 +266,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="bg-line-1"></div>
-                                                <div class="bg-line-2"></div>
+                                                {{-- <div class="bg-line-1"></div> --}}
+                                                {{-- <div class="bg-line-2"></div> --}}
                                             </div>
                                         </div>
                                     @endforeach

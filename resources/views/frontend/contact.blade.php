@@ -170,7 +170,7 @@
     </div>
 
     <!--======================== Contact Section End ==========================-->
-    @include('partials.global.common-footer')
+    {{-- @include('partials.global.common-footer') --}}
 @endsection
 @section('script')
     <script>

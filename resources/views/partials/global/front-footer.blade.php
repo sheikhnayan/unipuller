@@ -7,8 +7,8 @@
                 <p class="mb-0 ">
                     <span class="pr-2"><a class="" href="{{ route('front.vendor', 'about') }}">About
                             {{ config('app.name') }}.com</a></span>
-                   <span class="px-2">|</span> <span class=""><a class="" href="#">Help & Support</a></span>
-                   <span class="px-2">|</span> <span class=""><a class="" href="#">Careers</a></span>
+                   <span class="px-2">|</span> <span class=""><a class="" href="{{route('front.contact')}}">Help & Support</a></span>
+                   <span class="px-2">|</span> <span class=""><a class="" href="{{route('front.contact')}}">Careers</a></span>
                    <span class="px-2">|</span> <span class=""><a class="" href="{{route('front.contact')}}">Contact Us</a></span>
                 </p>
             </div>
@@ -24,8 +24,8 @@
                 <p class="mb-0 ">
                     <span class="pr-2"><a class=""
                             href="{{ route('front.vendor', 'about') }}">Advertising</a></span>
-                   <span class="px-2">|</span> <span class=""><a class="" href="#">Social Media</a></span>
-                   <span class="px-2">|</span> <span class=""><a class="" href="#">Online Reputation
+                   <span class="px-2">|</span> <span class=""><a class="" href="https://slippa.unipuller.uk">Social Media</a></span>
+                   <span class="px-2">|</span> <span class=""><a class="" href="">Online Reputation
                             Management</a></span>
                 </p>
             </div>

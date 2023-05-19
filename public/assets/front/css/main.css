@@ -7,9 +7,6 @@
 .bg-sea-green {
     background-color: var(--light-green);
 }
-.bg-green {
-    background-color: var(--green);
-}
 p {
     font-size: 15px;
     line-height: 25px;
@@ -228,10 +225,10 @@ nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
     border: 0px;
     padding: 5px;
 }
-.recruitment-section .main-icon,
-.estate-section .main-icon,
-.ubs-section .main-icon,
-.digital-section .main-icon {
+.recruitment-section i.bi.bi-building-check,
+.estate-section i.bi.bi-house-check,
+.ubs-section i.bi.bi-kanban-fill,
+.digital-section i.bi.bi-globe-central-south-asia {
     font-size: 25px;
     background-color: var(--light-green);
     padding: 10px 10px;
@@ -527,6 +524,9 @@ background-color: var(--light-green) !important;
     }
 }
 @media (max-width: 425px) {
+    .banner-wrapper-item{
+        padding:20px 0px;
+    }
     .footer-section .d-flex.justify-content-sm-center {
         justify-content: center;
         margin-top: 15px;
@@ -559,12 +559,6 @@ background-color: var(--light-green) !important;
     .shop-list-page p.about_line {
         min-height: 55px;
         max-height: 55px;
-    }
-    .shop-list-page .card-image {
-        border-radius: 0px;
-    }
-    .shop-list-page .select-appearance-none{
-        display:none;
     }
 }
 @media (max-width: 375px) {
