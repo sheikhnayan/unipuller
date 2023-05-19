@@ -193,7 +193,7 @@
         //   append parameters to pagination links
         function addToPagination() {
 
-            console.log(Request::route('category'));
+            console.log(' i m herer addToPagination');
             // add to attributes in pagination links
             $('ul.pagination li a').each(function() {
                 let url = $(this).attr('href');
