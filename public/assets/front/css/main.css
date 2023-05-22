@@ -499,7 +499,7 @@ background-color: var(--light-green) !important;
 }
 
 @media (min-width: 768px) {
-  
+
 }
 @media (max-width: 768px) {
     .footer-section img {
@@ -524,6 +524,9 @@ background-color: var(--light-green) !important;
     }
 }
 @media (max-width: 425px) {
+    .banner-wrapper-item{
+        padding:20px 0px;
+    }
     .footer-section .d-flex.justify-content-sm-center {
         justify-content: center;
         margin-top: 15px;

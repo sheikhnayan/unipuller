@@ -15,7 +15,7 @@
             <hr class="mx-auto">
         </div>
         <div class="col-12 col-sm-6 col-lg-3 col-xl-3 col-md-6 buy-sell py-2">
-            <a href="#">
+            <a href="{{route('front.categories',['','','','','featured'])}}">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Top Deal</h5>
@@ -28,11 +28,10 @@
                                 </div>
                                 <span class="badge bg-danger text-white">Up to 37% off</span><span class="text-danger">
                                     Deal</span>
-                                <p class="text-secondary card-text mb-2 ">Lorem ipsum dolor Lorem ipsum dolor
-                                    Lorem ipsum dolor Lorem ipsum dolor </p>
+                                <p class="text-secondary card-text mb-2 ">we take pride in providing the best deals to our valued customers </p>
                             </div>
                         </div>
-                        <a href="#" class="card-link text-dark text-deconration-none mt-2">Show more details</a>
+                        <a href="{{route('front.categories',['','','','','featured'])}}" class="card-link mt-2">Show more details</a>
                     </div>
                 </div>
 
@@ -44,12 +43,20 @@
                     <div class="card-body">
                         <h5 class="card-title">Buy products</h5>
                         <div class="row">
+                            @php
+                                $index = 0;
+                            @endphp
+
                             @foreach ($subcategories as $category)
+                            @php
+                                $index++;
+                                $currentimg = asset('assets/front/images/products/sample'.$index.'.png');
+                            @endphp
                                 <div class="col-6">
                                     <a href="{{ route('front.categories') }}" class="text-decoration-none">
-                                        <div class="card-item">
+                                        <div class="card-item text-center">
                                             <img class="lazy"
-                                                data-src="{{ asset('assets/front/images/products/sample.png') }}"
+                                                data-src="{{$currentimg }}"
                                                 alt="">
                                         </div>
                                         <p class="text-secondary card-text mb-2 text-center">
@@ -64,7 +71,7 @@
                                 </div>
                             @endforeach
                         </div>
-                        <a href="#" class="card-link text-dark text-deconration-none mt-2">Show more details</a>
+                        <a href="{{ route('front.categories') }}" class="card-link mt-2">Show more details</a>
                     </div>
                 </div>
 
@@ -96,7 +103,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="card-link text-dark text-deconration-none mt-2">Show more details</a>
+                        <a href="{{ $route }}" class="card-link mt-2">Show more details</a>
                     </div>
                 </div>
             </a>
@@ -108,7 +115,7 @@
                         <h5 class="card-title">Study Support</h5>
                         <div class="row">
                             <div class="col-6">
-                                <a href="#" class="text-decoration-none">
+                                <a href="{{route('front.service_category', 'tutoring')}}" class="text-decoration-none">
                                     <div class="card-item">
                                         <img class="lazy"
                                             data-src="{{ asset('assets/front/images/services/tutoring.png') }}"
@@ -120,7 +127,7 @@
                                 </a>
                             </div>
                             <div class="col-6 ">
-                                <a href="#" class="text-decoration-none">
+                                <a href="{{route('front.service_category', 'educational')}}" class="text-decoration-none">
                                     <div class="card-item">
                                         <img class="lazy"
                                             data-src="{{ asset('assets/front/images/services/elearning.png') }}"
@@ -132,7 +139,7 @@
                                 </a>
                             </div>
                             <div class="col-6">
-                                <a href="#" class="text-decoration-none">
+                                <a href="{{route('front.service_category', 'study-abroad-consultancy')}}" class="text-decoration-none">
                                     <div class="card-item">
                                         <img class="lazy"
                                             data-src="{{ asset('assets/front/images/services/study-abroad.png') }}"
@@ -144,7 +151,7 @@
                                 </a>
                             </div>
                             <div class="col-6">
-                                <a href="#" class="text-decoration-none">
+                                <a href="{{route('front.service_category', 'educational')}}" class="text-decoration-none">
                                     <div class="card-item">
                                         <img class="lazy"
                                             data-src="{{ asset('assets/front/images/services/books.png') }}"
@@ -156,7 +163,7 @@
                                 </a>
                             </div>
                         </div>
-                        <a href="#" class="card-link text-dark text-deconration-none mt-2">Show more details</a>
+                        <a href="{{route('front.service_category', 'educational')}}" class="card-link mt-2">Show more details</a>
                     </div>
                 </div>
             </a>
@@ -168,7 +175,7 @@
                         <h5 class="card-title">Book a service</h5>
                         <div class="row">
                             <div class="col-6 ">
-                                <a href="{{ route('front.categories') }}" class="text-decoration-none">
+                                <a href="{{ route('front.service_category') }}" class="text-decoration-none">
                                     <div class="card-item">
                                         <img class="lazy"
                                             data-src="{{ asset('assets/front/images/services/doctor.png') }}"
@@ -181,7 +188,7 @@
 
                             </div>
                             <div class="col-6 ">
-                                <a href="{{ route('front.categories') }}" class="text-decoration-none">
+                                <a href="{{ route('front.service_category') }}" class="text-decoration-none">
                                     <div class="card-item">
                                         <img class="lazy"
                                             data-src="{{ asset('assets/front/images/services/engineer.png') }}"
@@ -194,7 +201,7 @@
 
                             </div>
                             <div class="col-6">
-                                <a href="{{ route('front.categories') }}" class="text-decoration-none">
+                                <a href="{{ route('front.service_category') }}" class="text-decoration-none">
                                     <div class="card-item">
                                         <img class="lazy"
                                             data-src="{{ asset('assets/front/images/services/lawyer.png') }}"
@@ -207,7 +214,7 @@
 
                             </div>
                             <div class="col-6">
-                                <a href="{{ route('front.categories') }}" class="text-decoration-none">
+                                <a href="{{ route('front.service_category') }}" class="text-decoration-none">
                                     <div class="card-item">
                                         <img class="lazy"
                                             data-src="{{ asset('assets/front/images/services/meison.png') }}"
@@ -220,7 +227,7 @@
 
                             </div>
                         </div>
-                        <a href="#" class="card-link text-dark text-deconration-none mt-2">Show more details</a>
+                        <a href="{{ route('front.service_category') }}" class="card-link mt-2">Show more details</a>
                     </div>
                 </div>
 
@@ -233,7 +240,7 @@
                         <h5 class="card-title">Technology services</h5>
                         <div class="row">
                             <div class="col-6 ">
-                                <a href="{{ route('front.categories') }}" class="text-decoration-none">
+                                <a href="https://slippa.unipuller.uk" class="text-decoration-none">
                                     <div class="card-item">
                                         <img class="lazy"
                                             data-src="{{ asset('assets/front/images/services/app-dev.png') }}"
@@ -246,7 +253,7 @@
 
                             </div>
                             <div class="col-6 ">
-                                <a href="{{ route('front.categories') }}" class="text-decoration-none">
+                                <a href="https://slippa.unipuller.uk" class="text-decoration-none">
                                     <div class="card-item">
                                         <img class="lazy"
                                             data-src="{{ asset('assets/front/images/services/web-desiogn.png') }}"
@@ -259,7 +266,7 @@
 
                             </div>
                             <div class="col-6">
-                                <a href="{{ route('front.categories') }}" class="text-decoration-none">
+                                <a href="https://slippa.unipuller.uk" class="text-decoration-none">
                                     <div class="card-item">
                                         <img class="lazy"
                                             data-src="{{ asset('assets/front/images/services/web-dev.png') }}"
@@ -272,7 +279,7 @@
 
                             </div>
                             <div class="col-6">
-                                <a href="{{ route('front.categories') }}" class="text-decoration-none">
+                                <a href="https://slippa.unipuller.uk" class="text-decoration-none">
                                     <div class="card-item">
                                         <img class="lazy"
                                             data-src="{{ asset('assets/front/images/services/cyber.png') }}"
@@ -285,7 +292,7 @@
 
                             </div>
                         </div>
-                        <a href="#" class="card-link text-dark text-deconration-none mt-2">Show more details</a>
+                        <a href="https://slippa.unipuller.uk" class="card-link mt-2">Show more details</a>
                     </div>
                 </div>
 
@@ -305,7 +312,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="card-link text-dark text-deconration-none mt-2">Show more details</a>
+                        <a href="https://slippa.unipuller.uk" class="card-link mt-2">Show more details</a>
                     </div>
                 </div>
             </a>
@@ -314,7 +321,7 @@
             <a href="#">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Search  local companies</h5>
+                        <h5 class="card-title">Search local companies</h5>
                         <div class="row">
                             @foreach ($shopUser as $vendor)
                                 <div class="col-6">
@@ -335,7 +342,7 @@
                             @endforeach
 
                         </div>
-                        <a href="#" class="card-link text-dark text-deconration-none mt-2">Show more details</a>
+                        <a href="{{ route('vendor.list') }}" class="card-link mt-2">Show more details</a>
                     </div>
                 </div>
 

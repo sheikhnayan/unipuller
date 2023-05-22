@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front;
 use App\{Models\Blog, Models\Order, Models\Product, Models\Subscriber, Models\BlogCategory, Classes\GeniusMailer, Models\Generalsetting};
 use App\Models\ArrivalSection;
 use App\Models\Category;
+use App\Models\Star;
 use App\Models\Department;
 
 use App\Models\Comment;
@@ -457,6 +458,7 @@ class FrontendController extends FrontBaseController
             ->take(2)
             ->get();
         $data['service_categories'] = Category::take(12)->get();
+        $data['stars'] = Star::take(8)->get();
         $data['ps'] = $this->ps;
 
         return view('partials.theme.extraindex', $data);

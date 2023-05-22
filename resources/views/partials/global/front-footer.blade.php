@@ -7,8 +7,8 @@
                 <p class="mb-0 ">
                     <span class="pr-2"><a class="" href="{{ route('front.vendor', 'about') }}">About
                             {{ config('app.name') }}.com</a></span>
-                   <span class="px-2">|</span> <span class=""><a class="" href="#">Help & Support</a></span>
-                   <span class="px-2">|</span> <span class=""><a class="" href="#">Careers</a></span>
+                   <span class="px-2">|</span> <span class=""><a class="" href="{{route('front.contact')}}">Help & Support</a></span>
+                   <span class="px-2">|</span> <span class=""><a class="" href="{{route('front.contact')}}">Careers</a></span>
                    <span class="px-2">|</span> <span class=""><a class="" href="{{route('front.contact')}}">Contact Us</a></span>
                 </p>
             </div>
@@ -24,8 +24,8 @@
                 <p class="mb-0 ">
                     <span class="pr-2"><a class=""
                             href="{{ route('front.vendor', 'about') }}">Advertising</a></span>
-                   <span class="px-2">|</span> <span class=""><a class="" href="#">Social Media</a></span>
-                   <span class="px-2">|</span> <span class=""><a class="" href="#">Online Reputation
+                   <span class="px-2">|</span> <span class=""><a class="" href="https://slippa.unipuller.uk">Social Media</a></span>
+                   <span class="px-2">|</span> <span class=""><a class="" href="">Online Reputation
                             Management</a></span>
                 </p>
             </div>
@@ -51,7 +51,7 @@
                 </p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-12 d-flex justify-content-md-end justify-content-sm-center">
-                <p class="mb-0 p-3 bg-warning rounded-2">Advertise here: <span class="advertise-number"> 0000-000-000</span></p>
+                <p class="mb-0 p-3 bg-green rounded-2 text-white">Advertise here: <span class="advertise-number text-white"> 0000-000-000</span></p>
             </div>
         </div>
         <div class="row  py-2">
@@ -72,7 +72,7 @@
             <div class="col-md-4 col-sm-12">
                 <div class="d-flex justify-content-end social-icons">
                     @foreach (DB::table('social_links')->where('user_id', 0)->where('status', 1)->get() as $link)
-                        <a href="{{ $link->link }}"><i class="{{ $link->icon }}"></i></a>
+                        <a href="{{ $link->link }}" class="m-3"><i class="{{ $link->icon }}"></i></a>
                     @endforeach
                 </div>
             </div>

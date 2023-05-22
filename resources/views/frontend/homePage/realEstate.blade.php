@@ -12,7 +12,8 @@
                                     alt="" srcset="">
                                 </div>
                                 <div class="col-lg-7 col-md-8 col-sm-12 p-3">
-                                    <i class="bi bi-house-check p-2"></i>
+                                    {{-- <i class="bi bi-house-check p-2"></i> --}}
+                                    <i class="fa fa-house p-2 main-icon"></i>
                                     <h3 class="mb-0 mt-2 py-1 text-secondary">Real-Estate</h3>
                                     <hr class="mt-0">
                                     <p class="card-text mb-0">Whether you are buying, selling, or renting a property, our real estate agents are
@@ -21,11 +22,11 @@
                                         and
                                         get started on your real estate journey.</p>
                                         <ul class="list-group">
-                                            <li class="list-group-item"><i class="bi bi-check-circle-fill"></i> Find Places Anywhere in the World </li>
-                                            <li class="list-group-item"><i class="bi bi-check-circle-fill"></i> We have agents that can help you </li>
-                                            <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>  Buy & Rent Modern Properties</li>
-                                            <li class="list-group-item"><i class="bi bi-check-circle-fill"></i> Real estate investment advice</li>
-                                            <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>  Real estate consulting</li>
+                                            <li class="list-group-item"><i class="fa fa-check"></i> Find Places Anywhere in the World </li>
+                                            <li class="list-group-item"><i class="fa fa-check"></i> We have agents that can help you </li>
+                                            <li class="list-group-item"><i class="fa fa-check"></i>  Buy & Rent Modern Properties</li>
+                                            <li class="list-group-item"><i class="fa fa-check"></i> Real estate investment advice</li>
+                                            <li class="list-group-item"><i class="fa fa-check"></i>  Real estate consulting</li>
                                           </ul>
                                     <a href="{{route('front.contact')}}" class="btn  btn-dark mt-3">Get Job</a>
                                 </div>
