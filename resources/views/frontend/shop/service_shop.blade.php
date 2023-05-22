@@ -317,10 +317,83 @@
 
     }
     /* News Section Style End */
-</style>
 
-<div class="container mb-4 bg-white rounded">
-    <div class="row shadow m-0 p-0 custom">
+
+    /* Header for Mobile Responsive */
+    .user-image {
+      position: absolute;
+      bottom: -75px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      border: 2px solid #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .top-left-image {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+    }
+    .user-img-style{
+        width: 100%;
+        justify-content: center;
+    }
+    .custom_small_screen{
+        display: none;
+    }
+    @media only screen and (max-width: 990px) {
+        .custom{
+            display: none;
+        }
+        .banner_img{
+            position: absolute;
+            height: 300px;
+            z-index: 10;
+            width: 90%;
+            background-size: cover;
+            background-position: center;
+
+        }
+        .custom_small_screen{
+            display: block;
+            padding-bottom:90px;
+        }
+        .partner_company_name {
+            margin-top: 380px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0px;
+        } 
+        .partner_company_address {
+            display: flex;
+            justify-content: center;
+        }
+        .custom_mobile{
+            margin-top:460px;
+        }
+    }
+</style>
+<div class="custom_small_screen row shadow m-0 p-0">
+    <imgm class="lazy banner-img w-100 img-fluid rounded banner_img"  data-src="{{ $shop->shop_banner ? asset('assets/images/categories/' . $shop->shop_banner) : asset('assets/common_img/shop_banner.jpeg') }}" alt="" />
+    <img class="user-image" src="{{ $shop->shop_image ? asset('assets/images/categories/' . $shop->shop_image) : asset('assets/common_img/vendor_profile.jpeg') }}" />
+    <img class="top-left-image" src="{{ $vendor->photo ? asset('assets/images/users/' . $vendor->photo) : asset('assets/common_img/vendor_profile.jpeg') }}" />
+    <h3 class="partner_company_name">{{ $shop->shop_name }}</h3>
+    <h4 class="partner_company_address">40 Bracken house</h4>
+</div>
+    
+    
+<div class="container mb-4 bg-white rounded custom_mobile">
+     <div class="row shadow m-0 p-0 custom">
         <div class="col-lg-4 d-flex pl-0 user-custom1">
             <a href="{{ route('vendor.service',$vendor->id) }}">
                 <img class="lazy custom-left-img w-100 img-fluid rounded" data-src="{{ $vendor->photo ? asset('assets/images/users/' . $vendor->photo) : asset('assets/common_img/vendor_profile.jpeg') }}" alt="">

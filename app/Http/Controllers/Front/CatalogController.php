@@ -22,7 +22,6 @@ class CatalogController extends FrontBaseController
 
     public function categories()
     {
-
         return view('frontend.products');
     }
 
