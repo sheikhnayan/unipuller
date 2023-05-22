@@ -13,21 +13,21 @@
                                             class="img-fluid" alt="" srcset="">
                                     </div>
                                     <div class="col-lg-7 col-md-8 col-sm-12 p-3">
-
-                                        <i class="bi bi-building-check p-2"></i>
+                                        <i class="fa fa-briefcase main-icon"></i>
+                                        {{-- <i class="bi bi-building-check p-2"></i> --}}
                                         <h3 class="mb-0 mt-2 py-1 text-secondary">Recruitment</h3>
                                         <hr class="mt-0">
                                         <p class="card-text mb-0">We are excited to be seeking out talented individuals
                                             to join our team and help us
                                             achieve our goals</p>
                                         <ul class="list-group">
-                                            <li class="list-group-item"><i class="bi bi-check-circle-fill"></i> Verfied
+                                            <li class="list-group-item"><i class="fa fa-check"></i> Verfied
                                                 Jobs </li>
-                                            <li class="list-group-item"><i class="bi bi-check-circle-fill"></i> Desired
+                                            <li class="list-group-item"><i class="fa fa-check"></i> Desired
                                                 Jobs</li>
-                                            <li class="list-group-item"><i class="bi bi-check-circle-fill"></i> Secured
+                                            <li class="list-group-item"><i class="fa fa-check"></i> Secured
                                                 Future</li>
-                                            <li class="list-group-item"><i class="bi bi-check-circle-fill"></i> Achieve
+                                            <li class="list-group-item"><i class="fa fa-check"></i> Achieve
                                                 your dream goals</li>
                                         </ul>
                                         <a href="https://candidate-finder.unipuller.uk"

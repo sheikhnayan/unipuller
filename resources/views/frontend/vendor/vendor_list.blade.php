@@ -37,83 +37,110 @@
         <div class="mt-2 content-circle">
             <div class="container">
                 <div class="row mobile-reverse">
-                    <div class="col-xl-3">
-                        <div class="advertise-banner">
-                            <h5 class="text-center px-4 mt-3">Create Your Free Business Profile</h5>
-                            <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/social.png') }}"
-                                alt="">
+                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                        <div class="row ">
+                            <div class="col-lg-12 col-md-4 col-sm-6 d-flex align-content-stretch flex-wrap">
+                                <div class="advertise-banner">
+                                    <h5 class="text-center px-4 mt-3">Create Your Free Business Profile</h5>
+                                    <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/social.png') }}"
+                                        alt="">
 
-                            <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p>
-                            {{-- <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p> --}}
-                            {{-- <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p> --}}
-                            {{-- <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p> --}}
-                            <div class="d-flex mt-3 justify-content-between">
-                                <a href="{{ route('vendor.register') }}" target="_blank"><a
-                                        class="btn btn-primary mr-2">Get Started</a></a>
-                                <a href="{{ route('front.contact') }}" class="btn btn-primary">Suggest edit</a>
+                                    <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p>
+                                    {{-- <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p> --}}
+                                    {{-- <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p> --}}
+                                    {{-- <p> <span><i class="fa fa-check"></i></span> Help us improve by letting us know</p> --}}
+                                    <div class="d-flex mt-3 justify-content-between">
+                                        <a href="{{ route('vendor.register') }}" target="_blank"><a class="btn btn-primary mr-2">Get
+                                                Started</a></a>
+                                        <a href="{{ route('front.contact') }}" class="btn btn-primary">Suggest edit</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- <div class="col-lg-12 col-md-4 col-sm-6 d-flex align-content-stretch flex-wrap">
+                                <div class="advertise-box">
+                                    <h6 class="text-center">See Anything wrong with this listing</h6>
+                                    <p>Help us improve by letting us know</p>
+                                    <a href="{{ route('front.contact') }}" class="btn btn-primary">Suggest edit</a>
+                                </div>
+                            </div> --}}
+                            {{-- <div class="col-lg-12 col-md-4 col-sm-6 d-flex align-content-stretch flex-wrap">
+                                <div class="advertise-box">
+                                    <h6 class="text-center">Is this your business</h6>
+                                    <p>By claiming this business you can update and control company information</p>
+                                    <a href="{{ route('front.contact') }}" class="btn btn-primary">Claim Your Business</a>
+                                </div>
+                            </div> --}}
+                            <div class="col-lg-12 col-md-4 col-sm-6 d-flex align-content-stretch flex-wrap">
+                                <div class="advertise-box bg-sea-green">
+                                    <h6 class="text-center">Real-Estate</h6>
+                                    <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/social.png') }}"
+                                        alt="">
+                                    <p> we take pride in providing exceptional services to assist you in fin
+                                        ding your dream property. Whether you're looking for a cozy apartmen
+                                        t, a spacious family home, or a commercial space for your business,
+                                        we have a wide range of options to suit your needs.</p>
+                                    {{-- <a class="btn btn-primary">Claim Your Business</a> --}}
+                                    <a href="{{ route('front.contact') }}" class="btn  btn-dark">Get Job</a>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-4 col-sm-6 d-flex align-content-stretch flex-wrap">
+                                <div class="advertise-box">
+                                    <h6 class="text-center">Our UBS System</h6>
+                                    <p>Our UBS is a comprehensive solution designed to streamline and optimize various aspects of managing a business. It encompasses a wide range of functionalities and tools that help organizations effectively handle their operations, resources, and processes.</p>
+                                    {{-- <a class="btn btn-primary">Claim Your Business</a> --}}
+                                    <a href="{{ route('front.contact') }}" class="btn  btn-dark">Get System Services</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-4 col-sm-6 d-flex align-content-stretch flex-wrap">
+                                <div class="advertise-box bg-sea-green">
+                                    <h6 class="text-center">Technology Services</h6>
+                                    <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/app-dev.png') }}"
+                                        alt="">
+                                    <p>We provide the following services:</p>
+                                    <p> <span><i class="fa fa-check"></i></span> Application Development</p>
+                                    <p> <span><i class="fa fa-check"></i></span> Web Development</p>
+                                    <p> <span><i class="fa fa-check"></i></span> Cyber Security Service</p>
+                                    <p> <span><i class="fa fa-check"></i></span> Web designing and services</p>
+                                    {{-- <a class="btn btn-primary">Claim Your Business</a> --}}
+                                    <a href="{{ route('front.contact') }}" class="btn  btn-dark">Get Technolgy
+                                        services</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-4 col-sm-6 d-flex align-content-stretch flex-wrap">
+                                <div class="advertise-box">
+                                    <h6 class="text-center">Domain Hosting</h6>
+                                    <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/social.png') }}"
+                                        alt="">
+                                    <p>we are dedicated to providing reliable and secure hosting solutions for your online presence.
+                                        We understand the importance of having a robust and accessible website, and we strive to
+                                        ensure that your domain and hosting needs.</p>
+                                    {{-- <a class="btn btn-primary">Claim Your Business</a> --}}
+                                    <a href="https://slippa.unipuller.uk/" class="btn  btn-dark">Get Domain</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-4 col-sm-6 d-flex align-content-stretch flex-wrap">
+                                <div class="advertise-box">
+                                    <h6 class="text-center">Book a Service</h6>
+                                    <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/social.png') }}"
+                                        alt="">
+                                    <p>we provide all kind of professional services. All professional working under our hood are experienced and easy to approach </p>
+                                    <p> <span><i class="fa fa-check"></i></span> Experienced doctors</p>
+                                    <p> <span><i class="fa fa-check"></i></span> Professional lawyers</p>
+                                    <p> <span><i class="fa fa-check"></i></span> Engineers</p>
+
+                                    {{-- <a class="btn btn-primary">Claim Your Business</a> --}}
+                                    <a href="{{ route('front.contact') }}" class="btn  btn-dark">Get Service</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="advertise-box">
-                            <h6 class="text-center">See Anything wrong with this listing</h6>
-                            <p>Help us improve by letting us know</p>
-                            <a href="{{ route('front.contact') }}" class="btn btn-primary">Suggest edit</a>
-                        </div>
-                        <div class="advertise-box">
-                            <h6 class="text-center">Is this your business</h6>
-                            <p>By claiming this business you can update and control company information</p>
-                            <a href="{{ route('front.contact') }}" class="btn btn-primary">Claim Your Business</a>
-                        </div>
-                        <div class="advertise-box bg-sea-green">
-                            <h6 class="text-center">Real-Estate</h6>
-                            <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/social.png') }}"
-                                alt="">
-                            <p> we take pride in providing exceptional services to assist you in fin
-                                ding your dream property. Whether you're looking for a cozy apartmen
-                                t, a spacious family home, or a commercial space for your business,
-                                we have a wide range of options to suit your needs.</p>
-                            {{-- <a class="btn btn-primary">Claim Your Business</a> --}}
-                            <a href="{{ route('front.contact') }}" class="btn  btn-dark">Get Job</a>
 
-                        </div>
-                        <div class="advertise-box">
-                            <h6 class="text-center">Our UBS System</h6>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, asperiores
-                                enim voluptatibus ut atque molestiae natus facilis, accusamus dolorum, repelle
-                                ndus voluptas sequi ad. Molestias.</p>
-                            {{-- <a class="btn btn-primary">Claim Your Business</a> --}}
-                            <a href="{{ route('front.contact') }}" class="btn  btn-dark">Get System Services</a>
-                        </div>
-                        <div class="advertise-box bg-sea-green">
-                            <h6 class="text-center">Technology Services</h6>
-                            <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/app-dev.png') }}"
-                                alt="">
-                            <p>We provide the following services:</p>
-                            <p class="mb-0">
-                                <i class="bi bi-check-circle-fill"></i> Applicatoin Development
-                            </p>
-                            <p class="mb-0">
-                                <i class="bi bi-check-circle-fill"></i> Web designing and services
-                            </p>
-                            <p class="mb-0">
-                                <i class="bi bi-check-circle-fill"></i> Web Development
-                            </p>
-                            <p class="">
-                                <i class="bi bi-check-circle-fill"></i> Cyber Security Service
-                            </p>
-                            {{-- <a class="btn btn-primary">Claim Your Business</a> --}}
-                            <a href="{{ route('front.contact') }}" class="btn  btn-dark">Get Technolgy
-                                services</a>
-                        </div>
-                        <div class="advertise-box">
-                            <h6 class="text-center">Domain Hosting</h6>
-                            <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/social.png') }}"
-                                alt="">
-                            <p>we are dedicated to providing reliable and secure hosting solutions for your online presence.
-                                We understand the importance of having a robust and accessible website, and we strive to
-                                ensure that your domain and hosting needs.</p>
-                            {{-- <a class="btn btn-primary">Claim Your Business</a> --}}
-                            <a href="https://slippa.unipuller.uk/" class="btn  btn-dark">Get Domain</a>
-                        </div>
+
+
+
+
+
+
                         {{-- <div class="advertise-box">
                             <h6 class="text-center">Buy and Sell Products</h6>
                             <img class="text-center mb-2" src="{{ asset('/assets/front/images/services/sell-product.png') }}"
@@ -124,7 +151,7 @@
                     </div>
 
 
-                    <div class="col-xl-9">
+                    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
                         <div class="product-search-one">
                             <form id="searchForm" class="search-form form-inline search-pill-shape"
                                 action="{{ route('vendor.list') }}" method="GET">
@@ -159,7 +186,7 @@
                         <div class="shopautocomplete2 position-relative">
                             <div id="shopmyInputautocomplete-list2" class="autocomplete-items"></div>
                         </div>
-                        <div class="mb-4 d-xl-none">
+                        <div class="mb-4 d-none">
                             <a class="dashboard-sidebar-btn btn bg-primary rounded">
                                 <i class="fas fa-bars"></i>
                             </a>
@@ -197,55 +224,40 @@
                                                             <h5 class="product-title large_screen  mb-0 ">
                                                                 <a class="text-dark"
                                                                     href="{{ route('vendor.shop.service', $vendor->id) }}">
-                                                                    @if (strlen($vendor->shop_name) > 40)
-                                                                        {{ substr($vendor->shop_name, 0, 40) . '...' }}
-                                                                    @else
-                                                                        {{ $vendor->shop_name }}
-                                                                    @endif
+                                                                    <span class="company-name"> {{ $vendor->shop_name }}</span>
                                                                 </a>
                                                             </h5>
                                                             <h5 class="product-title small_screen  mb-0"
                                                                 style="display: none">
                                                                 <a class="text-dark"
                                                                     href="{{ route('vendor.shop.service', $vendor->id) }}">
-                                                                    @if (strlen($vendor->shop_name) > 30)
-                                                                        {{ substr($vendor->shop_name, 0, 30) . '...' }}
-                                                                    @else
-                                                                        {{ $vendor->shop_name }}
-                                                                    @endif
+                                                                    <span class="company-name"> {{ $vendor->shop_name }}</span>
                                                                 </a>
                                                             </h5>
                                                             <hr class="mt-0">
-                                                            <p class="category_text text-dark">
-                                                                {{ $vendor->subcategory->name ?? '' }}</p>
+                                                            <p class="category_text text-dark"> {{ $vendor->subcategory->name ?? '' }}</p>
 
 
-                                                            <p class="about_line  text-dark">
-                                                                @if (strlen($vendor->shop_about) > 80)
-                                                                    {!! substr($vendor->shop_about, 0, 77) !!}...
-                                                                @else
-                                                                    {!! substr($vendor->shop_about, 0, 80) !!}
-                                                                @endif
-                                                            </p>
+                                                            <p class="about_line  text-dark"> {{ $vendor->shop_about }}</p>
                                                         </div>
 
                                                         <div class="d-flex text-center"
                                                             style="background-color: whitesmoke;
                                                         border-top: 3px solid var(--green);">
                                                             <span class=" flex-fill mb-0 text-white p-2">
-                                                                <p class="lower-section-text mb-0  text-muted">Total</p>
+                                                                <p class="lower-section-text mb-0  text-muted">Services</p>
                                                                 <p class="mb-0 text-muted">
                                                                     {{ $vendor->services->count() }}</p>
                                                             </span>
                                                             <span class=" flex-fill mb-0 text-white p-2">
-                                                                <p class="lower-section-text mb-0  text-muted">Services &
-                                                                    Products</p>
+                                                                <p class="lower-section-text mb-0  text-muted"> Products</p>
                                                                 <p class="mb-0  text-muted">
                                                                     {{ $vendor->products->count() }}</p>
                                                             </span>
                                                             <span class=" flex-fill mb-0 text-white p-2">
                                                                 <p class="lower-section-text mb-0  text-muted">Rating</p>
-                                                                <p class="mb-0  text-muted"><i class="fas fa-star"></i>
+                                                                <p class="mb-0  text-muted">
+                                                                    {{-- <i class="fas fa-star"></i> --}}
                                                                     {{ App\Models\Rating::ratings($vendor->id) }}
                                                                     ({{ App\Models\Rating::ratingCount($vendor->id) }})
                                                                 </p>
@@ -253,8 +265,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="bg-line-1"></div>
-                                                <div class="bg-line-2"></div>
+                                                {{-- <div class="bg-line-1"></div> --}}
+                                                {{-- <div class="bg-line-2"></div> --}}
                                             </div>
                                         </div>
                                     @endforeach
@@ -292,12 +304,12 @@
                                         }
 
                                         /* .shipping-feed-back {
-                                                                            margin-bottom: -25px;
-                                                                        } */
+                                                                                                        margin-bottom: -25px;
+                                                                                                    } */
 
                                         /* .shipping-feed-back2 {
-                                                                            margin-bottom: -15px;
-                                                                        } */
+                                                                                                        margin-bottom: -15px;
+                                                                                                    } */
 
                                         .product-info .product-title a {
                                             font-size: 18px !important;
@@ -355,5 +367,77 @@
                 $(".small_screen").css("display", "none");
             }
         }, 1000);
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            function adjustCompanyName() {
+                var companyNames = document.getElementsByClassName('company-name');
+                var maxLengths = [60, 30, 25, 40,20]; // Maximum lengths for different screen widths
+
+                for (var i = 0; i < companyNames.length; i++) {
+                    var paragraph = companyNames[i];
+                    var maxWidth = window.innerWidth;
+                    var maxLength;
+
+                    // Determine the maximum length based on the screen width
+                    if (maxWidth < 768) {
+                        maxLength = maxLengths[0];
+                    } else if (maxWidth >= 768 && maxWidth < 992) {
+                        maxLength = maxLengths[2];
+                    } else if (maxWidth >= 992 && maxWidth < 1024) {
+                        maxLength = maxLengths[1];
+                    }else if (maxWidth >= 1024 && maxWidth < 1240) {
+                        maxLength = maxLengths[4];
+                    } else {
+                        maxLength = maxLengths[0];
+                    }
+
+                    var text = paragraph.innerText; // Use innerText to retrieve the visible text
+                    var truncatedText = text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
+                    paragraph.innerText = truncatedText; // Update the content of the paragraph
+                }
+            }
+
+            function adjustCompanyDetail() {
+                var details = document.getElementsByClassName('about_line');
+                var maxLen = [90,60,80 ,110,50]; // Maximum lengths for different screen widths
+
+                for (var i = 0; i < details.length; i++) {
+                    var detail = details[i];
+                    var maxWidth = window.innerWidth;
+                    var max;
+
+                    // Determine the maximum length based on the screen width
+                    if (maxWidth < 768) {
+                        max = maxLen[0];
+                    } else if (maxWidth >= 768 && maxWidth < 992) {
+                        max = maxLen[1];
+                    } else if (maxWidth > 992 && maxWidth < 1024) {
+                        max = maxLen[2];
+                    } else if (maxWidth >= 1024 && maxWidth < 1240) {
+                        max = maxLen[4];
+                    } else if (maxWidth >= 1240 && maxWidth < 1440) {
+                        max = maxLen[3];
+                    }
+                     else {
+                        max = maxLen[0];
+                    }
+
+                    var text = detail.innerText; // Use innerText to retrieve the visible text
+                    var truncatedText = text.length > max ? text.substring(0, max) + "..." : text;
+                    detail.innerText = truncatedText; // Update the content of the paragraph
+                }
+            }
+            adjustCompanyName(); // Initial adjustment
+            adjustCompanyDetail(); // Initial adjustment
+
+            function resizeEventHandler() {
+                adjustCompanyDetail();
+                adjustCompanyName();
+            }
+
+            window.addEventListener('resize', resizeEventHandler);
+
+        });
     </script>
 @endsection
