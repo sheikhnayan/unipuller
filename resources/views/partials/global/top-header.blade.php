@@ -63,21 +63,24 @@
                 </div>
             </div>
             <div class="col-lg-6 sm-mx-none">
-                <div class="product-search-one flex-grow-1 global-search">
-                    <form id="searchForm" class="search-form form-inline search-pill-shape"
-                        action=""
-                        method="GET">
+                @php
+                    $categoryType = request()->segment(1);
+                @endphp
+                @if ($categoryType != 'service_category')
+                    <div class="product-search-one flex-grow-1 global-search">
+                        <form id="searchForm" class="search-form form-inline search-pill-shape" action=""
+                            method="GET">
 
-                        @if (!empty(request()->input('sort')))
-                            <input type="hidden" name="sort" value="{{ request()->input('sort') }}">
-                        @endif
-                        @if (!empty(request()->input('minprice')))
-                            <input type="hidden" name="minprice" value="{{ request()->input('minprice') }}">
-                        @endif
-                        @if (!empty(request()->input('maxprice')))
-                            <input type="hidden" name="maxprice" value="{{ request()->input('maxprice') }}">
-                        @endif
-                        {{-- <input type="text" id="prod_name" class="col form-control search-field " name="search"
+                            @if (!empty(request()->input('sort')))
+                                <input type="hidden" name="sort" value="{{ request()->input('sort') }}">
+                            @endif
+                            @if (!empty(request()->input('minprice')))
+                                <input type="hidden" name="minprice" value="{{ request()->input('minprice') }}">
+                            @endif
+                            @if (!empty(request()->input('maxprice')))
+                                <input type="hidden" name="maxprice" value="{{ request()->input('maxprice') }}">
+                            @endif
+                            {{-- <input type="text" id="prod_name" class="col form-control search-field " name="search"
                             placeholder="Search Product For" value="{{ request()->input('search') }}">
                         <div class=" categori-container select-appearance-none mx-2" id="serviceSelectForm">
                             <select name="category" class="form-control select2 category_select">
@@ -90,48 +93,50 @@
                                 @endforeach
                             </select>
                         </div> --}}
-                        <div class="select-appearance-none categori-container mx-2" id="typeSelectForm">
-                            <select name="selectType" id="selectType" class="form-control  type_select"
-                                onchange="searchCategory()" required>
-                                <option value=""> Select Type </option>
-                                <option value="service"> Service </option>
-                                <option value="product"> Product </option>
-                            </select>
-                        </div>
-                        <div class="select-appearance-none categori-container mx-2" id="catSelectForm">
-                            <span id="productCategory">
-                                <select name="category" class="form-control select2 category_select ">
-                                    <option selected disabled>{{ __('Select Category') }}</option>
-                                    @foreach (DB::table('categories')->where('language_id', $langg->id)->where('status', 1)->get() as $data)
-                                        <option value="{{ $data->slug }}"
-                                            {{ Request::route('category') == $data->slug ? 'selected' : '' }}>
-                                            {{ $data->name }}
-                                        </option>
-                                    @endforeach
+                            <div class="select-appearance-none categori-container mx-2" id="typeSelectForm">
+                                <select name="selectType" id="selectType" class="form-control  type_select"
+                                    onchange="searchCategory()" required>
+                                    <option value=""> Select Type </option>
+                                    <option value="service"> Service </option>
+                                    <option value="product"> Product </option>
                                 </select>
-                            </span>
-                            <span id="serviceCategory">
-                                <select name="category" class="form-control select2 category_select ">
-                                    <option selected disabled>{{ __('Select Service Category') }}</option>
-                                    @foreach (DB::table('service_categories')->where('language_id', $langg->id)->where('status', 1)->get() as $data)
-                                        <option value="{{ $data->slug }}"
-                                            {{ Request::route('category') == $data->slug ? 'selected' : '' }}>
-                                            {{ $data->name }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </span>
+                            </div>
+                            <div class="select-appearance-none categori-container mx-2" id="catSelectForm">
+                                <span id="productCategory">
+                                    <select name="category" class="form-control select2 category_select ">
+                                        <option selected disabled>{{ __('Select Category') }}</option>
+                                        @foreach (DB::table('categories')->where('language_id', $langg->id)->where('status', 1)->get() as $data)
+                                            <option value="{{ $data->slug }}"
+                                                {{ Request::route('category') == $data->slug ? 'selected' : '' }}>
+                                                {{ $data->name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </span>
+                                <span id="serviceCategory">
+                                    <select name="category" class="form-control select2 category_select ">
+                                        <option selected disabled>{{ __('Select Category') }}</option>
+                                        @foreach (DB::table('service_categories')->where('language_id', $langg->id)->where('status', 1)->get() as $data)
+                                            <option value="{{ $data->slug }}"
+                                                {{ Request::route('category') == $data->slug ? 'selected' : '' }}>
+                                                {{ $data->name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </span>
 
-                        </div>
-                        <input type="text" id="prod_name2" class="col form-control search-field" name="search"
-                            placeholder="Search Product For" value="{{ request()->input('search') }}">
+                            </div>
+                            <input type="text" id="prod_name2" class="col form-control search-field" name="search"
+                                placeholder="Search Product For" value="{{ request()->input('search') }}">
 
 
-                        <button type="submit" name="submit" class="search-submit"><i
-                                class="flaticon-search flat-mini text-white"></i></button>
+                            <button type="submit" name="submit" class="search-submit"><i
+                                    class="flaticon-search flat-mini text-white"></i></button>
 
-                    </form>
-                </div>
+                        </form>
+                    </div>
+                @endif
+
             </div>
             <div class="col-lg-3">
                 {{-- <ul class="top-links text-general ms-auto  d-flex justify-content-end">
@@ -177,8 +182,7 @@
                 </ul> --}}
                 <div class="margin-right-1 d-flex align-items-center justify-content-end h-100">
                     <div class="product-search-one flex-grow-1 global-search touch-screen-view">
-                        <form id="searchForm" class="search-form form-inline search-pill-shape"
-                            action=""
+                        <form id="searchForm" class="search-form form-inline search-pill-shape" action=""
                             method="GET">
 
                             @if (!empty(request()->input('sort')))
@@ -337,20 +341,22 @@
         var type = document.getElementById("selectType").value;
         document.getElementById("catSelectForm").style.display = "block"
         var form = document.getElementById("searchForm");
-        console.log('form',form.action);
+        console.log('form', form.action);
         // Change the action attribute (form path)
         if (type == 'service') {
             document.getElementById("serviceCategory").style.display = "block"
             document.getElementById("productCategory").style.display = "none"
-            form.action ="{{ route('front.service_category', [Request::route('category'), Request::route('subcategory'), Request::route('childcategory')]) }}";
-            console.log('form',form.action);
+            form.action =
+                "{{ route('front.service_category', [Request::route('category'), Request::route('subcategory'), Request::route('childcategory')]) }}";
+            console.log('form', form.action);
 
 
         } else {
             document.getElementById("productCategory").style.display = "block"
             document.getElementById("serviceCategory").style.display = "none"
-            form.action ="{{ route('front.category', [Request::route('category'), Request::route('subcategory'), Request::route('childcategory')]) }}";
-            console.log('form',form.action);
+            form.action =
+                "{{ route('front.category', [Request::route('category'), Request::route('subcategory'), Request::route('childcategory')]) }}";
+            console.log('form', form.action);
         }
     }
 </script>

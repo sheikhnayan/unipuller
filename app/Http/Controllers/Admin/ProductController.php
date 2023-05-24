@@ -226,7 +226,6 @@ class ProductController extends AdminBaseController
         $data = new Product;
         $sign = $this->curr;
         $input = $request->all();
-
         // Check File
         if ($file = $request->file('file')) {
             $name = time().\Str::random(8).str_replace(' ', '', $file->getClientOriginalExtension());

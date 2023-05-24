@@ -107,7 +107,7 @@
                                                             value="{{ $cat->id }}">{{ $cat->name }}</option>
                                                     @endforeach
                                                 </select>
-                                                <input type="text" id="category_type" value="" name="category_type">
+                                                <input type="hidden" id="category_type" value="" name="category_type">
                                             </div>
                                         </div>
 

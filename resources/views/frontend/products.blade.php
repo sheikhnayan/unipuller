@@ -21,6 +21,7 @@
             </div>
         </div>
     </div>
+
     <!-- breadcrumb -->
     {{-- There are two product page. you have to give condition here --}}
     <div class="full-row">
@@ -54,6 +55,7 @@
             </div>
         </div>
     </div>
+
     {{-- @includeIf('partials.product.grid') --}}
     {{-- @includeIf('partials.global.common-footer') --}}
 @endsection

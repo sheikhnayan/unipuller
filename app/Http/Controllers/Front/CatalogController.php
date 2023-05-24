@@ -232,14 +232,7 @@ class CatalogController extends FrontBaseController
             $data['ajax_check'] = 1;
             return view('frontend.ajax.category', $data);
         }
-        // if($request->selectType=='service'){
-        //     return view('frontend.services', $data);
-
-        // }
-        // else{
             return view('frontend.products', $data);
-
-        // }
     }
 
     public function servicecategory(Request $request, $slug = null, $slug1 = null, $slug2 = null, $slug3 = null)
@@ -451,6 +444,9 @@ class CatalogController extends FrontBaseController
             $data['ajax_check'] = 1;
             return view('frontend.ajax.service_category', $data);
         }
+        //s added by huma 
+        $data['categoryType'] = 'service';
+        //e added by huma 
 
         return view('frontend.services', $data);
     }
