@@ -32,4 +32,9 @@ class UserShop extends Model
         return $this->hasMany('App\Models\Product','shop_id','id');
     }
 
+    // get 2 products for marketing
+    public function marketingProducts(){
+        return $this->hasMany('App\Models\Product','shop_id','id');
+    }
+
 }

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Session;
 use DB;
+use App\Helpers\PriceHelper;
 
 class UserService extends Model
 {
@@ -87,7 +88,7 @@ class UserService extends Model
             });
         }
         $price = $price * $curr->value;
-        $price = \PriceHelper::showPrice($price);
+        $price = PriceHelper::showPrice($price);
         if($gs->currency_format == 0){
             return $curr->sign.$price;
         }
@@ -150,7 +151,7 @@ class UserService extends Model
         }
 
         $price = $price * $curr->value;
-        $price = \PriceHelper::showPrice($price);
+        $price = PriceHelper::showPrice($price);
 
         if($gs->currency_format == 0){
             return $curr->sign.$price;
@@ -188,7 +189,7 @@ class UserService extends Model
         }
 
         $price = $price * $curr->value;
-        $price = \PriceHelper::showPrice($price);
+        $price = PriceHelper::showPrice($price);
 
         if($gs->currency_format == 0){
             return $curr->sign.$price;
