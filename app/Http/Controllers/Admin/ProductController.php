@@ -6,6 +6,7 @@ use App\{
     Models\Product,
     Models\Gallery,
     Models\Category,
+    Models\ServiceCategory,
     Models\Currency,
     Models\Attribute,
     Models\Subcategory,
@@ -132,7 +133,9 @@ class ProductController extends AdminBaseController
     //*** GET Request
     public function create($slug)
     {
-        $cats = Category::all();
+        $collection1 = Category::all();
+        $collection2 = ServiceCategory::all();
+        $cats = $collection1->concat($collection2);
         $sign = $this->curr;
         if($slug == 'physical'){
             return view('admin.product.create.physical',compact('cats','sign'));

@@ -15,7 +15,7 @@
             <hr class="mx-auto">
         </div>
         <div class="col-12 col-sm-6 col-lg-3 col-xl-3 col-md-6 buy-sell py-2">
-            <a href="{{route('front.categories',['','','','','featured'])}}">
+            <a href="#">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Top Deal</h5>
@@ -31,7 +31,7 @@
                                 <p class="text-secondary card-text mb-2 ">we take pride in providing the best deals to our valued customers </p>
                             </div>
                         </div>
-                        <a href="{{route('front.categories',['','','','','featured'])}}" class="card-link mt-2">Show more details</a>
+                        <a href="#" class="card-link mt-2">Show more details</a>
                     </div>
                 </div>
 

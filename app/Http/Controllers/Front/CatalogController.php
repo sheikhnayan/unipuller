@@ -22,8 +22,6 @@ class CatalogController extends FrontBaseController
     //aready type existed thats why kind was used  --added by huma
     public function category(Request $request, $slug = null, $slug1 = null, $slug2 = null, $slug3 = null, $kind= null)
     {
-        // dd(' i m here', $kind,$prods);
-
         if ($request->view_check) {
             session::put('view', $request->view_check);
         }
@@ -234,8 +232,14 @@ class CatalogController extends FrontBaseController
             $data['ajax_check'] = 1;
             return view('frontend.ajax.category', $data);
         }
+        // if($request->selectType=='service'){
+        //     return view('frontend.services', $data);
 
-        return view('frontend.products', $data);
+        // }
+        // else{
+            return view('frontend.products', $data);
+
+        // }
     }
 
     public function servicecategory(Request $request, $slug = null, $slug1 = null, $slug2 = null, $slug3 = null)

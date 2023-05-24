@@ -59,7 +59,7 @@
 
 
     <li>
-            <a href="#menu5" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false"><i class="fas fa-sitemap"></i>{{ __('Manage Categories') }}</a>
+            <a href="#menu5" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false"><i class="fas fa-sitemap"></i>{{ __('Product Categories') }}</a>
             <ul class="collapse list-unstyled
             @if(request()->is('admin/attribute/*/manage') && request()->input('type')=='category')
               show

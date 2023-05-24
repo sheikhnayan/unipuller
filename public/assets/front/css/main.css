@@ -46,6 +46,20 @@ button.btn.btn-dark {
 form#searchForm {
     border: 1px solid !important;
 }
+#productCategory, #serviceCategory, #catSelectForm{
+    display:none
+}
+.top-header select#selectType{
+    height: 29px  !important;
+    border-right: 1px solid grey !important;
+    border-radius:0px !important
+}
+.top-header .select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 0px !important;
+    border-right: 1px solid grey !important;
+    border-radius: 0px !important;
+}
 nav.navbar.navbar-expand-lg.nav-dark.nav-primary-hover.nav-line-active {
     overflow: auto;
     white-space: nowrap;
